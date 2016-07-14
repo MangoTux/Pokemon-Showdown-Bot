@@ -1,6 +1,6 @@
 'use strict';
 
-exports.BattlePokedex = {
+exports.Pokedex = {
 	bulbasaur: {
 		num: 1,
 		species:"Seed", 		
@@ -983,7 +983,8 @@ exports.BattlePokedex = {
 	},
 	mankey: {
 		num: 56,
-		species:"", 		name: "Mankey",
+		species:"Pig Monkey",
+        name: "Mankey",
 		types: ["Fighting"],
 		baseStats: {hp: 40, atk: 80, def: 35, spa: 35, spd: 45, spe: 70},
 		abilities: {0: "Vital Spirit", 1: "Anger Point", H: "Defiant"},
@@ -995,7 +996,8 @@ exports.BattlePokedex = {
 	},
 	primeape: {
 		num: 57,
-		species:"", 		name: "Primeape",
+		species:"Pig Monkey",
+        name: "Primeape",
 		types: ["Fighting"],
 		baseStats: {hp: 65, atk: 105, def: 60, spa: 60, spd: 70, spe: 95},
 		abilities: {0: "Vital Spirit", 1: "Anger Point", H: "Defiant"},
@@ -1008,7 +1010,7 @@ exports.BattlePokedex = {
 	},
 	growlithe: {
 		num: 58,
-		species:"", 		name: "Growlithe",
+		species:"Puppy", 		name: "Growlithe",
 		types: ["Fire"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 55, atk: 70, def: 45, spa: 70, spd: 50, spe: 60},
@@ -1021,7 +1023,7 @@ exports.BattlePokedex = {
 	},
 	arcanine: {
 		num: 59,
-		species:"", 		name: "Arcanine",
+		species:"Legendary", 		name: "Arcanine",
 		types: ["Fire"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 90, atk: 110, def: 80, spa: 100, spd: 80, spe: 95},
@@ -1035,7 +1037,7 @@ exports.BattlePokedex = {
 	},
 	poliwag: {
 		num: 60,
-		species:"", 		name: "Poliwag",
+		species:"Tadpole", 		name: "Poliwag",
 		types: ["Water"],
 		baseStats: {hp: 40, atk: 50, def: 40, spa: 40, spd: 40, spe: 90},
 		abilities: {0: "Water Absorb", 1: "Damp", H: "Swift Swim"},
@@ -1047,7 +1049,7 @@ exports.BattlePokedex = {
 	},
 	poliwhirl: {
 		num: 61,
-		species:"", 		name: "Poliwhirl",
+		species:"Tadpole", 		name: "Poliwhirl",
 		types: ["Water"],
 		baseStats: {hp: 65, atk: 65, def: 65, spa: 50, spd: 50, spe: 90},
 		abilities: {0: "Water Absorb", 1: "Damp", H: "Swift Swim"},
@@ -1061,7 +1063,7 @@ exports.BattlePokedex = {
 	},
 	poliwrath: {
 		num: 62,
-		species:"", 		name: "Poliwrath",
+		species:"Tadpole", 		name: "Poliwrath",
 		types: ["Water", "Fighting"],
 		baseStats: {hp: 90, atk: 95, def: 95, spa: 70, spd: 90, spe: 70},
 		abilities: {0: "Water Absorb", 1: "Damp", H: "Swift Swim"},
@@ -1074,7 +1076,7 @@ exports.BattlePokedex = {
 	},
 	abra: {
 		num: 63,
-		species:"", 		name: "Abra",
+		species:"Psi", 		name: "Abra",
 		types: ["Psychic"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 25, atk: 20, def: 15, spa: 105, spd: 55, spe: 90},
@@ -1087,7 +1089,7 @@ exports.BattlePokedex = {
 	},
 	kadabra: {
 		num: 64,
-		species:"", 		name: "Kadabra",
+		species:"Psi", 		name: "Kadabra",
 		types: ["Psychic"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 40, atk: 35, def: 30, spa: 120, spd: 70, spe: 105},
@@ -1102,7 +1104,7 @@ exports.BattlePokedex = {
 	},
 	alakazam: {
 		num: 65,
-		species:"", 		name: "Alakazam",
+		species:"Psi", 		name: "Alakazam",
 		types: ["Psychic"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 55, atk: 50, def: 45, spa: 135, spd: 95, spe: 120},
@@ -1117,7 +1119,7 @@ exports.BattlePokedex = {
 	},
 	alakazammega: {
 		num: 65,
-		species:"", 		name: "Alakazam-Mega",
+		species:"Psi", 		name: "Alakazam-Mega",
 		baseName: "Alakazam",
 		forme: "Mega",
 		formeLetter: "M",
@@ -1132,7 +1134,7 @@ exports.BattlePokedex = {
 	},
 	machop: {
 		num: 66,
-		species:"", 		name: "Machop",
+		species:"Superpower", 		name: "Machop",
 		types: ["Fighting"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 70, atk: 80, def: 50, spa: 35, spd: 35, spe: 35},
@@ -1145,7 +1147,7 @@ exports.BattlePokedex = {
 	},
 	machoke: {
 		num: 67,
-		species:"", 		name: "Machoke",
+		species:"Superpower", 		name: "Machoke",
 		types: ["Fighting"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 80, atk: 100, def: 70, spa: 50, spd: 60, spe: 45},
@@ -1160,7 +1162,7 @@ exports.BattlePokedex = {
 	},
 	machamp: {
 		num: 68,
-		species:"", 		name: "Machamp",
+		species:"Superpower", 		name: "Machamp",
 		types: ["Fighting"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 90, atk: 130, def: 80, spa: 65, spd: 85, spe: 55},
@@ -1174,7 +1176,7 @@ exports.BattlePokedex = {
 	},
 	bellsprout: {
 		num: 69,
-		species:"", 		name: "Bellsprout",
+		species:"Flower", 		name: "Bellsprout",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 50, atk: 75, def: 35, spa: 70, spd: 30, spe: 40},
 		abilities: {0: "Chlorophyll", H: "Gluttony"},
@@ -1186,7 +1188,7 @@ exports.BattlePokedex = {
 	},
 	weepinbell: {
 		num: 70,
-		species:"", 		name: "Weepinbell",
+		species:"Flycatcher", 		name: "Weepinbell",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 65, atk: 90, def: 50, spa: 85, spd: 45, spe: 55},
 		abilities: {0: "Chlorophyll", H: "Gluttony"},
@@ -1200,7 +1202,7 @@ exports.BattlePokedex = {
 	},
 	victreebel: {
 		num: 71,
-		species:"", 		name: "Victreebel",
+		species:"Flycatcher", 		name: "Victreebel",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 80, atk: 105, def: 65, spa: 100, spd: 70, spe: 70},
 		abilities: {0: "Chlorophyll", H: "Gluttony"},
@@ -1213,7 +1215,7 @@ exports.BattlePokedex = {
 	},
 	tentacool: {
 		num: 72,
-		species:"", 		name: "Tentacool",
+		species:"Jellyfish", 		name: "Tentacool",
 		types: ["Water", "Poison"],
 		baseStats: {hp: 40, atk: 40, def: 35, spa: 50, spd: 100, spe: 70},
 		abilities: {0: "Clear Body", 1: "Liquid Ooze", H: "Rain Dish"},
@@ -1225,7 +1227,7 @@ exports.BattlePokedex = {
 	},
 	tentacruel: {
 		num: 73,
-		species:"", 		name: "Tentacruel",
+		species:"Jellyfish", 		name: "Tentacruel",
 		types: ["Water", "Poison"],
 		baseStats: {hp: 80, atk: 70, def: 65, spa: 80, spd: 120, spe: 100},
 		abilities: {0: "Clear Body", 1: "Liquid Ooze", H: "Rain Dish"},
@@ -1238,7 +1240,7 @@ exports.BattlePokedex = {
 	},
 	geodude: {
 		num: 74,
-		species:"", 		name: "Geodude",
+		species:"Rock", 		name: "Geodude",
 		types: ["Rock", "Ground"],
 		baseStats: {hp: 40, atk: 80, def: 100, spa: 30, spd: 30, spe: 20},
 		abilities: {0: "Rock Head", 1: "Sturdy", H: "Sand Veil"},
@@ -1250,7 +1252,7 @@ exports.BattlePokedex = {
 	},
 	graveler: {
 		num: 75,
-		species:"", 		name: "Graveler",
+		species:"Rock", 		name: "Graveler",
 		types: ["Rock", "Ground"],
 		baseStats: {hp: 55, atk: 95, def: 115, spa: 45, spd: 45, spe: 35},
 		abilities: {0: "Rock Head", 1: "Sturdy", H: "Sand Veil"},
@@ -1264,7 +1266,7 @@ exports.BattlePokedex = {
 	},
 	golem: {
 		num: 76,
-		species:"", 		name: "Golem",
+		species:"Megaton", 		name: "Golem",
 		types: ["Rock", "Ground"],
 		baseStats: {hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45},
 		abilities: {0: "Rock Head", 1: "Sturdy", H: "Sand Veil"},
@@ -1277,7 +1279,7 @@ exports.BattlePokedex = {
 	},
 	ponyta: {
 		num: 77,
-		species:"", 		name: "Ponyta",
+		species:"Fire Horse", 		name: "Ponyta",
 		types: ["Fire"],
 		baseStats: {hp: 50, atk: 85, def: 55, spa: 65, spd: 65, spe: 90},
 		abilities: {0: "Run Away", 1: "Flash Fire", H: "Flame Body"},
@@ -1289,7 +1291,7 @@ exports.BattlePokedex = {
 	},
 	rapidash: {
 		num: 78,
-		species:"", 		name: "Rapidash",
+		species:"Fire Horse", 		name: "Rapidash",
 		types: ["Fire"],
 		baseStats: {hp: 65, atk: 100, def: 70, spa: 80, spd: 80, spe: 105},
 		abilities: {0: "Run Away", 1: "Flash Fire", H: "Flame Body"},
@@ -1302,7 +1304,7 @@ exports.BattlePokedex = {
 	},
 	slowpoke: {
 		num: 79,
-		species:"", 		name: "Slowpoke",
+		species:"Dopey", 		name: "Slowpoke",
 		types: ["Water", "Psychic"],
 		baseStats: {hp: 90, atk: 65, def: 65, spa: 40, spd: 40, spe: 15},
 		abilities: {0: "Oblivious", 1: "Own Tempo", H: "Regenerator"},
@@ -1314,7 +1316,7 @@ exports.BattlePokedex = {
 	},
 	slowbro: {
 		num: 80,
-		species:"", 		name: "Slowbro",
+		species:"Hermit Crab", 		name: "Slowbro",
 		types: ["Water", "Psychic"],
 		baseStats: {hp: 95, atk: 75, def: 110, spa: 100, spd: 80, spe: 30},
 		abilities: {0: "Oblivious", 1: "Own Tempo", H: "Regenerator"},
@@ -1328,7 +1330,7 @@ exports.BattlePokedex = {
 	},
 	slowbromega: {
 		num: 80,
-		species:"", 		name: "Slowbro-Mega",
+		species:"Hermit Crab", 		name: "Slowbro-Mega",
 		baseName: "Slowbro",
 		forme: "Mega",
 		formeLetter: "M",
@@ -1342,7 +1344,7 @@ exports.BattlePokedex = {
 	},
 	magnemite: {
 		num: 81,
-		species:"", 		name: "Magnemite",
+		species:"Magnet", 		name: "Magnemite",
 		types: ["Electric", "Steel"],
 		gender: "N",
 		baseStats: {hp: 25, atk: 35, def: 70, spa: 95, spd: 55, spe: 45},
@@ -1355,7 +1357,7 @@ exports.BattlePokedex = {
 	},
 	magneton: {
 		num: 82,
-		species:"", 		name: "Magneton",
+		species:"Magnet", 		name: "Magneton",
 		types: ["Electric", "Steel"],
 		gender: "N",
 		baseStats: {hp: 50, atk: 60, def: 95, spa: 120, spd: 70, spe: 70},
@@ -1370,7 +1372,7 @@ exports.BattlePokedex = {
 	},
 	farfetchd: {
 		num: 83,
-		species:"", 		name: "Farfetch'd",
+		species:"Wild Duck", 		name: "Farfetch'd",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 52, atk: 65, def: 55, spa: 58, spd: 62, spe: 60},
 		abilities: {0: "Keen Eye", 1: "Inner Focus", H: "Defiant"},
@@ -1381,7 +1383,7 @@ exports.BattlePokedex = {
 	},
 	doduo: {
 		num: 84,
-		species:"", 		name: "Doduo",
+		species:"Twin Bird", 		name: "Doduo",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 35, atk: 85, def: 45, spa: 35, spd: 35, spe: 75},
 		abilities: {0: "Run Away", 1: "Early Bird", H: "Tangled Feet"},
@@ -1393,7 +1395,7 @@ exports.BattlePokedex = {
 	},
 	dodrio: {
 		num: 85,
-		species:"", 		name: "Dodrio",
+		species:"Triple Bird", 		name: "Dodrio",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 60, atk: 110, def: 70, spa: 60, spd: 60, spe: 100},
 		abilities: {0: "Run Away", 1: "Early Bird", H: "Tangled Feet"},
@@ -1406,7 +1408,7 @@ exports.BattlePokedex = {
 	},
 	seel: {
 		num: 86,
-		species:"", 		name: "Seel",
+		species:"Sea Lion", 		name: "Seel",
 		types: ["Water"],
 		baseStats: {hp: 65, atk: 45, def: 55, spa: 45, spd: 70, spe: 45},
 		abilities: {0: "Thick Fat", 1: "Hydration", H: "Ice Body"},
@@ -1418,7 +1420,7 @@ exports.BattlePokedex = {
 	},
 	dewgong: {
 		num: 87,
-		species:"", 		name: "Dewgong",
+		species:"Sea Lion", 		name: "Dewgong",
 		types: ["Water", "Ice"],
 		baseStats: {hp: 90, atk: 70, def: 80, spa: 70, spd: 95, spe: 70},
 		abilities: {0: "Thick Fat", 1: "Hydration", H: "Ice Body"},
@@ -1431,7 +1433,7 @@ exports.BattlePokedex = {
 	},
 	grimer: {
 		num: 88,
-		species:"", 		name: "Grimer",
+		species:"Sludge", 		name: "Grimer",
 		types: ["Poison"],
 		baseStats: {hp: 80, atk: 80, def: 50, spa: 40, spd: 50, spe: 25},
 		abilities: {0: "Stench", 1: "Sticky Hold", H: "Poison Touch"},
@@ -1443,7 +1445,7 @@ exports.BattlePokedex = {
 	},
 	muk: {
 		num: 89,
-		species:"", 		name: "Muk",
+		species:"Sludge", 		name: "Muk",
 		types: ["Poison"],
 		baseStats: {hp: 105, atk: 105, def: 75, spa: 65, spd: 100, spe: 50},
 		abilities: {0: "Stench", 1: "Sticky Hold", H: "Poison Touch"},
@@ -1456,7 +1458,7 @@ exports.BattlePokedex = {
 	},
 	shellder: {
 		num: 90,
-		species:"", 		name: "Shellder",
+		species:"Bivalve", 		name: "Shellder",
 		types: ["Water"],
 		baseStats: {hp: 30, atk: 65, def: 100, spa: 45, spd: 25, spe: 40},
 		abilities: {0: "Shell Armor", 1: "Skill Link", H: "Overcoat"},
@@ -1468,7 +1470,7 @@ exports.BattlePokedex = {
 	},
 	cloyster: {
 		num: 91,
-		species:"", 		name: "Cloyster",
+		species:"Bivalve", 		name: "Cloyster",
 		types: ["Water", "Ice"],
 		baseStats: {hp: 50, atk: 95, def: 180, spa: 85, spd: 45, spe: 70},
 		abilities: {0: "Shell Armor", 1: "Skill Link", H: "Overcoat"},
@@ -1481,7 +1483,7 @@ exports.BattlePokedex = {
 	},
 	gastly: {
 		num: 92,
-		species:"", 		name: "Gastly",
+		species:"Gas", 		name: "Gastly",
 		types: ["Ghost", "Poison"],
 		baseStats: {hp: 30, atk: 35, def: 30, spa: 100, spd: 35, spe: 80},
 		abilities: {0: "Levitate"},
@@ -1493,7 +1495,7 @@ exports.BattlePokedex = {
 	},
 	haunter: {
 		num: 93,
-		species:"", 		name: "Haunter",
+		species:"Gas", 		name: "Haunter",
 		types: ["Ghost", "Poison"],
 		baseStats: {hp: 45, atk: 50, def: 45, spa: 115, spd: 55, spe: 95},
 		abilities: {0: "Levitate"},
@@ -1507,7 +1509,7 @@ exports.BattlePokedex = {
 	},
 	gengar: {
 		num: 94,
-		species:"", 		name: "Gengar",
+		species:"Shadow", 		name: "Gengar",
 		types: ["Ghost", "Poison"],
 		baseStats: {hp: 60, atk: 65, def: 60, spa: 130, spd: 75, spe: 110},
 		abilities: {0: "Levitate"},
@@ -1521,7 +1523,7 @@ exports.BattlePokedex = {
 	},
 	gengarmega: {
 		num: 94,
-		species:"", 		name: "Gengar-Mega",
+		species:"Shadow", 		name: "Gengar-Mega",
 		baseName: "Gengar",
 		forme: "Mega",
 		formeLetter: "M",
@@ -1535,7 +1537,7 @@ exports.BattlePokedex = {
 	},
 	onix: {
 		num: 95,
-		species:"", 		name: "Onix",
+		species:"Rock Snake", 		name: "Onix",
 		types: ["Rock", "Ground"],
 		baseStats: {hp: 35, atk: 45, def: 160, spa: 30, spd: 45, spe: 70},
 		abilities: {0: "Rock Head", 1: "Sturdy", H: "Weak Armor"},
@@ -1547,7 +1549,7 @@ exports.BattlePokedex = {
 	},
 	drowzee: {
 		num: 96,
-		species:"", 		name: "Drowzee",
+		species:"Hypnosis", 		name: "Drowzee",
 		types: ["Psychic"],
 		baseStats: {hp: 60, atk: 48, def: 45, spa: 43, spd: 90, spe: 42},
 		abilities: {0: "Insomnia", 1: "Forewarn", H: "Inner Focus"},
@@ -1559,7 +1561,7 @@ exports.BattlePokedex = {
 	},
 	hypno: {
 		num: 97,
-		species:"", 		name: "Hypno",
+		species:"Hypnosis", 		name: "Hypno",
 		types: ["Psychic"],
 		baseStats: {hp: 85, atk: 73, def: 70, spa: 73, spd: 115, spe: 67},
 		abilities: {0: "Insomnia", 1: "Forewarn", H: "Inner Focus"},
@@ -1572,7 +1574,7 @@ exports.BattlePokedex = {
 	},
 	krabby: {
 		num: 98,
-		species:"", 		name: "Krabby",
+		species:"River Crab", 		name: "Krabby",
 		types: ["Water"],
 		baseStats: {hp: 30, atk: 105, def: 90, spa: 25, spd: 25, spe: 50},
 		abilities: {0: "Hyper Cutter", 1: "Shell Armor", H: "Sheer Force"},
@@ -1584,7 +1586,7 @@ exports.BattlePokedex = {
 	},
 	kingler: {
 		num: 99,
-		species:"", 		name: "Kingler",
+		species:"Pincer", 		name: "Kingler",
 		types: ["Water"],
 		baseStats: {hp: 55, atk: 130, def: 115, spa: 50, spd: 50, spe: 75},
 		abilities: {0: "Hyper Cutter", 1: "Shell Armor", H: "Sheer Force"},
@@ -1597,7 +1599,7 @@ exports.BattlePokedex = {
 	},
 	voltorb: {
 		num: 100,
-		species:"", 		name: "Voltorb",
+		species:"Ball", 		name: "Voltorb",
 		types: ["Electric"],
 		gender: "N",
 		baseStats: {hp: 40, atk: 30, def: 50, spa: 55, spd: 55, spe: 100},
@@ -1610,7 +1612,7 @@ exports.BattlePokedex = {
 	},
 	electrode: {
 		num: 101,
-		species:"", 		name: "Electrode",
+		species:"Ball", 		name: "Electrode",
 		types: ["Electric"],
 		gender: "N",
 		baseStats: {hp: 60, atk: 50, def: 70, spa: 80, spd: 80, spe: 140},
@@ -1624,7 +1626,7 @@ exports.BattlePokedex = {
 	},
 	exeggcute: {
 		num: 102,
-		species:"", 		name: "Exeggcute",
+		species:"Egg", 		name: "Exeggcute",
 		types: ["Grass", "Psychic"],
 		baseStats: {hp: 60, atk: 40, def: 80, spa: 60, spd: 45, spe: 40},
 		abilities: {0: "Chlorophyll", H: "Harvest"},
@@ -1636,7 +1638,7 @@ exports.BattlePokedex = {
 	},
 	exeggutor: {
 		num: 103,
-		species:"", 		name: "Exeggutor",
+		species:"Coconut", 		name: "Exeggutor",
 		types: ["Grass", "Psychic"],
 		baseStats: {hp: 95, atk: 95, def: 85, spa: 125, spd: 65, spe: 55},
 		abilities: {0: "Chlorophyll", H: "Harvest"},
@@ -1649,7 +1651,7 @@ exports.BattlePokedex = {
 	},
 	cubone: {
 		num: 104,
-		species:"", 		name: "Cubone",
+		species:"Lonely", 		name: "Cubone",
 		types: ["Ground"],
 		baseStats: {hp: 50, atk: 50, def: 95, spa: 40, spd: 50, spe: 35},
 		abilities: {0: "Rock Head", 1: "Lightning Rod", H: "Battle Armor"},
@@ -1661,7 +1663,7 @@ exports.BattlePokedex = {
 	},
 	marowak: {
 		num: 105,
-		species:"", 		name: "Marowak",
+		species:"Bone Keeper", 		name: "Marowak",
 		types: ["Ground"],
 		baseStats: {hp: 60, atk: 80, def: 110, spa: 50, spd: 80, spe: 45},
 		abilities: {0: "Rock Head", 1: "Lightning Rod", H: "Battle Armor"},
@@ -1674,7 +1676,7 @@ exports.BattlePokedex = {
 	},
 	hitmonlee: {
 		num: 106,
-		species:"", 		name: "Hitmonlee",
+		species:"Kicking", 		name: "Hitmonlee",
 		types: ["Fighting"],
 		gender: "M",
 		baseStats: {hp: 50, atk: 120, def: 53, spa: 35, spd: 110, spe: 87},
@@ -1688,7 +1690,7 @@ exports.BattlePokedex = {
 	},
 	hitmonchan: {
 		num: 107,
-		species:"", 		name: "Hitmonchan",
+		species:"Punching", 		name: "Hitmonchan",
 		types: ["Fighting"],
 		gender: "M",
 		baseStats: {hp: 50, atk: 105, def: 79, spa: 35, spd: 110, spe: 76},
@@ -1702,7 +1704,7 @@ exports.BattlePokedex = {
 	},
 	lickitung: {
 		num: 108,
-		species:"", 		name: "Lickitung",
+		species:"Licking", 		name: "Lickitung",
 		types: ["Normal"],
 		baseStats: {hp: 90, atk: 55, def: 75, spa: 60, spd: 75, spe: 30},
 		abilities: {0: "Own Tempo", 1: "Oblivious", H: "Cloud Nine"},
@@ -1714,7 +1716,7 @@ exports.BattlePokedex = {
 	},
 	koffing: {
 		num: 109,
-		species:"", 		name: "Koffing",
+		species:"Poison Gas", 		name: "Koffing",
 		types: ["Poison"],
 		baseStats: {hp: 40, atk: 65, def: 95, spa: 60, spd: 45, spe: 35},
 		abilities: {0: "Levitate"},
@@ -1726,7 +1728,7 @@ exports.BattlePokedex = {
 	},
 	weezing: {
 		num: 110,
-		species:"", 		name: "Weezing",
+		species:"Poison Gas", 		name: "Weezing",
 		types: ["Poison"],
 		baseStats: {hp: 65, atk: 90, def: 120, spa: 85, spd: 70, spe: 60},
 		abilities: {0: "Levitate"},
@@ -1739,7 +1741,7 @@ exports.BattlePokedex = {
 	},
 	rhyhorn: {
 		num: 111,
-		species:"", 		name: "Rhyhorn",
+		species:"Spikes", 		name: "Rhyhorn",
 		types: ["Ground", "Rock"],
 		baseStats: {hp: 80, atk: 85, def: 95, spa: 30, spd: 30, spe: 25},
 		abilities: {0: "Lightning Rod", 1: "Rock Head", H: "Reckless"},
@@ -1751,7 +1753,7 @@ exports.BattlePokedex = {
 	},
 	rhydon: {
 		num: 112,
-		species:"", 		name: "Rhydon",
+		species:"Drill", 		name: "Rhydon",
 		types: ["Ground", "Rock"],
 		baseStats: {hp: 105, atk: 130, def: 120, spa: 45, spd: 45, spe: 40},
 		abilities: {0: "Lightning Rod", 1: "Rock Head", H: "Reckless"},
@@ -1765,7 +1767,7 @@ exports.BattlePokedex = {
 	},
 	chansey: {
 		num: 113,
-		species:"", 		name: "Chansey",
+		species:"Egg", 		name: "Chansey",
 		types: ["Normal"],
 		gender: "F",
 		baseStats: {hp: 250, atk: 5, def: 5, spa: 35, spd: 105, spe: 50},
@@ -1780,7 +1782,7 @@ exports.BattlePokedex = {
 	},
 	tangela: {
 		num: 114,
-		species:"", 		name: "Tangela",
+		species:"Vine", 		name: "Tangela",
 		types: ["Grass"],
 		baseStats: {hp: 65, atk: 55, def: 115, spa: 100, spd: 40, spe: 60},
 		abilities: {0: "Chlorophyll", 1: "Leaf Guard", H: "Regenerator"},
@@ -1792,7 +1794,7 @@ exports.BattlePokedex = {
 	},
 	kangaskhan: {
 		num: 115,
-		species:"", 		name: "Kangaskhan",
+		species:"Parent", 		name: "Kangaskhan",
 		types: ["Normal"],
 		gender: "F",
 		baseStats: {hp: 105, atk: 95, def: 80, spa: 40, spd: 80, spe: 90},
@@ -1805,7 +1807,7 @@ exports.BattlePokedex = {
 	},
 	kangaskhanmega: {
 		num: 115,
-		species:"", 		name: "Kangaskhan-Mega",
+		species:"Parent", 		name: "Kangaskhan-Mega",
 		baseName: "Kangaskhan",
 		forme: "Mega",
 		formeLetter: "M",
@@ -1820,7 +1822,7 @@ exports.BattlePokedex = {
 	},
 	horsea: {
 		num: 116,
-		species:"", 		name: "Horsea",
+		species:"Dragon", 		name: "Horsea",
 		types: ["Water"],
 		baseStats: {hp: 30, atk: 40, def: 70, spa: 70, spd: 25, spe: 60},
 		abilities: {0: "Swift Swim", 1: "Sniper", H: "Damp"},
@@ -1832,7 +1834,7 @@ exports.BattlePokedex = {
 	},
 	seadra: {
 		num: 117,
-		species:"", 		name: "Seadra",
+		species:"Dragon", 		name: "Seadra",
 		types: ["Water"],
 		baseStats: {hp: 55, atk: 65, def: 95, spa: 95, spd: 45, spe: 85},
 		abilities: {0: "Poison Point", 1: "Sniper", H: "Damp"},
@@ -1846,7 +1848,7 @@ exports.BattlePokedex = {
 	},
 	goldeen: {
 		num: 118,
-		species:"", 		name: "Goldeen",
+		species:"Goldfish", 		name: "Goldeen",
 		types: ["Water"],
 		baseStats: {hp: 45, atk: 67, def: 60, spa: 35, spd: 50, spe: 63},
 		abilities: {0: "Swift Swim", 1: "Water Veil", H: "Lightning Rod"},
@@ -1858,7 +1860,7 @@ exports.BattlePokedex = {
 	},
 	seaking: {
 		num: 119,
-		species:"", 		name: "Seaking",
+		species:"Goldfish", 		name: "Seaking",
 		types: ["Water"],
 		baseStats: {hp: 80, atk: 92, def: 65, spa: 65, spd: 80, spe: 68},
 		abilities: {0: "Swift Swim", 1: "Water Veil", H: "Lightning Rod"},
@@ -1871,7 +1873,7 @@ exports.BattlePokedex = {
 	},
 	staryu: {
 		num: 120,
-		species:"", 		name: "Staryu",
+		species:"Star Shape", 		name: "Staryu",
 		types: ["Water"],
 		gender: "N",
 		baseStats: {hp: 30, atk: 45, def: 55, spa: 70, spd: 55, spe: 85},
@@ -1884,7 +1886,7 @@ exports.BattlePokedex = {
 	},
 	starmie: {
 		num: 121,
-		species:"", 		name: "Starmie",
+		species:"Mysterious", 		name: "Starmie",
 		types: ["Water", "Psychic"],
 		gender: "N",
 		baseStats: {hp: 60, atk: 75, def: 85, spa: 100, spd: 85, spe: 115},
@@ -1898,7 +1900,7 @@ exports.BattlePokedex = {
 	},
 	mrmime: {
 		num: 122,
-		species:"", 		name: "Mr. Mime",
+		species:"Barrier", 		name: "Mr. Mime",
 		types: ["Psychic", "Fairy"],
 		baseStats: {hp: 40, atk: 45, def: 65, spa: 100, spd: 120, spe: 90},
 		abilities: {0: "Soundproof", 1: "Filter", H: "Technician"},
@@ -1912,7 +1914,7 @@ exports.BattlePokedex = {
 	},
 	scyther: {
 		num: 123,
-		species:"", 		name: "Scyther",
+		species:"Mantis", 		name: "Scyther",
 		types: ["Bug", "Flying"],
 		baseStats: {hp: 70, atk: 110, def: 80, spa: 55, spd: 80, spe: 105},
 		abilities: {0: "Swarm", 1: "Technician", H: "Steadfast"},
@@ -1924,7 +1926,7 @@ exports.BattlePokedex = {
 	},
 	jynx: {
 		num: 124,
-		species:"", 		name: "Jynx",
+		species:"Human Shape", 		name: "Jynx",
 		types: ["Ice", "Psychic"],
 		gender: "F",
 		baseStats: {hp: 65, atk: 50, def: 35, spa: 115, spd: 95, spe: 95},
@@ -1938,7 +1940,7 @@ exports.BattlePokedex = {
 	},
 	electabuzz: {
 		num: 125,
-		species:"", 		name: "Electabuzz",
+		species:"Electric", 		name: "Electabuzz",
 		types: ["Electric"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 65, atk: 83, def: 57, spa: 95, spd: 85, spe: 105},
@@ -1953,7 +1955,7 @@ exports.BattlePokedex = {
 	},
 	magmar: {
 		num: 126,
-		species:"", 		name: "Magmar",
+		species:"Spitfire", 		name: "Magmar",
 		types: ["Fire"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 65, atk: 95, def: 57, spa: 100, spd: 85, spe: 93},
@@ -1968,7 +1970,7 @@ exports.BattlePokedex = {
 	},
 	pinsir: {
 		num: 127,
-		species:"", 		name: "Pinsir",
+		species:"Stag Beetle", 		name: "Pinsir",
 		types: ["Bug"],
 		baseStats: {hp: 65, atk: 125, def: 100, spa: 55, spd: 70, spe: 85},
 		abilities: {0: "Hyper Cutter", 1: "Mold Breaker", H: "Moxie"},
@@ -1980,7 +1982,7 @@ exports.BattlePokedex = {
 	},
 	pinsirmega: {
 		num: 127,
-		species:"", 		name: "Pinsir-Mega",
+		species:"Stag Beetle", 		name: "Pinsir-Mega",
 		baseName: "Pinsir",
 		forme: "Mega",
 		formeLetter: "M",
@@ -1994,7 +1996,7 @@ exports.BattlePokedex = {
 	},
 	tauros: {
 		num: 128,
-		species:"", 		name: "Tauros",
+		species:"Wild Bull", 		name: "Tauros",
 		types: ["Normal"],
 		gender: "M",
 		baseStats: {hp: 75, atk: 100, def: 95, spa: 40, spd: 70, spe: 110},
@@ -2006,7 +2008,7 @@ exports.BattlePokedex = {
 	},
 	magikarp: {
 		num: 129,
-		species:"", 		name: "Magikarp",
+		species:"Fish", 		name: "Magikarp",
 		types: ["Water"],
 		baseStats: {hp: 20, atk: 10, def: 55, spa: 15, spd: 20, spe: 80},
 		abilities: {0: "Swift Swim", H: "Rattled"},
@@ -2018,7 +2020,7 @@ exports.BattlePokedex = {
 	},
 	gyarados: {
 		num: 130,
-		species:"", 		name: "Gyarados",
+		species:"Atrocious", 		name: "Gyarados",
 		types: ["Water", "Flying"],
 		baseStats: {hp: 95, atk: 125, def: 79, spa: 60, spd: 100, spe: 81},
 		abilities: {0: "Intimidate", H: "Moxie"},
@@ -2032,7 +2034,7 @@ exports.BattlePokedex = {
 	},
 	gyaradosmega: {
 		num: 130,
-		species:"", 		name: "Gyarados-Mega",
+		species:"Atrocious", 		name: "Gyarados-Mega",
 		baseName: "Gyarados",
 		forme: "Mega",
 		formeLetter: "M",
@@ -2046,7 +2048,7 @@ exports.BattlePokedex = {
 	},
 	lapras: {
 		num: 131,
-		species:"", 		name: "Lapras",
+		species:"Transport", 		name: "Lapras",
 		types: ["Water", "Ice"],
 		baseStats: {hp: 130, atk: 85, def: 80, spa: 85, spd: 95, spe: 60},
 		abilities: {0: "Water Absorb", 1: "Shell Armor", H: "Hydration"},
@@ -2057,7 +2059,7 @@ exports.BattlePokedex = {
 	},
 	ditto: {
 		num: 132,
-		species:"", 		name: "Ditto",
+		species:"Transform", 		name: "Ditto",
 		types: ["Normal"],
 		gender: "N",
 		baseStats: {hp: 48, atk: 48, def: 48, spa: 48, spd: 48, spe: 48},
@@ -2069,7 +2071,7 @@ exports.BattlePokedex = {
 	},
 	eevee: {
 		num: 133,
-		species:"", 		name: "Eevee",
+		species:"Evolution", 		name: "Eevee",
 		types: ["Normal"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 55, atk: 55, def: 50, spa: 45, spd: 65, spe: 55},
@@ -2082,7 +2084,7 @@ exports.BattlePokedex = {
 	},
 	vaporeon: {
 		num: 134,
-		species:"", 		name: "Vaporeon",
+		species:"Bubble Jet", 		name: "Vaporeon",
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 130, atk: 65, def: 60, spa: 110, spd: 95, spe: 65},
@@ -2096,7 +2098,7 @@ exports.BattlePokedex = {
 	},
 	jolteon: {
 		num: 135,
-		species:"", 		name: "Jolteon",
+		species:"Lightning", 		name: "Jolteon",
 		types: ["Electric"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 65, atk: 65, def: 60, spa: 110, spd: 95, spe: 130},
@@ -2110,7 +2112,7 @@ exports.BattlePokedex = {
 	},
 	flareon: {
 		num: 136,
-		species:"", 		name: "Flareon",
+		species:"Flame", 		name: "Flareon",
 		types: ["Fire"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 65, atk: 130, def: 60, spa: 95, spd: 110, spe: 65},
@@ -2124,7 +2126,7 @@ exports.BattlePokedex = {
 	},
 	porygon: {
 		num: 137,
-		species:"", 		name: "Porygon",
+		species:"Virtual", 		name: "Porygon",
 		types: ["Normal"],
 		gender: "N",
 		baseStats: {hp: 65, atk: 60, def: 70, spa: 85, spd: 75, spe: 40},
@@ -2137,7 +2139,7 @@ exports.BattlePokedex = {
 	},
 	omanyte: {
 		num: 138,
-		species:"", 		name: "Omanyte",
+		species:"Spiral", 		name: "Omanyte",
 		types: ["Rock", "Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 35, atk: 40, def: 100, spa: 90, spd: 55, spe: 35},
@@ -2150,7 +2152,7 @@ exports.BattlePokedex = {
 	},
 	omastar: {
 		num: 139,
-		species:"", 		name: "Omastar",
+		species:"Spiral", 		name: "Omastar",
 		types: ["Rock", "Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 70, atk: 60, def: 125, spa: 115, spd: 70, spe: 55},
@@ -2164,7 +2166,7 @@ exports.BattlePokedex = {
 	},
 	kabuto: {
 		num: 140,
-		species:"", 		name: "Kabuto",
+		species:"Shellfish", 		name: "Kabuto",
 		types: ["Rock", "Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 30, atk: 80, def: 90, spa: 55, spd: 45, spe: 55},
@@ -2177,7 +2179,7 @@ exports.BattlePokedex = {
 	},
 	kabutops: {
 		num: 141,
-		species:"", 		name: "Kabutops",
+		species:"Shellfish", 		name: "Kabutops",
 		types: ["Rock", "Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 60, atk: 115, def: 105, spa: 65, spd: 70, spe: 80},
@@ -2191,7 +2193,7 @@ exports.BattlePokedex = {
 	},
 	aerodactyl: {
 		num: 142,
-		species:"", 		name: "Aerodactyl",
+		species:"Fossil", 		name: "Aerodactyl",
 		types: ["Rock", "Flying"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 80, atk: 105, def: 65, spa: 60, spd: 75, spe: 130},
@@ -2204,7 +2206,7 @@ exports.BattlePokedex = {
 	},
 	aerodactylmega: {
 		num: 142,
-		species:"", 		name: "Aerodactyl-Mega",
+		species:"Fossil", 		name: "Aerodactyl-Mega",
 		baseName: "Aerodactyl",
 		forme: "Mega",
 		formeLetter: "M",
@@ -2219,7 +2221,7 @@ exports.BattlePokedex = {
 	},
 	snorlax: {
 		num: 143,
-		species:"", 		name: "Snorlax",
+		species:"Sleeping", 		name: "Snorlax",
 		types: ["Normal"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30},
@@ -2233,7 +2235,7 @@ exports.BattlePokedex = {
 	},
 	articuno: {
 		num: 144,
-		species:"", 		name: "Articuno",
+		species:"Freeze", 		name: "Articuno",
 		types: ["Ice", "Flying"],
 		gender: "N",
 		baseStats: {hp: 90, atk: 85, def: 100, spa: 95, spd: 125, spe: 85},
@@ -2245,7 +2247,7 @@ exports.BattlePokedex = {
 	},
 	zapdos: {
 		num: 145,
-		species:"", 		name: "Zapdos",
+		species:"Electric", 		name: "Zapdos",
 		types: ["Electric", "Flying"],
 		gender: "N",
 		baseStats: {hp: 90, atk: 90, def: 85, spa: 125, spd: 90, spe: 100},
@@ -2257,7 +2259,7 @@ exports.BattlePokedex = {
 	},
 	moltres: {
 		num: 146,
-		species:"", 		name: "Moltres",
+		species:"Flame", 		name: "Moltres",
 		types: ["Fire", "Flying"],
 		gender: "N",
 		baseStats: {hp: 90, atk: 100, def: 90, spa: 125, spd: 85, spe: 90},
@@ -2269,7 +2271,7 @@ exports.BattlePokedex = {
 	},
 	dratini: {
 		num: 147,
-		species:"", 		name: "Dratini",
+		species:"Dragon", 		name: "Dratini",
 		types: ["Dragon"],
 		baseStats: {hp: 41, atk: 64, def: 45, spa: 50, spd: 50, spe: 50},
 		abilities: {0: "Shed Skin", H: "Marvel Scale"},
@@ -2281,7 +2283,7 @@ exports.BattlePokedex = {
 	},
 	dragonair: {
 		num: 148,
-		species:"", 		name: "Dragonair",
+		species:"Dragon", 		name: "Dragonair",
 		types: ["Dragon"],
 		baseStats: {hp: 61, atk: 84, def: 65, spa: 70, spd: 70, spe: 70},
 		abilities: {0: "Shed Skin", H: "Marvel Scale"},
@@ -2295,7 +2297,7 @@ exports.BattlePokedex = {
 	},
 	dragonite: {
 		num: 149,
-		species:"", 		name: "Dragonite",
+		species:"Dragon", 		name: "Dragonite",
 		types: ["Dragon", "Flying"],
 		baseStats: {hp: 91, atk: 134, def: 95, spa: 100, spd: 100, spe: 80},
 		abilities: {0: "Inner Focus", H: "Multiscale"},
@@ -2308,7 +2310,7 @@ exports.BattlePokedex = {
 	},
 	mewtwo: {
 		num: 150,
-		species:"", 		name: "Mewtwo",
+		species:"Genetic", 		name: "Mewtwo",
 		types: ["Psychic"],
 		gender: "N",
 		baseStats: {hp: 106, atk: 110, def: 90, spa: 154, spd: 90, spe: 130},
@@ -2321,7 +2323,7 @@ exports.BattlePokedex = {
 	},
 	mewtwomegax: {
 		num: 150,
-		species:"", 		name: "Mewtwo-Mega-X",
+		species:"Genetic", 		name: "Mewtwo-Mega-X",
 		baseName: "Mewtwo",
 		forme: "Mega-X",
 		formeLetter: "M",
@@ -2336,7 +2338,7 @@ exports.BattlePokedex = {
 	},
 	mewtwomegay: {
 		num: 150,
-		species:"", 		name: "Mewtwo-Mega-Y",
+		species:"Genetic", 		name: "Mewtwo-Mega-Y",
 		baseName: "Mewtwo",
 		forme: "Mega-Y",
 		formeLetter: "M",
@@ -2351,7 +2353,7 @@ exports.BattlePokedex = {
 	},
 	mew: {
 		num: 151,
-		species:"", 		name: "Mew",
+		species:"New Species", 		name: "Mew",
 		types: ["Psychic"],
 		gender: "N",
 		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
@@ -2363,7 +2365,7 @@ exports.BattlePokedex = {
 	},
 	chikorita: {
 		num: 152,
-		species:"", 		name: "Chikorita",
+		species:"Leaf", 		name: "Chikorita",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 45, atk: 49, def: 65, spa: 49, spd: 65, spe: 45},
@@ -2376,7 +2378,7 @@ exports.BattlePokedex = {
 	},
 	bayleef: {
 		num: 153,
-		species:"", 		name: "Bayleef",
+		species:"Leaf", 		name: "Bayleef",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 60, atk: 62, def: 80, spa: 63, spd: 80, spe: 60},
@@ -2391,7 +2393,7 @@ exports.BattlePokedex = {
 	},
 	meganium: {
 		num: 154,
-		species:"", 		name: "Meganium",
+		species:"Herb", 		name: "Meganium",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 80, atk: 82, def: 100, spa: 83, spd: 100, spe: 80},
@@ -2405,7 +2407,7 @@ exports.BattlePokedex = {
 	},
 	cyndaquil: {
 		num: 155,
-		species:"", 		name: "Cyndaquil",
+		species:"Fire Mouse", 		name: "Cyndaquil",
 		types: ["Fire"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 39, atk: 52, def: 43, spa: 60, spd: 50, spe: 65},
@@ -2418,7 +2420,7 @@ exports.BattlePokedex = {
 	},
 	quilava: {
 		num: 156,
-		species:"", 		name: "Quilava",
+		species:"Volcano", 		name: "Quilava",
 		types: ["Fire"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 58, atk: 64, def: 58, spa: 80, spd: 65, spe: 80},
@@ -2433,7 +2435,7 @@ exports.BattlePokedex = {
 	},
 	typhlosion: {
 		num: 157,
-		species:"", 		name: "Typhlosion",
+		species:"Volcano", 		name: "Typhlosion",
 		types: ["Fire"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100},
@@ -2447,7 +2449,7 @@ exports.BattlePokedex = {
 	},
 	totodile: {
 		num: 158,
-		species:"", 		name: "Totodile",
+		species:"Big Jaw", 		name: "Totodile",
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 50, atk: 65, def: 64, spa: 44, spd: 48, spe: 43},
@@ -2460,7 +2462,7 @@ exports.BattlePokedex = {
 	},
 	croconaw: {
 		num: 159,
-		species:"", 		name: "Croconaw",
+		species:"Big Jaw", 		name: "Croconaw",
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 65, atk: 80, def: 80, spa: 59, spd: 63, spe: 58},
@@ -2475,7 +2477,7 @@ exports.BattlePokedex = {
 	},
 	feraligatr: {
 		num: 160,
-		species:"", 		name: "Feraligatr",
+		species:"Big Jaw", 		name: "Feraligatr",
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 85, atk: 105, def: 100, spa: 79, spd: 83, spe: 78},
@@ -2489,7 +2491,7 @@ exports.BattlePokedex = {
 	},
 	sentret: {
 		num: 161,
-		species:"", 		name: "Sentret",
+		species:"Scout", 		name: "Sentret",
 		types: ["Normal"],
 		baseStats: {hp: 35, atk: 46, def: 34, spa: 35, spd: 45, spe: 20},
 		abilities: {0: "Run Away", 1: "Keen Eye", H: "Frisk"},
@@ -2501,7 +2503,7 @@ exports.BattlePokedex = {
 	},
 	furret: {
 		num: 162,
-		species:"", 		name: "Furret",
+		species:"Long Body", 		name: "Furret",
 		types: ["Normal"],
 		baseStats: {hp: 85, atk: 76, def: 64, spa: 45, spd: 55, spe: 90},
 		abilities: {0: "Run Away", 1: "Keen Eye", H: "Frisk"},
@@ -2514,7 +2516,7 @@ exports.BattlePokedex = {
 	},
 	hoothoot: {
 		num: 163,
-		species:"", 		name: "Hoothoot",
+		species:"Owl", 		name: "Hoothoot",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 60, atk: 30, def: 30, spa: 36, spd: 56, spe: 50},
 		abilities: {0: "Insomnia", 1: "Keen Eye", H: "Tinted Lens"},
@@ -2526,7 +2528,7 @@ exports.BattlePokedex = {
 	},
 	noctowl: {
 		num: 164,
-		species:"", 		name: "Noctowl",
+		species:"Owl", 		name: "Noctowl",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 100, atk: 50, def: 50, spa: 76, spd: 96, spe: 70},
 		abilities: {0: "Insomnia", 1: "Keen Eye", H: "Tinted Lens"},
@@ -2539,7 +2541,7 @@ exports.BattlePokedex = {
 	},
 	ledyba: {
 		num: 165,
-		species:"", 		name: "Ledyba",
+		species:"Five Star", 		name: "Ledyba",
 		types: ["Bug", "Flying"],
 		baseStats: {hp: 40, atk: 20, def: 30, spa: 40, spd: 80, spe: 55},
 		abilities: {0: "Swarm", 1: "Early Bird", H: "Rattled"},
@@ -2551,7 +2553,7 @@ exports.BattlePokedex = {
 	},
 	ledian: {
 		num: 166,
-		species:"", 		name: "Ledian",
+		species:"Five Star", 		name: "Ledian",
 		types: ["Bug", "Flying"],
 		baseStats: {hp: 55, atk: 35, def: 50, spa: 55, spd: 110, spe: 85},
 		abilities: {0: "Swarm", 1: "Early Bird", H: "Iron Fist"},
@@ -2564,7 +2566,7 @@ exports.BattlePokedex = {
 	},
 	spinarak: {
 		num: 167,
-		species:"", 		name: "Spinarak",
+		species:"String Spit", 		name: "Spinarak",
 		types: ["Bug", "Poison"],
 		baseStats: {hp: 40, atk: 60, def: 40, spa: 40, spd: 40, spe: 30},
 		abilities: {0: "Swarm", 1: "Insomnia", H: "Sniper"},
@@ -2576,7 +2578,7 @@ exports.BattlePokedex = {
 	},
 	ariados: {
 		num: 168,
-		species:"", 		name: "Ariados",
+		species:"Long Leg", 		name: "Ariados",
 		types: ["Bug", "Poison"],
 		baseStats: {hp: 70, atk: 90, def: 70, spa: 60, spd: 60, spe: 40},
 		abilities: {0: "Swarm", 1: "Insomnia", H: "Sniper"},
@@ -2589,7 +2591,7 @@ exports.BattlePokedex = {
 	},
 	crobat: {
 		num: 169,
-		species:"", 		name: "Crobat",
+		species:"Bat", 		name: "Crobat",
 		types: ["Poison", "Flying"],
 		baseStats: {hp: 85, atk: 90, def: 80, spa: 70, spd: 80, spe: 130},
 		abilities: {0: "Inner Focus", H: "Infiltrator"},
@@ -2602,7 +2604,7 @@ exports.BattlePokedex = {
 	},
 	chinchou: {
 		num: 170,
-		species:"", 		name: "Chinchou",
+		species:"Angler", 		name: "Chinchou",
 		types: ["Water", "Electric"],
 		baseStats: {hp: 75, atk: 38, def: 38, spa: 56, spd: 56, spe: 67},
 		abilities: {0: "Volt Absorb", 1: "Illuminate", H: "Water Absorb"},
@@ -2614,7 +2616,7 @@ exports.BattlePokedex = {
 	},
 	lanturn: {
 		num: 171,
-		species:"", 		name: "Lanturn",
+		species:"Light", 		name: "Lanturn",
 		types: ["Water", "Electric"],
 		baseStats: {hp: 125, atk: 58, def: 58, spa: 76, spd: 76, spe: 67},
 		abilities: {0: "Volt Absorb", 1: "Illuminate", H: "Water Absorb"},
@@ -2627,7 +2629,7 @@ exports.BattlePokedex = {
 	},
 	pichu: {
 		num: 172,
-		species:"", 		name: "Pichu",
+		species:"Tiny Mouse", 		name: "Pichu",
 		types: ["Electric"],
 		baseStats: {hp: 20, atk: 40, def: 15, spa: 35, spd: 35, spe: 60},
 		abilities: {0: "Static", H: "Lightning Rod"},
@@ -2640,7 +2642,7 @@ exports.BattlePokedex = {
 	},
 	pichuspikyeared: {
 		num: 172,
-		species:"", 		name: "Pichu-Spiky-eared",
+		species:"Tiny Mouse", 		name: "Pichu-Spiky-eared",
 		baseName: "Pichu",
 		forme: "Spiky-eared",
 		formeLetter: "S",
@@ -2654,7 +2656,7 @@ exports.BattlePokedex = {
 	},
 	cleffa: {
 		num: 173,
-		species:"", 		name: "Cleffa",
+		species:"Star Shape", 		name: "Cleffa",
 		types: ["Fairy"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 50, atk: 25, def: 28, spa: 45, spd: 55, spe: 15},
@@ -2667,7 +2669,7 @@ exports.BattlePokedex = {
 	},
 	igglybuff: {
 		num: 174,
-		species:"", 		name: "Igglybuff",
+		species:"Balloon", 		name: "Igglybuff",
 		types: ["Normal", "Fairy"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 90, atk: 30, def: 15, spa: 40, spd: 20, spe: 15},
@@ -2680,7 +2682,7 @@ exports.BattlePokedex = {
 	},
 	togepi: {
 		num: 175,
-		species:"", 		name: "Togepi",
+		species:"Spike Ball", 		name: "Togepi",
 		types: ["Fairy"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 35, atk: 20, def: 65, spa: 40, spd: 65, spe: 20},
@@ -2693,7 +2695,7 @@ exports.BattlePokedex = {
 	},
 	togetic: {
 		num: 176,
-		species:"", 		name: "Togetic",
+		species:"Happiness", 		name: "Togetic",
 		types: ["Fairy", "Flying"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 55, atk: 40, def: 85, spa: 80, spd: 105, spe: 40},
@@ -2708,7 +2710,7 @@ exports.BattlePokedex = {
 	},
 	natu: {
 		num: 177,
-		species:"", 		name: "Natu",
+		species:"Tiny Bird", 		name: "Natu",
 		types: ["Psychic", "Flying"],
 		baseStats: {hp: 40, atk: 50, def: 45, spa: 70, spd: 45, spe: 70},
 		abilities: {0: "Synchronize", 1: "Early Bird", H: "Magic Bounce"},
@@ -2720,7 +2722,7 @@ exports.BattlePokedex = {
 	},
 	xatu: {
 		num: 178,
-		species:"", 		name: "Xatu",
+		species:"Mystic", 		name: "Xatu",
 		types: ["Psychic", "Flying"],
 		baseStats: {hp: 65, atk: 75, def: 70, spa: 95, spd: 70, spe: 95},
 		abilities: {0: "Synchronize", 1: "Early Bird", H: "Magic Bounce"},
@@ -2733,7 +2735,7 @@ exports.BattlePokedex = {
 	},
 	mareep: {
 		num: 179,
-		species:"", 		name: "Mareep",
+		species:"Wool", 		name: "Mareep",
 		types: ["Electric"],
 		baseStats: {hp: 55, atk: 40, def: 40, spa: 65, spd: 45, spe: 35},
 		abilities: {0: "Static", H: "Plus"},
@@ -2745,7 +2747,7 @@ exports.BattlePokedex = {
 	},
 	flaaffy: {
 		num: 180,
-		species:"", 		name: "Flaaffy",
+		species:"Wool", 		name: "Flaaffy",
 		types: ["Electric"],
 		baseStats: {hp: 70, atk: 55, def: 55, spa: 80, spd: 60, spe: 45},
 		abilities: {0: "Static", H: "Plus"},
@@ -2759,7 +2761,7 @@ exports.BattlePokedex = {
 	},
 	ampharos: {
 		num: 181,
-		species:"", 		name: "Ampharos",
+		species:"Light", 		name: "Ampharos",
 		types: ["Electric"],
 		baseStats: {hp: 90, atk: 75, def: 85, spa: 115, spd: 90, spe: 55},
 		abilities: {0: "Static", H: "Plus"},
@@ -2773,7 +2775,7 @@ exports.BattlePokedex = {
 	},
 	ampharosmega: {
 		num: 181,
-		species:"", 		name: "Ampharos-Mega",
+		species:"Light", 		name: "Ampharos-Mega",
 		baseName: "Ampharos",
 		forme: "Mega",
 		formeLetter: "M",
@@ -2787,7 +2789,7 @@ exports.BattlePokedex = {
 	},
 	bellossom: {
 		num: 182,
-		species:"", 		name: "Bellossom",
+		species:"Flower", 		name: "Bellossom",
 		types: ["Grass"],
 		baseStats: {hp: 75, atk: 80, def: 95, spa: 90, spd: 100, spe: 50},
 		abilities: {0: "Chlorophyll", H: "Healer"},
@@ -2800,7 +2802,7 @@ exports.BattlePokedex = {
 	},
 	marill: {
 		num: 183,
-		species:"", 		name: "Marill",
+		species:"Aqua Mouse", 		name: "Marill",
 		types: ["Water", "Fairy"],
 		baseStats: {hp: 70, atk: 20, def: 50, spa: 20, spd: 50, spe: 40},
 		abilities: {0: "Thick Fat", 1: "Huge Power", H: "Sap Sipper"},
@@ -2814,7 +2816,7 @@ exports.BattlePokedex = {
 	},
 	azumarill: {
 		num: 184,
-		species:"", 		name: "Azumarill",
+		species:"Aqua Rabbit", 		name: "Azumarill",
 		types: ["Water", "Fairy"],
 		baseStats: {hp: 100, atk: 50, def: 80, spa: 60, spd: 80, spe: 50},
 		abilities: {0: "Thick Fat", 1: "Huge Power", H: "Sap Sipper"},
@@ -2827,7 +2829,7 @@ exports.BattlePokedex = {
 	},
 	sudowoodo: {
 		num: 185,
-		species:"", 		name: "Sudowoodo",
+		species:"Imitation", 		name: "Sudowoodo",
 		types: ["Rock"],
 		baseStats: {hp: 70, atk: 100, def: 115, spa: 30, spd: 65, spe: 30},
 		abilities: {0: "Sturdy", 1: "Rock Head", H: "Rattled"},
@@ -2841,7 +2843,7 @@ exports.BattlePokedex = {
 	},
 	politoed: {
 		num: 186,
-		species:"", 		name: "Politoed",
+		species:"Frog", 		name: "Politoed",
 		types: ["Water"],
 		baseStats: {hp: 90, atk: 75, def: 75, spa: 90, spd: 100, spe: 70},
 		abilities: {0: "Water Absorb", 1: "Damp", H: "Drizzle"},
@@ -2854,7 +2856,7 @@ exports.BattlePokedex = {
 	},
 	hoppip: {
 		num: 187,
-		species:"", 		name: "Hoppip",
+		species:"Cottonweed", 		name: "Hoppip",
 		types: ["Grass", "Flying"],
 		baseStats: {hp: 35, atk: 35, def: 40, spa: 35, spd: 55, spe: 50},
 		abilities: {0: "Chlorophyll", 1: "Leaf Guard", H: "Infiltrator"},
@@ -2866,7 +2868,7 @@ exports.BattlePokedex = {
 	},
 	skiploom: {
 		num: 188,
-		species:"", 		name: "Skiploom",
+		species:"Cottonweed", 		name: "Skiploom",
 		types: ["Grass", "Flying"],
 		baseStats: {hp: 55, atk: 45, def: 50, spa: 45, spd: 65, spe: 80},
 		abilities: {0: "Chlorophyll", 1: "Leaf Guard", H: "Infiltrator"},
@@ -2880,7 +2882,7 @@ exports.BattlePokedex = {
 	},
 	jumpluff: {
 		num: 189,
-		species:"", 		name: "Jumpluff",
+		species:"Cottonweed", 		name: "Jumpluff",
 		types: ["Grass", "Flying"],
 		baseStats: {hp: 75, atk: 55, def: 70, spa: 55, spd: 95, spe: 110},
 		abilities: {0: "Chlorophyll", 1: "Leaf Guard", H: "Infiltrator"},
@@ -2893,7 +2895,7 @@ exports.BattlePokedex = {
 	},
 	aipom: {
 		num: 190,
-		species:"", 		name: "Aipom",
+		species:"Long Tail", 		name: "Aipom",
 		types: ["Normal"],
 		baseStats: {hp: 55, atk: 70, def: 55, spa: 40, spd: 55, spe: 85},
 		abilities: {0: "Run Away", 1: "Pickup", H: "Skill Link"},
@@ -2905,7 +2907,7 @@ exports.BattlePokedex = {
 	},
 	sunkern: {
 		num: 191,
-		species:"", 		name: "Sunkern",
+		species:"Seed", 		name: "Sunkern",
 		types: ["Grass"],
 		baseStats: {hp: 30, atk: 30, def: 30, spa: 30, spd: 30, spe: 30},
 		abilities: {0: "Chlorophyll", 1: "Solar Power", H: "Early Bird"},
@@ -2917,7 +2919,7 @@ exports.BattlePokedex = {
 	},
 	sunflora: {
 		num: 192,
-		species:"", 		name: "Sunflora",
+		species:"Sun", 		name: "Sunflora",
 		types: ["Grass"],
 		baseStats: {hp: 75, atk: 75, def: 55, spa: 105, spd: 85, spe: 30},
 		abilities: {0: "Chlorophyll", 1: "Solar Power", H: "Early Bird"},
@@ -2930,7 +2932,7 @@ exports.BattlePokedex = {
 	},
 	yanma: {
 		num: 193,
-		species:"", 		name: "Yanma",
+		species:"Clear Wing", 		name: "Yanma",
 		types: ["Bug", "Flying"],
 		baseStats: {hp: 65, atk: 65, def: 45, spa: 75, spd: 45, spe: 95},
 		abilities: {0: "Speed Boost", 1: "Compound Eyes", H: "Frisk"},
@@ -2942,7 +2944,7 @@ exports.BattlePokedex = {
 	},
 	wooper: {
 		num: 194,
-		species:"", 		name: "Wooper",
+		species:"Water Fish", 		name: "Wooper",
 		types: ["Water", "Ground"],
 		baseStats: {hp: 55, atk: 45, def: 45, spa: 25, spd: 25, spe: 15},
 		abilities: {0: "Damp", 1: "Water Absorb", H: "Unaware"},
@@ -2954,7 +2956,7 @@ exports.BattlePokedex = {
 	},
 	quagsire: {
 		num: 195,
-		species:"", 		name: "Quagsire",
+		species:"Water Fish", 		name: "Quagsire",
 		types: ["Water", "Ground"],
 		baseStats: {hp: 95, atk: 85, def: 85, spa: 65, spd: 65, spe: 35},
 		abilities: {0: "Damp", 1: "Water Absorb", H: "Unaware"},
@@ -2967,7 +2969,7 @@ exports.BattlePokedex = {
 	},
 	espeon: {
 		num: 196,
-		species:"", 		name: "Espeon",
+		species:"Sun", 		name: "Espeon",
 		types: ["Psychic"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 65, atk: 65, def: 60, spa: 130, spd: 95, spe: 110},
@@ -2981,7 +2983,7 @@ exports.BattlePokedex = {
 	},
 	umbreon: {
 		num: 197,
-		species:"", 		name: "Umbreon",
+		species:"Moonlight", 		name: "Umbreon",
 		types: ["Dark"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 95, atk: 65, def: 110, spa: 60, spd: 130, spe: 65},
@@ -2995,7 +2997,7 @@ exports.BattlePokedex = {
 	},
 	murkrow: {
 		num: 198,
-		species:"", 		name: "Murkrow",
+		species:"Darkness", 		name: "Murkrow",
 		types: ["Dark", "Flying"],
 		baseStats: {hp: 60, atk: 85, def: 42, spa: 85, spd: 42, spe: 91},
 		abilities: {0: "Insomnia", 1: "Super Luck", H: "Prankster"},
@@ -3007,7 +3009,7 @@ exports.BattlePokedex = {
 	},
 	slowking: {
 		num: 199,
-		species:"", 		name: "Slowking",
+		species:"Royal", 		name: "Slowking",
 		types: ["Water", "Psychic"],
 		baseStats: {hp: 95, atk: 75, def: 80, spa: 100, spd: 110, spe: 30},
 		abilities: {0: "Oblivious", 1: "Own Tempo", H: "Regenerator"},
@@ -3020,7 +3022,7 @@ exports.BattlePokedex = {
 	},
 	misdreavus: {
 		num: 200,
-		species:"", 		name: "Misdreavus",
+		species:"Screech", 		name: "Misdreavus",
 		types: ["Ghost"],
 		baseStats: {hp: 60, atk: 60, def: 60, spa: 85, spd: 85, spe: 85},
 		abilities: {0: "Levitate"},
@@ -3032,7 +3034,7 @@ exports.BattlePokedex = {
 	},
 	unown: {
 		num: 201,
-		species:"", 		name: "Unown",
+		species:"Symbol", 		name: "Unown",
 		baseForme: "A",
 		types: ["Psychic"],
 		gender: "N",
@@ -3046,7 +3048,7 @@ exports.BattlePokedex = {
 	},
 	wobbuffet: {
 		num: 202,
-		species:"", 		name: "Wobbuffet",
+		species:"Patient", 		name: "Wobbuffet",
 		types: ["Psychic"],
 		baseStats: {hp: 190, atk: 33, def: 58, spa: 33, spd: 58, spe: 33},
 		abilities: {0: "Shadow Tag", H: "Telepathy"},
@@ -3059,7 +3061,7 @@ exports.BattlePokedex = {
 	},
 	girafarig: {
 		num: 203,
-		species:"", 		name: "Girafarig",
+		species:"Long Neck", 		name: "Girafarig",
 		types: ["Normal", "Psychic"],
 		baseStats: {hp: 70, atk: 80, def: 65, spa: 90, spd: 65, spe: 85},
 		abilities: {0: "Inner Focus", 1: "Early Bird", H: "Sap Sipper"},
@@ -3070,7 +3072,7 @@ exports.BattlePokedex = {
 	},
 	pineco: {
 		num: 204,
-		species:"", 		name: "Pineco",
+		species:"Bagworm", 		name: "Pineco",
 		types: ["Bug"],
 		baseStats: {hp: 50, atk: 65, def: 90, spa: 35, spd: 35, spe: 15},
 		abilities: {0: "Sturdy", H: "Overcoat"},
@@ -3082,7 +3084,7 @@ exports.BattlePokedex = {
 	},
 	forretress: {
 		num: 205,
-		species:"", 		name: "Forretress",
+		species:"Bagworm", 		name: "Forretress",
 		types: ["Bug", "Steel"],
 		baseStats: {hp: 75, atk: 90, def: 140, spa: 60, spd: 60, spe: 40},
 		abilities: {0: "Sturdy", H: "Overcoat"},
@@ -3095,7 +3097,7 @@ exports.BattlePokedex = {
 	},
 	dunsparce: {
 		num: 206,
-		species:"", 		name: "Dunsparce",
+		species:"Land Snake", 		name: "Dunsparce",
 		types: ["Normal"],
 		baseStats: {hp: 100, atk: 70, def: 70, spa: 65, spd: 65, spe: 45},
 		abilities: {0: "Serene Grace", 1: "Run Away", H: "Rattled"},
@@ -3106,7 +3108,7 @@ exports.BattlePokedex = {
 	},
 	gligar: {
 		num: 207,
-		species:"", 		name: "Gligar",
+		species:"Fly Scorpion", 		name: "Gligar",
 		types: ["Ground", "Flying"],
 		baseStats: {hp: 65, atk: 75, def: 105, spa: 35, spd: 65, spe: 85},
 		abilities: {0: "Hyper Cutter", 1: "Sand Veil", H: "Immunity"},
@@ -3118,7 +3120,7 @@ exports.BattlePokedex = {
 	},
 	steelix: {
 		num: 208,
-		species:"", 		name: "Steelix",
+		species:"Iron Snake", 		name: "Steelix",
 		types: ["Steel", "Ground"],
 		baseStats: {hp: 75, atk: 85, def: 200, spa: 55, spd: 65, spe: 30},
 		abilities: {0: "Rock Head", 1: "Sturdy", H: "Sheer Force"},
@@ -3132,7 +3134,7 @@ exports.BattlePokedex = {
 	},
 	steelixmega: {
 		num: 208,
-		species:"", 		name: "Steelix-Mega",
+		species:"Iron Snake", 		name: "Steelix-Mega",
 		baseName: "Steelix",
 		forme: "Mega",
 		formeLetter: "M",
@@ -3146,7 +3148,7 @@ exports.BattlePokedex = {
 	},
 	snubbull: {
 		num: 209,
-		species:"", 		name: "Snubbull",
+		species:"Fairy", 		name: "Snubbull",
 		types: ["Fairy"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 60, atk: 80, def: 50, spa: 40, spd: 40, spe: 30},
@@ -3159,7 +3161,7 @@ exports.BattlePokedex = {
 	},
 	granbull: {
 		num: 210,
-		species:"", 		name: "Granbull",
+		species:"Fairy", 		name: "Granbull",
 		types: ["Fairy"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 90, atk: 120, def: 75, spa: 60, spd: 60, spe: 45},
@@ -3173,7 +3175,7 @@ exports.BattlePokedex = {
 	},
 	qwilfish: {
 		num: 211,
-		species:"", 		name: "Qwilfish",
+		species:"Balloon", 		name: "Qwilfish",
 		types: ["Water", "Poison"],
 		baseStats: {hp: 65, atk: 95, def: 75, spa: 55, spd: 55, spe: 85},
 		abilities: {0: "Poison Point", 1: "Swift Swim", H: "Intimidate"},
@@ -3184,7 +3186,7 @@ exports.BattlePokedex = {
 	},
 	scizor: {
 		num: 212,
-		species:"", 		name: "Scizor",
+		species:"Pincer", 		name: "Scizor",
 		types: ["Bug", "Steel"],
 		baseStats: {hp: 70, atk: 130, def: 100, spa: 55, spd: 80, spe: 65},
 		abilities: {0: "Swarm", 1: "Technician", H: "Light Metal"},
@@ -3198,7 +3200,7 @@ exports.BattlePokedex = {
 	},
 	scizormega: {
 		num: 212,
-		species:"", 		name: "Scizor-Mega",
+		species:"Pincer", 		name: "Scizor-Mega",
 		baseName: "Scizor",
 		forme: "Mega",
 		formeLetter: "M",
@@ -3212,7 +3214,7 @@ exports.BattlePokedex = {
 	},
 	shuckle: {
 		num: 213,
-		species:"", 		name: "Shuckle",
+		species:"Mold", 		name: "Shuckle",
 		types: ["Bug", "Rock"],
 		baseStats: {hp: 20, atk: 10, def: 230, spa: 10, spd: 230, spe: 5},
 		abilities: {0: "Sturdy", 1: "Gluttony", H: "Contrary"},
@@ -3223,7 +3225,7 @@ exports.BattlePokedex = {
 	},
 	heracross: {
 		num: 214,
-		species:"", 		name: "Heracross",
+		species:"Single Horn", 		name: "Heracross",
 		types: ["Bug", "Fighting"],
 		baseStats: {hp: 80, atk: 125, def: 75, spa: 40, spd: 95, spe: 85},
 		abilities: {0: "Swarm", 1: "Guts", H: "Moxie"},
@@ -3235,7 +3237,7 @@ exports.BattlePokedex = {
 	},
 	heracrossmega: {
 		num: 214,
-		species:"", 		name: "Heracross-Mega",
+		species:"Single Horn", 		name: "Heracross-Mega",
 		baseName: "Heracross",
 		forme: "Mega",
 		formeLetter: "M",
@@ -3249,7 +3251,7 @@ exports.BattlePokedex = {
 	},
 	sneasel: {
 		num: 215,
-		species:"", 		name: "Sneasel",
+		species:"Sharp Claw", 		name: "Sneasel",
 		types: ["Dark", "Ice"],
 		baseStats: {hp: 55, atk: 95, def: 55, spa: 35, spd: 75, spe: 115},
 		abilities: {0: "Inner Focus", 1: "Keen Eye", H: "Pickpocket"},
@@ -3261,7 +3263,7 @@ exports.BattlePokedex = {
 	},
 	teddiursa: {
 		num: 216,
-		species:"", 		name: "Teddiursa",
+		species:"Little Bear", 		name: "Teddiursa",
 		types: ["Normal"],
 		baseStats: {hp: 60, atk: 80, def: 50, spa: 50, spd: 50, spe: 40},
 		abilities: {0: "Pickup", 1: "Quick Feet", H: "Honey Gather"},
@@ -3273,7 +3275,7 @@ exports.BattlePokedex = {
 	},
 	ursaring: {
 		num: 217,
-		species:"", 		name: "Ursaring",
+		species:"Hibernator", 		name: "Ursaring",
 		types: ["Normal"],
 		baseStats: {hp: 90, atk: 130, def: 75, spa: 75, spd: 75, spe: 55},
 		abilities: {0: "Guts", 1: "Quick Feet", H: "Unnerve"},
@@ -3286,7 +3288,7 @@ exports.BattlePokedex = {
 	},
 	slugma: {
 		num: 218,
-		species:"", 		name: "Slugma",
+		species:"Lava", 		name: "Slugma",
 		types: ["Fire"],
 		baseStats: {hp: 40, atk: 40, def: 40, spa: 70, spd: 40, spe: 20},
 		abilities: {0: "Magma Armor", 1: "Flame Body", H: "Weak Armor"},
@@ -3298,7 +3300,7 @@ exports.BattlePokedex = {
 	},
 	magcargo: {
 		num: 219,
-		species:"", 		name: "Magcargo",
+		species:"Lava", 		name: "Magcargo",
 		types: ["Fire", "Rock"],
 		baseStats: {hp: 50, atk: 50, def: 120, spa: 80, spd: 80, spe: 30},
 		abilities: {0: "Magma Armor", 1: "Flame Body", H: "Weak Armor"},
@@ -3311,7 +3313,7 @@ exports.BattlePokedex = {
 	},
 	swinub: {
 		num: 220,
-		species:"", 		name: "Swinub",
+		species:"Pig", 		name: "Swinub",
 		types: ["Ice", "Ground"],
 		baseStats: {hp: 50, atk: 50, def: 40, spa: 30, spd: 30, spe: 50},
 		abilities: {0: "Oblivious", 1: "Snow Cloak", H: "Thick Fat"},
@@ -3323,7 +3325,7 @@ exports.BattlePokedex = {
 	},
 	piloswine: {
 		num: 221,
-		species:"", 		name: "Piloswine",
+		species:"Swine", 		name: "Piloswine",
 		types: ["Ice", "Ground"],
 		baseStats: {hp: 100, atk: 100, def: 80, spa: 60, spd: 60, spe: 50},
 		abilities: {0: "Oblivious", 1: "Snow Cloak", H: "Thick Fat"},
@@ -3337,7 +3339,7 @@ exports.BattlePokedex = {
 	},
 	corsola: {
 		num: 222,
-		species:"", 		name: "Corsola",
+		species:"Corsola", 		name: "Corsola",
 		types: ["Water", "Rock"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 55, atk: 55, def: 85, spa: 65, spd: 85, spe: 35},
@@ -3349,7 +3351,7 @@ exports.BattlePokedex = {
 	},
 	remoraid: {
 		num: 223,
-		species:"", 		name: "Remoraid",
+		species:"Jet", 		name: "Remoraid",
 		types: ["Water"],
 		baseStats: {hp: 35, atk: 65, def: 35, spa: 65, spd: 35, spe: 65},
 		abilities: {0: "Hustle", 1: "Sniper", H: "Moody"},
@@ -3361,7 +3363,7 @@ exports.BattlePokedex = {
 	},
 	octillery: {
 		num: 224,
-		species:"", 		name: "Octillery",
+		species:"Jet", 		name: "Octillery",
 		types: ["Water"],
 		baseStats: {hp: 75, atk: 105, def: 75, spa: 105, spd: 75, spe: 45},
 		abilities: {0: "Suction Cups", 1: "Sniper", H: "Moody"},
@@ -3374,7 +3376,7 @@ exports.BattlePokedex = {
 	},
 	delibird: {
 		num: 225,
-		species:"", 		name: "Delibird",
+		species:"Delivery", 		name: "Delibird",
 		types: ["Ice", "Flying"],
 		baseStats: {hp: 45, atk: 55, def: 45, spa: 65, spd: 45, spe: 75},
 		abilities: {0: "Vital Spirit", 1: "Hustle", H: "Insomnia"},
@@ -3385,7 +3387,7 @@ exports.BattlePokedex = {
 	},
 	mantine: {
 		num: 226,
-		species:"", 		name: "Mantine",
+		species:"Kite", 		name: "Mantine",
 		types: ["Water", "Flying"],
 		baseStats: {hp: 65, atk: 40, def: 70, spa: 80, spd: 140, spe: 70},
 		abilities: {0: "Swift Swim", 1: "Water Absorb", H: "Water Veil"},
@@ -3398,7 +3400,7 @@ exports.BattlePokedex = {
 	},
 	skarmory: {
 		num: 227,
-		species:"", 		name: "Skarmory",
+		species:"Armor Bird", 		name: "Skarmory",
 		types: ["Steel", "Flying"],
 		baseStats: {hp: 65, atk: 80, def: 140, spa: 40, spd: 70, spe: 70},
 		abilities: {0: "Keen Eye", 1: "Sturdy", H: "Weak Armor"},
@@ -3409,7 +3411,7 @@ exports.BattlePokedex = {
 	},
 	houndour: {
 		num: 228,
-		species:"", 		name: "Houndour",
+		species:"Dark", 		name: "Houndour",
 		types: ["Dark", "Fire"],
 		baseStats: {hp: 45, atk: 60, def: 30, spa: 80, spd: 50, spe: 65},
 		abilities: {0: "Early Bird", 1: "Flash Fire", H: "Unnerve"},
@@ -3421,7 +3423,7 @@ exports.BattlePokedex = {
 	},
 	houndoom: {
 		num: 229,
-		species:"", 		name: "Houndoom",
+		species:"Dark", 		name: "Houndoom",
 		types: ["Dark", "Fire"],
 		baseStats: {hp: 75, atk: 90, def: 50, spa: 110, spd: 80, spe: 95},
 		abilities: {0: "Early Bird", 1: "Flash Fire", H: "Unnerve"},
@@ -3435,7 +3437,7 @@ exports.BattlePokedex = {
 	},
 	houndoommega: {
 		num: 229,
-		species:"", 		name: "Houndoom-Mega",
+		species:"Dark", 		name: "Houndoom-Mega",
 		baseName: "Houndoom",
 		forme: "Mega",
 		formeLetter: "M",
@@ -3449,7 +3451,7 @@ exports.BattlePokedex = {
 	},
 	kingdra: {
 		num: 230,
-		species:"", 		name: "Kingdra",
+		species:"Dragon", 		name: "Kingdra",
 		types: ["Water", "Dragon"],
 		baseStats: {hp: 75, atk: 95, def: 95, spa: 95, spd: 95, spe: 85},
 		abilities: {0: "Swift Swim", 1: "Sniper", H: "Damp"},
@@ -3462,7 +3464,7 @@ exports.BattlePokedex = {
 	},
 	phanpy: {
 		num: 231,
-		species:"", 		name: "Phanpy",
+		species:"Long Nose", 		name: "Phanpy",
 		types: ["Ground"],
 		baseStats: {hp: 90, atk: 60, def: 60, spa: 40, spd: 40, spe: 40},
 		abilities: {0: "Pickup", H: "Sand Veil"},
@@ -3474,7 +3476,7 @@ exports.BattlePokedex = {
 	},
 	donphan: {
 		num: 232,
-		species:"", 		name: "Donphan",
+		species:"Armor", 		name: "Donphan",
 		types: ["Ground"],
 		baseStats: {hp: 90, atk: 120, def: 120, spa: 60, spd: 60, spe: 50},
 		abilities: {0: "Sturdy", H: "Sand Veil"},
@@ -3487,7 +3489,7 @@ exports.BattlePokedex = {
 	},
 	porygon2: {
 		num: 233,
-		species:"", 		name: "Porygon2",
+		species:"Virtual", 		name: "Porygon2",
 		types: ["Normal"],
 		gender: "N",
 		baseStats: {hp: 85, atk: 80, def: 90, spa: 105, spd: 95, spe: 60},
@@ -3502,7 +3504,7 @@ exports.BattlePokedex = {
 	},
 	stantler: {
 		num: 234,
-		species:"", 		name: "Stantler",
+		species:"Big Horn", 		name: "Stantler",
 		types: ["Normal"],
 		baseStats: {hp: 73, atk: 95, def: 62, spa: 85, spd: 65, spe: 85},
 		abilities: {0: "Intimidate", 1: "Frisk", H: "Sap Sipper"},
@@ -3513,7 +3515,7 @@ exports.BattlePokedex = {
 	},
 	smeargle: {
 		num: 235,
-		species:"", 		name: "Smeargle",
+		species:"Painter", 		name: "Smeargle",
 		types: ["Normal"],
 		baseStats: {hp: 55, atk: 20, def: 35, spa: 20, spd: 45, spe: 75},
 		abilities: {0: "Own Tempo", 1: "Technician", H: "Moody"},
@@ -3524,7 +3526,7 @@ exports.BattlePokedex = {
 	},
 	tyrogue: {
 		num: 236,
-		species:"", 		name: "Tyrogue",
+		species:"Scuffle", 		name: "Tyrogue",
 		types: ["Fighting"],
 		gender: "M",
 		baseStats: {hp: 35, atk: 35, def: 35, spa: 35, spd: 35, spe: 35},
@@ -3537,7 +3539,7 @@ exports.BattlePokedex = {
 	},
 	hitmontop: {
 		num: 237,
-		species:"", 		name: "Hitmontop",
+		species:"Handstand", 		name: "Hitmontop",
 		types: ["Fighting"],
 		gender: "M",
 		baseStats: {hp: 50, atk: 95, def: 95, spa: 35, spd: 110, spe: 70},
@@ -3551,7 +3553,7 @@ exports.BattlePokedex = {
 	},
 	smoochum: {
 		num: 238,
-		species:"", 		name: "Smoochum",
+		species:"Kiss", 		name: "Smoochum",
 		types: ["Ice", "Psychic"],
 		gender: "F",
 		baseStats: {hp: 45, atk: 30, def: 15, spa: 85, spd: 65, spe: 65},
@@ -3564,7 +3566,7 @@ exports.BattlePokedex = {
 	},
 	elekid: {
 		num: 239,
-		species:"", 		name: "Elekid",
+		species:"Electric", 		name: "Elekid",
 		types: ["Electric"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 45, atk: 63, def: 37, spa: 65, spd: 55, spe: 95},
@@ -3577,7 +3579,7 @@ exports.BattlePokedex = {
 	},
 	magby: {
 		num: 240,
-		species:"", 		name: "Magby",
+		species:"Live Coal", 		name: "Magby",
 		types: ["Fire"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 45, atk: 75, def: 37, spa: 70, spd: 55, spe: 83},
@@ -3590,7 +3592,7 @@ exports.BattlePokedex = {
 	},
 	miltank: {
 		num: 241,
-		species:"", 		name: "Miltank",
+		species:"Milk Cow", 		name: "Miltank",
 		types: ["Normal"],
 		gender: "F",
 		baseStats: {hp: 95, atk: 80, def: 105, spa: 40, spd: 70, spe: 100},
@@ -3602,7 +3604,7 @@ exports.BattlePokedex = {
 	},
 	blissey: {
 		num: 242,
-		species:"", 		name: "Blissey",
+		species:"Happiness", 		name: "Blissey",
 		types: ["Normal"],
 		gender: "F",
 		baseStats: {hp: 255, atk: 10, def: 10, spa: 75, spd: 135, spe: 55},
@@ -3616,7 +3618,7 @@ exports.BattlePokedex = {
 	},
 	raikou: {
 		num: 243,
-		species:"", 		name: "Raikou",
+		species:"Thunder", 		name: "Raikou",
 		types: ["Electric"],
 		gender: "N",
 		baseStats: {hp: 90, atk: 85, def: 75, spa: 115, spd: 100, spe: 115},
@@ -3628,7 +3630,7 @@ exports.BattlePokedex = {
 	},
 	entei: {
 		num: 244,
-		species:"", 		name: "Entei",
+		species:"Volcano", 		name: "Entei",
 		types: ["Fire"],
 		gender: "N",
 		baseStats: {hp: 115, atk: 115, def: 85, spa: 90, spd: 75, spe: 100},
@@ -3640,7 +3642,7 @@ exports.BattlePokedex = {
 	},
 	suicune: {
 		num: 245,
-		species:"", 		name: "Suicune",
+		species:"Aurora", 		name: "Suicune",
 		types: ["Water"],
 		gender: "N",
 		baseStats: {hp: 100, atk: 75, def: 115, spa: 90, spd: 115, spe: 85},
@@ -3652,7 +3654,7 @@ exports.BattlePokedex = {
 	},
 	larvitar: {
 		num: 246,
-		species:"", 		name: "Larvitar",
+		species:"Rock Skin", 		name: "Larvitar",
 		types: ["Rock", "Ground"],
 		baseStats: {hp: 50, atk: 64, def: 50, spa: 45, spd: 50, spe: 41},
 		abilities: {0: "Guts", H: "Sand Veil"},
@@ -3664,7 +3666,7 @@ exports.BattlePokedex = {
 	},
 	pupitar: {
 		num: 247,
-		species:"", 		name: "Pupitar",
+		species:"Hard Shell", 		name: "Pupitar",
 		types: ["Rock", "Ground"],
 		baseStats: {hp: 70, atk: 84, def: 70, spa: 65, spd: 70, spe: 51},
 		abilities: {0: "Shed Skin"},
@@ -3678,7 +3680,7 @@ exports.BattlePokedex = {
 	},
 	tyranitar: {
 		num: 248,
-		species:"", 		name: "Tyranitar",
+		species:"Armor", 		name: "Tyranitar",
 		types: ["Rock", "Dark"],
 		baseStats: {hp: 100, atk: 134, def: 110, spa: 95, spd: 100, spe: 61},
 		abilities: {0: "Sand Stream", H: "Unnerve"},
@@ -3692,7 +3694,7 @@ exports.BattlePokedex = {
 	},
 	tyranitarmega: {
 		num: 248,
-		species:"", 		name: "Tyranitar-Mega",
+		species:"Armor", 		name: "Tyranitar-Mega",
 		baseName: "Tyranitar",
 		forme: "Mega",
 		formeLetter: "M",
@@ -3706,7 +3708,7 @@ exports.BattlePokedex = {
 	},
 	lugia: {
 		num: 249,
-		species:"", 		name: "Lugia",
+		species:"Diving", 		name: "Lugia",
 		types: ["Psychic", "Flying"],
 		gender: "N",
 		baseStats: {hp: 106, atk: 90, def: 130, spa: 90, spd: 154, spe: 110},
@@ -3718,7 +3720,7 @@ exports.BattlePokedex = {
 	},
 	hooh: {
 		num: 250,
-		species:"", 		name: "Ho-Oh",
+		species:"Rainbow", 		name: "Ho-Oh",
 		types: ["Fire", "Flying"],
 		gender: "N",
 		baseStats: {hp: 106, atk: 130, def: 90, spa: 110, spd: 154, spe: 90},
@@ -3730,7 +3732,7 @@ exports.BattlePokedex = {
 	},
 	celebi: {
 		num: 251,
-		species:"", 		name: "Celebi",
+		species:"Time Travel", 		name: "Celebi",
 		types: ["Psychic", "Grass"],
 		gender: "N",
 		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
@@ -3742,7 +3744,7 @@ exports.BattlePokedex = {
 	},
 	treecko: {
 		num: 252,
-		species:"", 		name: "Treecko",
+		species:"Wood Gecko", 		name: "Treecko",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 40, atk: 45, def: 35, spa: 65, spd: 55, spe: 70},
@@ -3755,7 +3757,7 @@ exports.BattlePokedex = {
 	},
 	grovyle: {
 		num: 253,
-		species:"", 		name: "Grovyle",
+		species:"Wood Gecko", 		name: "Grovyle",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 50, atk: 65, def: 45, spa: 85, spd: 65, spe: 95},
@@ -3770,7 +3772,7 @@ exports.BattlePokedex = {
 	},
 	sceptile: {
 		num: 254,
-		species:"", 		name: "Sceptile",
+		species:"Forest", 		name: "Sceptile",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 70, atk: 85, def: 65, spa: 105, spd: 85, spe: 120},
@@ -3785,7 +3787,7 @@ exports.BattlePokedex = {
 	},
 	sceptilemega: {
 		num: 254,
-		species:"", 		name: "Sceptile-Mega",
+		species:"Forest", 		name: "Sceptile-Mega",
 		baseName: "Sceptile",
 		forme: "Mega",
 		formeLetter: "M",
@@ -3800,7 +3802,7 @@ exports.BattlePokedex = {
 	},
 	torchic: {
 		num: 255,
-		species:"", 		name: "Torchic",
+		species:"Check", 		name: "Torchic",
 		types: ["Fire"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 45, atk: 60, def: 40, spa: 70, spd: 50, spe: 45},
@@ -3813,7 +3815,7 @@ exports.BattlePokedex = {
 	},
 	combusken: {
 		num: 256,
-		species:"", 		name: "Combusken",
+		species:"Young Foul", 		name: "Combusken",
 		types: ["Fire", "Fighting"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 60, atk: 85, def: 60, spa: 85, spd: 60, spe: 55},
@@ -3828,7 +3830,7 @@ exports.BattlePokedex = {
 	},
 	blaziken: {
 		num: 257,
-		species:"", 		name: "Blaziken",
+		species:"Blaze", 		name: "Blaziken",
 		types: ["Fire", "Fighting"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 80, atk: 120, def: 70, spa: 110, spd: 70, spe: 80},
@@ -3843,7 +3845,7 @@ exports.BattlePokedex = {
 	},
 	blazikenmega: {
 		num: 257,
-		species:"", 		name: "Blaziken-Mega",
+		species:"Blaze", 		name: "Blaziken-Mega",
 		baseName: "Blaziken",
 		forme: "Mega",
 		formeLetter: "M",
@@ -3858,7 +3860,7 @@ exports.BattlePokedex = {
 	},
 	mudkip: {
 		num: 258,
-		species:"", 		name: "Mudkip",
+		species:"Mud Fish", 		name: "Mudkip",
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 50, atk: 70, def: 50, spa: 50, spd: 50, spe: 40},
@@ -3871,7 +3873,7 @@ exports.BattlePokedex = {
 	},
 	marshtomp: {
 		num: 259,
-		species:"", 		name: "Marshtomp",
+		species:"Mud Fish", 		name: "Marshtomp",
 		types: ["Water", "Ground"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 70, atk: 85, def: 70, spa: 60, spd: 70, spe: 50},
@@ -3886,7 +3888,7 @@ exports.BattlePokedex = {
 	},
 	swampert: {
 		num: 260,
-		species:"", 		name: "Swampert",
+		species:"Mud Fish", 		name: "Swampert",
 		types: ["Water", "Ground"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 100, atk: 110, def: 90, spa: 85, spd: 90, spe: 60},
@@ -3901,7 +3903,7 @@ exports.BattlePokedex = {
 	},
 	swampertmega: {
 		num: 260,
-		species:"", 		name: "Swampert-Mega",
+		species:"Mud Fish", 		name: "Swampert-Mega",
 		baseName: "Swampert",
 		forme: "Mega",
 		formeLetter: "M",
@@ -3916,7 +3918,7 @@ exports.BattlePokedex = {
 	},
 	poochyena: {
 		num: 261,
-		species:"", 		name: "Poochyena",
+		species:"Bite", 		name: "Poochyena",
 		types: ["Dark"],
 		baseStats: {hp: 35, atk: 55, def: 35, spa: 30, spd: 30, spe: 35},
 		abilities: {0: "Run Away", 1: "Quick Feet", H: "Rattled"},
@@ -3928,7 +3930,7 @@ exports.BattlePokedex = {
 	},
 	mightyena: {
 		num: 262,
-		species:"", 		name: "Mightyena",
+		species:"Bite", 		name: "Mightyena",
 		types: ["Dark"],
 		baseStats: {hp: 70, atk: 90, def: 70, spa: 60, spd: 60, spe: 70},
 		abilities: {0: "Intimidate", 1: "Quick Feet", H: "Moxie"},
@@ -3941,7 +3943,7 @@ exports.BattlePokedex = {
 	},
 	zigzagoon: {
 		num: 263,
-		species:"", 		name: "Zigzagoon",
+		species:"Tiny Raccoon", 		name: "Zigzagoon",
 		types: ["Normal"],
 		baseStats: {hp: 38, atk: 30, def: 41, spa: 30, spd: 41, spe: 60},
 		abilities: {0: "Pickup", 1: "Gluttony", H: "Quick Feet"},
@@ -3953,7 +3955,7 @@ exports.BattlePokedex = {
 	},
 	linoone: {
 		num: 264,
-		species:"", 		name: "Linoone",
+		species:"Rushing", 		name: "Linoone",
 		types: ["Normal"],
 		baseStats: {hp: 78, atk: 70, def: 61, spa: 50, spd: 61, spe: 100},
 		abilities: {0: "Pickup", 1: "Gluttony", H: "Quick Feet"},
@@ -3966,7 +3968,7 @@ exports.BattlePokedex = {
 	},
 	wurmple: {
 		num: 265,
-		species:"", 		name: "Wurmple",
+		species:"Worm", 		name: "Wurmple",
 		types: ["Bug"],
 		baseStats: {hp: 45, atk: 45, def: 35, spa: 20, spd: 30, spe: 20},
 		abilities: {0: "Shield Dust", H: "Run Away"},
@@ -3978,7 +3980,7 @@ exports.BattlePokedex = {
 	},
 	silcoon: {
 		num: 266,
-		species:"", 		name: "Silcoon",
+		species:"Cocoon", 		name: "Silcoon",
 		types: ["Bug"],
 		baseStats: {hp: 50, atk: 35, def: 55, spa: 25, spd: 25, spe: 15},
 		abilities: {0: "Shed Skin"},
@@ -3992,7 +3994,7 @@ exports.BattlePokedex = {
 	},
 	beautifly: {
 		num: 267,
-		species:"", 		name: "Beautifly",
+		species:"Butterfly", 		name: "Beautifly",
 		types: ["Bug", "Flying"],
 		baseStats: {hp: 60, atk: 70, def: 50, spa: 100, spd: 50, spe: 65},
 		abilities: {0: "Swarm", H: "Rivalry"},
@@ -4005,7 +4007,7 @@ exports.BattlePokedex = {
 	},
 	cascoon: {
 		num: 268,
-		species:"", 		name: "Cascoon",
+		species:"Cocoon", 		name: "Cascoon",
 		types: ["Bug"],
 		baseStats: {hp: 50, atk: 35, def: 55, spa: 25, spd: 25, spe: 15},
 		abilities: {0: "Shed Skin"},
@@ -4019,7 +4021,7 @@ exports.BattlePokedex = {
 	},
 	dustox: {
 		num: 269,
-		species:"", 		name: "Dustox",
+		species:"Poison Moth", 		name: "Dustox",
 		types: ["Bug", "Poison"],
 		baseStats: {hp: 60, atk: 50, def: 70, spa: 50, spd: 90, spe: 65},
 		abilities: {0: "Shield Dust", H: "Compound Eyes"},
@@ -4032,7 +4034,7 @@ exports.BattlePokedex = {
 	},
 	lotad: {
 		num: 270,
-		species:"", 		name: "Lotad",
+		species:"Water Weed", 		name: "Lotad",
 		types: ["Water", "Grass"],
 		baseStats: {hp: 40, atk: 30, def: 30, spa: 40, spd: 50, spe: 30},
 		abilities: {0: "Swift Swim", 1: "Rain Dish", H: "Own Tempo"},
@@ -4044,7 +4046,7 @@ exports.BattlePokedex = {
 	},
 	lombre: {
 		num: 271,
-		species:"", 		name: "Lombre",
+		species:"Jolly", 		name: "Lombre",
 		types: ["Water", "Grass"],
 		baseStats: {hp: 60, atk: 50, def: 50, spa: 60, spd: 70, spe: 50},
 		abilities: {0: "Swift Swim", 1: "Rain Dish", H: "Own Tempo"},
@@ -4058,7 +4060,7 @@ exports.BattlePokedex = {
 	},
 	ludicolo: {
 		num: 272,
-		species:"", 		name: "Ludicolo",
+		species:"Carefree", 		name: "Ludicolo",
 		types: ["Water", "Grass"],
 		baseStats: {hp: 80, atk: 70, def: 70, spa: 90, spd: 100, spe: 70},
 		abilities: {0: "Swift Swim", 1: "Rain Dish", H: "Own Tempo"},
@@ -4071,7 +4073,7 @@ exports.BattlePokedex = {
 	},
 	seedot: {
 		num: 273,
-		species:"", 		name: "Seedot",
+		species:"Acorn", 		name: "Seedot",
 		types: ["Grass"],
 		baseStats: {hp: 40, atk: 40, def: 50, spa: 30, spd: 30, spe: 30},
 		abilities: {0: "Chlorophyll", 1: "Early Bird", H: "Pickpocket"},
@@ -4083,7 +4085,7 @@ exports.BattlePokedex = {
 	},
 	nuzleaf: {
 		num: 274,
-		species:"", 		name: "Nuzleaf",
+		species:"Wily", 		name: "Nuzleaf",
 		types: ["Grass", "Dark"],
 		baseStats: {hp: 70, atk: 70, def: 40, spa: 60, spd: 40, spe: 60},
 		abilities: {0: "Chlorophyll", 1: "Early Bird", H: "Pickpocket"},
@@ -4097,7 +4099,7 @@ exports.BattlePokedex = {
 	},
 	shiftry: {
 		num: 275,
-		species:"", 		name: "Shiftry",
+		species:"Wicked", 		name: "Shiftry",
 		types: ["Grass", "Dark"],
 		baseStats: {hp: 90, atk: 100, def: 60, spa: 90, spd: 60, spe: 80},
 		abilities: {0: "Chlorophyll", 1: "Early Bird", H: "Pickpocket"},
@@ -4110,7 +4112,7 @@ exports.BattlePokedex = {
 	},
 	taillow: {
 		num: 276,
-		species:"", 		name: "Taillow",
+		species:"Tiny Swallow", 		name: "Taillow",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 40, atk: 55, def: 30, spa: 30, spd: 30, spe: 85},
 		abilities: {0: "Guts", H: "Scrappy"},
@@ -4122,7 +4124,7 @@ exports.BattlePokedex = {
 	},
 	swellow: {
 		num: 277,
-		species:"", 		name: "Swellow",
+		species:"Swallow", 		name: "Swellow",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 60, atk: 85, def: 60, spa: 50, spd: 50, spe: 125},
 		abilities: {0: "Guts", H: "Scrappy"},
@@ -4135,7 +4137,7 @@ exports.BattlePokedex = {
 	},
 	wingull: {
 		num: 278,
-		species:"", 		name: "Wingull",
+		species:"Seagull", 		name: "Wingull",
 		types: ["Water", "Flying"],
 		baseStats: {hp: 40, atk: 30, def: 30, spa: 55, spd: 30, spe: 85},
 		abilities: {0: "Keen Eye", H: "Rain Dish"},
@@ -4147,7 +4149,7 @@ exports.BattlePokedex = {
 	},
 	pelipper: {
 		num: 279,
-		species:"", 		name: "Pelipper",
+		species:"Water Bird", 		name: "Pelipper",
 		types: ["Water", "Flying"],
 		baseStats: {hp: 60, atk: 50, def: 100, spa: 85, spd: 70, spe: 65},
 		abilities: {0: "Keen Eye", H: "Rain Dish"},
@@ -4160,7 +4162,7 @@ exports.BattlePokedex = {
 	},
 	ralts: {
 		num: 280,
-		species:"", 		name: "Ralts",
+		species:"Feeling", 		name: "Ralts",
 		types: ["Psychic", "Fairy"],
 		baseStats: {hp: 28, atk: 25, def: 25, spa: 45, spd: 35, spe: 40},
 		abilities: {0: "Synchronize", 1: "Trace", H: "Telepathy"},
@@ -4172,7 +4174,7 @@ exports.BattlePokedex = {
 	},
 	kirlia: {
 		num: 281,
-		species:"", 		name: "Kirlia",
+		species:"Emotion", 		name: "Kirlia",
 		types: ["Psychic", "Fairy"],
 		baseStats: {hp: 38, atk: 35, def: 35, spa: 65, spd: 55, spe: 50},
 		abilities: {0: "Synchronize", 1: "Trace", H: "Telepathy"},
@@ -4186,7 +4188,7 @@ exports.BattlePokedex = {
 	},
 	gardevoir: {
 		num: 282,
-		species:"", 		name: "Gardevoir",
+		species:"Embrace", 		name: "Gardevoir",
 		types: ["Psychic", "Fairy"],
 		baseStats: {hp: 68, atk: 65, def: 65, spa: 125, spd: 115, spe: 80},
 		abilities: {0: "Synchronize", 1: "Trace", H: "Telepathy"},
@@ -4200,7 +4202,7 @@ exports.BattlePokedex = {
 	},
 	gardevoirmega: {
 		num: 282,
-		species:"", 		name: "Gardevoir-Mega",
+		species:"Embrace", 		name: "Gardevoir-Mega",
 		baseName: "Gardevoir",
 		forme: "Mega",
 		formeLetter: "M",
@@ -4214,7 +4216,7 @@ exports.BattlePokedex = {
 	},
 	surskit: {
 		num: 283,
-		species:"", 		name: "Surskit",
+		species:"Pond Skater", 		name: "Surskit",
 		types: ["Bug", "Water"],
 		baseStats: {hp: 40, atk: 30, def: 32, spa: 50, spd: 52, spe: 65},
 		abilities: {0: "Swift Swim", H: "Rain Dish"},
@@ -4226,7 +4228,7 @@ exports.BattlePokedex = {
 	},
 	masquerain: {
 		num: 284,
-		species:"", 		name: "Masquerain",
+		species:"Eyeball", 		name: "Masquerain",
 		types: ["Bug", "Flying"],
 		baseStats: {hp: 70, atk: 60, def: 62, spa: 80, spd: 82, spe: 60},
 		abilities: {0: "Intimidate", H: "Unnerve"},
@@ -4239,7 +4241,7 @@ exports.BattlePokedex = {
 	},
 	shroomish: {
 		num: 285,
-		species:"", 		name: "Shroomish",
+		species:"Mushroom", 		name: "Shroomish",
 		types: ["Grass"],
 		baseStats: {hp: 60, atk: 40, def: 60, spa: 40, spd: 60, spe: 35},
 		abilities: {0: "Effect Spore", 1: "Poison Heal", H: "Quick Feet"},
@@ -4251,7 +4253,7 @@ exports.BattlePokedex = {
 	},
 	breloom: {
 		num: 286,
-		species:"", 		name: "Breloom",
+		species:"Mushroom", 		name: "Breloom",
 		types: ["Grass", "Fighting"],
 		baseStats: {hp: 60, atk: 130, def: 80, spa: 60, spd: 60, spe: 70},
 		abilities: {0: "Effect Spore", 1: "Poison Heal", H: "Technician"},
@@ -4264,7 +4266,7 @@ exports.BattlePokedex = {
 	},
 	slakoth: {
 		num: 287,
-		species:"", 		name: "Slakoth",
+		species:"Slacker", 		name: "Slakoth",
 		types: ["Normal"],
 		baseStats: {hp: 60, atk: 60, def: 60, spa: 35, spd: 35, spe: 30},
 		abilities: {0: "Truant"},
@@ -4276,7 +4278,7 @@ exports.BattlePokedex = {
 	},
 	vigoroth: {
 		num: 288,
-		species:"", 		name: "Vigoroth",
+		species:"Wild Monkey", 		name: "Vigoroth",
 		types: ["Normal"],
 		baseStats: {hp: 80, atk: 80, def: 80, spa: 55, spd: 55, spe: 90},
 		abilities: {0: "Vital Spirit"},
@@ -4290,7 +4292,7 @@ exports.BattlePokedex = {
 	},
 	slaking: {
 		num: 289,
-		species:"", 		name: "Slaking",
+		species:"Lazy", 		name: "Slaking",
 		types: ["Normal"],
 		baseStats: {hp: 150, atk: 160, def: 100, spa: 95, spd: 65, spe: 100},
 		abilities: {0: "Truant"},
@@ -4303,7 +4305,7 @@ exports.BattlePokedex = {
 	},
 	nincada: {
 		num: 290,
-		species:"", 		name: "Nincada",
+		species:"Trainee", 		name: "Nincada",
 		types: ["Bug", "Ground"],
 		baseStats: {hp: 31, atk: 45, def: 90, spa: 30, spd: 30, spe: 40},
 		abilities: {0: "Compound Eyes", H: "Run Away"},
@@ -4315,7 +4317,7 @@ exports.BattlePokedex = {
 	},
 	ninjask: {
 		num: 291,
-		species:"", 		name: "Ninjask",
+		species:"Ninja", 		name: "Ninjask",
 		types: ["Bug", "Flying"],
 		baseStats: {hp: 61, atk: 90, def: 45, spa: 50, spd: 50, spe: 160},
 		abilities: {0: "Speed Boost", H: "Infiltrator"},
@@ -4328,7 +4330,7 @@ exports.BattlePokedex = {
 	},
 	shedinja: {
 		num: 292,
-		species:"", 		name: "Shedinja",
+		species:"Shed", 		name: "Shedinja",
 		types: ["Bug", "Ghost"],
 		gender: "N",
 		baseStats: {hp: 1, atk: 90, def: 45, spa: 30, spd: 30, spe: 40},
@@ -4343,7 +4345,7 @@ exports.BattlePokedex = {
 	},
 	whismur: {
 		num: 293,
-		species:"", 		name: "Whismur",
+		species:"Whisper", 		name: "Whismur",
 		types: ["Normal"],
 		baseStats: {hp: 64, atk: 51, def: 23, spa: 51, spd: 23, spe: 28},
 		abilities: {0: "Soundproof", H: "Rattled"},
@@ -4355,7 +4357,7 @@ exports.BattlePokedex = {
 	},
 	loudred: {
 		num: 294,
-		species:"", 		name: "Loudred",
+		species:"Big Voice", 		name: "Loudred",
 		types: ["Normal"],
 		baseStats: {hp: 84, atk: 71, def: 43, spa: 71, spd: 43, spe: 48},
 		abilities: {0: "Soundproof", H: "Scrappy"},
@@ -4369,7 +4371,7 @@ exports.BattlePokedex = {
 	},
 	exploud: {
 		num: 295,
-		species:"", 		name: "Exploud",
+		species:"Loud Noise", 		name: "Exploud",
 		types: ["Normal"],
 		baseStats: {hp: 104, atk: 91, def: 63, spa: 91, spd: 73, spe: 68},
 		abilities: {0: "Soundproof", H: "Scrappy"},
@@ -4382,7 +4384,7 @@ exports.BattlePokedex = {
 	},
 	makuhita: {
 		num: 296,
-		species:"", 		name: "Makuhita",
+		species:"Guts", 		name: "Makuhita",
 		types: ["Fighting"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 72, atk: 60, def: 30, spa: 20, spd: 30, spe: 25},
@@ -4395,7 +4397,7 @@ exports.BattlePokedex = {
 	},
 	hariyama: {
 		num: 297,
-		species:"", 		name: "Hariyama",
+		species:"Arm Thrust", 		name: "Hariyama",
 		types: ["Fighting"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 144, atk: 120, def: 60, spa: 40, spd: 60, spe: 50},
@@ -4409,7 +4411,7 @@ exports.BattlePokedex = {
 	},
 	azurill: {
 		num: 298,
-		species:"", 		name: "Azurill",
+		species:"Polka Dot", 		name: "Azurill",
 		types: ["Normal", "Fairy"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 50, atk: 20, def: 40, spa: 20, spd: 40, spe: 20},
@@ -4422,7 +4424,7 @@ exports.BattlePokedex = {
 	},
 	nosepass: {
 		num: 299,
-		species:"", 		name: "Nosepass",
+		species:"Compass", 		name: "Nosepass",
 		types: ["Rock"],
 		baseStats: {hp: 30, atk: 45, def: 135, spa: 45, spd: 90, spe: 30},
 		abilities: {0: "Sturdy", 1: "Magnet Pull", H: "Sand Force"},
@@ -4434,7 +4436,7 @@ exports.BattlePokedex = {
 	},
 	skitty: {
 		num: 300,
-		species:"", 		name: "Skitty",
+		species:"Kitten", 		name: "Skitty",
 		types: ["Normal"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 50, atk: 45, def: 45, spa: 35, spd: 35, spe: 50},
@@ -4447,7 +4449,7 @@ exports.BattlePokedex = {
 	},
 	delcatty: {
 		num: 301,
-		species:"", 		name: "Delcatty",
+		species:"Prim", 		name: "Delcatty",
 		types: ["Normal"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 70, atk: 65, def: 65, spa: 55, spd: 55, spe: 70},
@@ -4461,7 +4463,7 @@ exports.BattlePokedex = {
 	},
 	sableye: {
 		num: 302,
-		species:"", 		name: "Sableye",
+		species:"Darkness", 		name: "Sableye",
 		types: ["Dark", "Ghost"],
 		baseStats: {hp: 50, atk: 75, def: 75, spa: 65, spd: 65, spe: 50},
 		abilities: {0: "Keen Eye", 1: "Stall", H: "Prankster"},
@@ -4473,7 +4475,7 @@ exports.BattlePokedex = {
 	},
 	sableyemega: {
 		num: 302,
-		species:"", 		name: "Sableye-Mega",
+		species:"Darkness", 		name: "Sableye-Mega",
 		baseName: "Sableye",
 		forme: "Mega",
 		formeLetter: "M",
@@ -4487,7 +4489,7 @@ exports.BattlePokedex = {
 	},
 	mawile: {
 		num: 303,
-		species:"", 		name: "Mawile",
+		species:"Deceiver", 		name: "Mawile",
 		types: ["Steel", "Fairy"],
 		baseStats: {hp: 50, atk: 85, def: 85, spa: 55, spd: 55, spe: 50},
 		abilities: {0: "Hyper Cutter", 1: "Intimidate", H: "Sheer Force"},
@@ -4499,7 +4501,7 @@ exports.BattlePokedex = {
 	},
 	mawilemega: {
 		num: 303,
-		species:"", 		name: "Mawile-Mega",
+		species:"Deceiver", 		name: "Mawile-Mega",
 		baseName: "Mawile",
 		forme: "Mega",
 		formeLetter: "M",
@@ -4513,7 +4515,7 @@ exports.BattlePokedex = {
 	},
 	aron: {
 		num: 304,
-		species:"", 		name: "Aron",
+		species:"Iron Armor", 		name: "Aron",
 		types: ["Steel", "Rock"],
 		baseStats: {hp: 50, atk: 70, def: 100, spa: 40, spd: 40, spe: 30},
 		abilities: {0: "Sturdy", 1: "Rock Head", H: "Heavy Metal"},
@@ -4525,7 +4527,7 @@ exports.BattlePokedex = {
 	},
 	lairon: {
 		num: 305,
-		species:"", 		name: "Lairon",
+		species:"Iron Armor", 		name: "Lairon",
 		types: ["Steel", "Rock"],
 		baseStats: {hp: 60, atk: 90, def: 140, spa: 50, spd: 50, spe: 40},
 		abilities: {0: "Sturdy", 1: "Rock Head", H: "Heavy Metal"},
@@ -4539,7 +4541,7 @@ exports.BattlePokedex = {
 	},
 	aggron: {
 		num: 306,
-		species:"", 		name: "Aggron",
+		species:"Iron Armor", 		name: "Aggron",
 		types: ["Steel", "Rock"],
 		baseStats: {hp: 70, atk: 110, def: 180, spa: 60, spd: 60, spe: 50},
 		abilities: {0: "Sturdy", 1: "Rock Head", H: "Heavy Metal"},
@@ -4553,7 +4555,7 @@ exports.BattlePokedex = {
 	},
 	aggronmega: {
 		num: 306,
-		species:"", 		name: "Aggron-Mega",
+		species:"Iron Armor", 		name: "Aggron-Mega",
 		baseName: "Aggron",
 		forme: "Mega",
 		formeLetter: "M",
@@ -4567,7 +4569,7 @@ exports.BattlePokedex = {
 	},
 	meditite: {
 		num: 307,
-		species:"", 		name: "Meditite",
+		species:"Meditate", 		name: "Meditite",
 		types: ["Fighting", "Psychic"],
 		baseStats: {hp: 30, atk: 40, def: 55, spa: 40, spd: 55, spe: 60},
 		abilities: {0: "Pure Power", H: "Telepathy"},
@@ -4579,7 +4581,7 @@ exports.BattlePokedex = {
 	},
 	medicham: {
 		num: 308,
-		species:"", 		name: "Medicham",
+		species:"Meditate", 		name: "Medicham",
 		types: ["Fighting", "Psychic"],
 		baseStats: {hp: 60, atk: 60, def: 75, spa: 60, spd: 75, spe: 80},
 		abilities: {0: "Pure Power", H: "Telepathy"},
@@ -4593,7 +4595,7 @@ exports.BattlePokedex = {
 	},
 	medichammega: {
 		num: 308,
-		species:"", 		name: "Medicham-Mega",
+		species:"Meditate", 		name: "Medicham-Mega",
 		baseName: "Medicham",
 		forme: "Mega",
 		formeLetter: "M",
@@ -4607,7 +4609,7 @@ exports.BattlePokedex = {
 	},
 	electrike: {
 		num: 309,
-		species:"", 		name: "Electrike",
+		species:"Lightning", 		name: "Electrike",
 		types: ["Electric"],
 		baseStats: {hp: 40, atk: 45, def: 40, spa: 65, spd: 40, spe: 65},
 		abilities: {0: "Static", 1: "Lightning Rod", H: "Minus"},
@@ -4619,7 +4621,7 @@ exports.BattlePokedex = {
 	},
 	manectric: {
 		num: 310,
-		species:"", 		name: "Manectric",
+		species:"Discharge", 		name: "Manectric",
 		types: ["Electric"],
 		baseStats: {hp: 70, atk: 75, def: 60, spa: 105, spd: 60, spe: 105},
 		abilities: {0: "Static", 1: "Lightning Rod", H: "Minus"},
@@ -4633,7 +4635,7 @@ exports.BattlePokedex = {
 	},
 	manectricmega: {
 		num: 310,
-		species:"", 		name: "Manectric-Mega",
+		species:"Discharge", 		name: "Manectric-Mega",
 		baseName: "Manectric",
 		forme: "Mega",
 		formeLetter: "M",
@@ -4647,7 +4649,7 @@ exports.BattlePokedex = {
 	},
 	plusle: {
 		num: 311,
-		species:"", 		name: "Plusle",
+		species:"Cheering", 		name: "Plusle",
 		types: ["Electric"],
 		baseStats: {hp: 60, atk: 50, def: 40, spa: 85, spd: 75, spe: 95},
 		abilities: {0: "Plus", H: "Lightning Rod"},
@@ -4658,7 +4660,7 @@ exports.BattlePokedex = {
 	},
 	minun: {
 		num: 312,
-		species:"", 		name: "Minun",
+		species:"Cheering", 		name: "Minun",
 		types: ["Electric"],
 		baseStats: {hp: 60, atk: 40, def: 50, spa: 75, spd: 85, spe: 95},
 		abilities: {0: "Minus", H: "Volt Absorb"},
@@ -4669,7 +4671,7 @@ exports.BattlePokedex = {
 	},
 	volbeat: {
 		num: 313,
-		species:"", 		name: "Volbeat",
+		species:"Firefly", 		name: "Volbeat",
 		types: ["Bug"],
 		gender: "M",
 		baseStats: {hp: 65, atk: 73, def: 55, spa: 47, spd: 75, spe: 85},
@@ -4681,7 +4683,7 @@ exports.BattlePokedex = {
 	},
 	illumise: {
 		num: 314,
-		species:"", 		name: "Illumise",
+		species:"Firefly", 		name: "Illumise",
 		types: ["Bug"],
 		gender: "F",
 		baseStats: {hp: 65, atk: 47, def: 55, spa: 73, spd: 75, spe: 85},
@@ -4693,7 +4695,7 @@ exports.BattlePokedex = {
 	},
 	roselia: {
 		num: 315,
-		species:"", 		name: "Roselia",
+		species:"Thorn", 		name: "Roselia",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 50, atk: 60, def: 45, spa: 100, spd: 80, spe: 65},
 		abilities: {0: "Natural Cure", 1: "Poison Point", H: "Leaf Guard"},
@@ -4707,7 +4709,7 @@ exports.BattlePokedex = {
 	},
 	gulpin: {
 		num: 316,
-		species:"", 		name: "Gulpin",
+		species:"Stomach", 		name: "Gulpin",
 		types: ["Poison"],
 		baseStats: {hp: 70, atk: 43, def: 53, spa: 43, spd: 53, spe: 40},
 		abilities: {0: "Liquid Ooze", 1: "Sticky Hold", H: "Gluttony"},
@@ -4719,7 +4721,7 @@ exports.BattlePokedex = {
 	},
 	swalot: {
 		num: 317,
-		species:"", 		name: "Swalot",
+		species:"Poison Bag", 		name: "Swalot",
 		types: ["Poison"],
 		baseStats: {hp: 100, atk: 73, def: 83, spa: 73, spd: 83, spe: 55},
 		abilities: {0: "Liquid Ooze", 1: "Sticky Hold", H: "Gluttony"},
@@ -4732,7 +4734,7 @@ exports.BattlePokedex = {
 	},
 	carvanha: {
 		num: 318,
-		species:"", 		name: "Carvanha",
+		species:"Savage", 		name: "Carvanha",
 		types: ["Water", "Dark"],
 		baseStats: {hp: 45, atk: 90, def: 20, spa: 65, spd: 20, spe: 65},
 		abilities: {0: "Rough Skin", H: "Speed Boost"},
@@ -4744,7 +4746,7 @@ exports.BattlePokedex = {
 	},
 	sharpedo: {
 		num: 319,
-		species:"", 		name: "Sharpedo",
+		species:"Brutal", 		name: "Sharpedo",
 		types: ["Water", "Dark"],
 		baseStats: {hp: 70, atk: 120, def: 40, spa: 95, spd: 40, spe: 95},
 		abilities: {0: "Rough Skin", H: "Speed Boost"},
@@ -4758,7 +4760,7 @@ exports.BattlePokedex = {
 	},
 	sharpedomega: {
 		num: 319,
-		species:"", 		name: "Sharpedo-Mega",
+		species:"Brutal", 		name: "Sharpedo-Mega",
 		baseName: "Sharpedo",
 		forme: "Mega",
 		formeLetter: "M",
@@ -4772,7 +4774,7 @@ exports.BattlePokedex = {
 	},
 	wailmer: {
 		num: 320,
-		species:"", 		name: "Wailmer",
+		species:"Ball Whale", 		name: "Wailmer",
 		types: ["Water"],
 		baseStats: {hp: 130, atk: 70, def: 35, spa: 70, spd: 35, spe: 60},
 		abilities: {0: "Water Veil", 1: "Oblivious", H: "Pressure"},
@@ -4784,7 +4786,7 @@ exports.BattlePokedex = {
 	},
 	wailord: {
 		num: 321,
-		species:"", 		name: "Wailord",
+		species:"Float Whale", 		name: "Wailord",
 		types: ["Water"],
 		baseStats: {hp: 170, atk: 90, def: 45, spa: 90, spd: 45, spe: 60},
 		abilities: {0: "Water Veil", 1: "Oblivious", H: "Pressure"},
@@ -4797,7 +4799,7 @@ exports.BattlePokedex = {
 	},
 	numel: {
 		num: 322,
-		species:"", 		name: "Numel",
+		species:"Numb", 		name: "Numel",
 		types: ["Fire", "Ground"],
 		baseStats: {hp: 60, atk: 60, def: 40, spa: 65, spd: 45, spe: 35},
 		abilities: {0: "Oblivious", 1: "Simple", H: "Own Tempo"},
@@ -4809,7 +4811,7 @@ exports.BattlePokedex = {
 	},
 	camerupt: {
 		num: 323,
-		species:"", 		name: "Camerupt",
+		species:"Eruption", 		name: "Camerupt",
 		types: ["Fire", "Ground"],
 		baseStats: {hp: 70, atk: 100, def: 70, spa: 105, spd: 75, spe: 40},
 		abilities: {0: "Magma Armor", 1: "Solid Rock", H: "Anger Point"},
@@ -4823,7 +4825,7 @@ exports.BattlePokedex = {
 	},
 	cameruptmega: {
 		num: 323,
-		species:"", 		name: "Camerupt-Mega",
+		species:"Eruption", 		name: "Camerupt-Mega",
 		baseName: "Camerupt",
 		forme: "Mega",
 		formeLetter: "M",
@@ -4837,7 +4839,7 @@ exports.BattlePokedex = {
 	},
 	torkoal: {
 		num: 324,
-		species:"", 		name: "Torkoal",
+		species:"Coal", 		name: "Torkoal",
 		types: ["Fire"],
 		baseStats: {hp: 70, atk: 85, def: 140, spa: 85, spd: 70, spe: 20},
 		abilities: {0: "White Smoke", H: "Shell Armor"},
@@ -4848,7 +4850,7 @@ exports.BattlePokedex = {
 	},
 	spoink: {
 		num: 325,
-		species:"", 		name: "Spoink",
+		species:"Bounce", 		name: "Spoink",
 		types: ["Psychic"],
 		baseStats: {hp: 60, atk: 25, def: 35, spa: 70, spd: 80, spe: 60},
 		abilities: {0: "Thick Fat", 1: "Own Tempo", H: "Gluttony"},
@@ -4860,7 +4862,7 @@ exports.BattlePokedex = {
 	},
 	grumpig: {
 		num: 326,
-		species:"", 		name: "Grumpig",
+		species:"Manipulate", 		name: "Grumpig",
 		types: ["Psychic"],
 		baseStats: {hp: 80, atk: 45, def: 65, spa: 90, spd: 110, spe: 80},
 		abilities: {0: "Thick Fat", 1: "Own Tempo", H: "Gluttony"},
@@ -4873,7 +4875,7 @@ exports.BattlePokedex = {
 	},
 	spinda: {
 		num: 327,
-		species:"", 		name: "Spinda",
+		species:"Spot Panda", 		name: "Spinda",
 		types: ["Normal"],
 		baseStats: {hp: 60, atk: 60, def: 60, spa: 60, spd: 60, spe: 60},
 		abilities: {0: "Own Tempo", 1: "Tangled Feet", H: "Contrary"},
@@ -4884,7 +4886,7 @@ exports.BattlePokedex = {
 	},
 	trapinch: {
 		num: 328,
-		species:"", 		name: "Trapinch",
+		species:"Ant Pit", 		name: "Trapinch",
 		types: ["Ground"],
 		baseStats: {hp: 45, atk: 100, def: 45, spa: 45, spd: 45, spe: 10},
 		abilities: {0: "Hyper Cutter", 1: "Arena Trap", H: "Sheer Force"},
@@ -4896,7 +4898,7 @@ exports.BattlePokedex = {
 	},
 	vibrava: {
 		num: 329,
-		species:"", 		name: "Vibrava",
+		species:"Vibration", 		name: "Vibrava",
 		types: ["Ground", "Dragon"],
 		baseStats: {hp: 50, atk: 70, def: 50, spa: 50, spd: 50, spe: 70},
 		abilities: {0: "Levitate"},
@@ -4910,7 +4912,7 @@ exports.BattlePokedex = {
 	},
 	flygon: {
 		num: 330,
-		species:"", 		name: "Flygon",
+		species:"Mystic", 		name: "Flygon",
 		types: ["Ground", "Dragon"],
 		baseStats: {hp: 80, atk: 100, def: 80, spa: 80, spd: 80, spe: 100},
 		abilities: {0: "Levitate"},
@@ -4923,7 +4925,7 @@ exports.BattlePokedex = {
 	},
 	cacnea: {
 		num: 331,
-		species:"", 		name: "Cacnea",
+		species:"Cactus", 		name: "Cacnea",
 		types: ["Grass"],
 		baseStats: {hp: 50, atk: 85, def: 40, spa: 85, spd: 40, spe: 35},
 		abilities: {0: "Sand Veil", H: "Water Absorb"},
@@ -4935,7 +4937,7 @@ exports.BattlePokedex = {
 	},
 	cacturne: {
 		num: 332,
-		species:"", 		name: "Cacturne",
+		species:"Scarecrow", 		name: "Cacturne",
 		types: ["Grass", "Dark"],
 		baseStats: {hp: 70, atk: 115, def: 60, spa: 115, spd: 60, spe: 55},
 		abilities: {0: "Sand Veil", H: "Water Absorb"},
@@ -4948,7 +4950,7 @@ exports.BattlePokedex = {
 	},
 	swablu: {
 		num: 333,
-		species:"", 		name: "Swablu",
+		species:"Cotton Bird", 		name: "Swablu",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 45, atk: 40, def: 60, spa: 40, spd: 75, spe: 50},
 		abilities: {0: "Natural Cure", H: "Cloud Nine"},
@@ -4960,7 +4962,7 @@ exports.BattlePokedex = {
 	},
 	altaria: {
 		num: 334,
-		species:"", 		name: "Altaria",
+		species:"Humming", 		name: "Altaria",
 		types: ["Dragon", "Flying"],
 		baseStats: {hp: 75, atk: 70, def: 90, spa: 70, spd: 105, spe: 80},
 		abilities: {0: "Natural Cure", H: "Cloud Nine"},
@@ -4974,7 +4976,7 @@ exports.BattlePokedex = {
 	},
 	altariamega: {
 		num: 334,
-		species:"", 		name: "Altaria-Mega",
+		species:"Humming", 		name: "Altaria-Mega",
 		baseName: "Altaria",
 		forme: "Mega",
 		formeLetter: "M",
@@ -4988,7 +4990,7 @@ exports.BattlePokedex = {
 	},
 	zangoose: {
 		num: 335,
-		species:"", 		name: "Zangoose",
+		species:"Cat Ferret", 		name: "Zangoose",
 		types: ["Normal"],
 		baseStats: {hp: 73, atk: 115, def: 60, spa: 60, spd: 60, spe: 90},
 		abilities: {0: "Immunity", H: "Toxic Boost"},
@@ -4999,7 +5001,7 @@ exports.BattlePokedex = {
 	},
 	seviper: {
 		num: 336,
-		species:"", 		name: "Seviper",
+		species:"Fang Snake", 		name: "Seviper",
 		types: ["Poison"],
 		baseStats: {hp: 73, atk: 100, def: 60, spa: 100, spd: 60, spe: 65},
 		abilities: {0: "Shed Skin", H: "Infiltrator"},
@@ -5010,7 +5012,7 @@ exports.BattlePokedex = {
 	},
 	lunatone: {
 		num: 337,
-		species:"", 		name: "Lunatone",
+		species:"Meteorite", 		name: "Lunatone",
 		types: ["Rock", "Psychic"],
 		gender: "N",
 		baseStats: {hp: 70, atk: 55, def: 65, spa: 95, spd: 85, spe: 70},
@@ -5022,7 +5024,7 @@ exports.BattlePokedex = {
 	},
 	solrock: {
 		num: 338,
-		species:"", 		name: "Solrock",
+		species:"Meteorite", 		name: "Solrock",
 		types: ["Rock", "Psychic"],
 		gender: "N",
 		baseStats: {hp: 70, atk: 95, def: 85, spa: 55, spd: 65, spe: 70},
@@ -5034,7 +5036,7 @@ exports.BattlePokedex = {
 	},
 	barboach: {
 		num: 339,
-		species:"", 		name: "Barboach",
+		species:"Whiskers", 		name: "Barboach",
 		types: ["Water", "Ground"],
 		baseStats: {hp: 50, atk: 48, def: 43, spa: 46, spd: 41, spe: 60},
 		abilities: {0: "Oblivious", 1: "Anticipation", H: "Hydration"},
@@ -5046,7 +5048,7 @@ exports.BattlePokedex = {
 	},
 	whiscash: {
 		num: 340,
-		species:"", 		name: "Whiscash",
+		species:"Whiskers", 		name: "Whiscash",
 		types: ["Water", "Ground"],
 		baseStats: {hp: 110, atk: 78, def: 73, spa: 76, spd: 71, spe: 60},
 		abilities: {0: "Oblivious", 1: "Anticipation", H: "Hydration"},
@@ -5059,7 +5061,7 @@ exports.BattlePokedex = {
 	},
 	corphish: {
 		num: 341,
-		species:"", 		name: "Corphish",
+		species:"Ruffian", 		name: "Corphish",
 		types: ["Water"],
 		baseStats: {hp: 43, atk: 80, def: 65, spa: 50, spd: 35, spe: 35},
 		abilities: {0: "Hyper Cutter", 1: "Shell Armor", H: "Adaptability"},
@@ -5071,7 +5073,7 @@ exports.BattlePokedex = {
 	},
 	crawdaunt: {
 		num: 342,
-		species:"", 		name: "Crawdaunt",
+		species:"Rogue", 		name: "Crawdaunt",
 		types: ["Water", "Dark"],
 		baseStats: {hp: 63, atk: 120, def: 85, spa: 90, spd: 55, spe: 55},
 		abilities: {0: "Hyper Cutter", 1: "Shell Armor", H: "Adaptability"},
@@ -5084,7 +5086,7 @@ exports.BattlePokedex = {
 	},
 	baltoy: {
 		num: 343,
-		species:"", 		name: "Baltoy",
+		species:"Clay Doll", 		name: "Baltoy",
 		types: ["Ground", "Psychic"],
 		gender: "N",
 		baseStats: {hp: 40, atk: 40, def: 55, spa: 40, spd: 70, spe: 55},
@@ -5097,7 +5099,7 @@ exports.BattlePokedex = {
 	},
 	claydol: {
 		num: 344,
-		species:"", 		name: "Claydol",
+		species:"Clay Doll", 		name: "Claydol",
 		types: ["Ground", "Psychic"],
 		gender: "N",
 		baseStats: {hp: 60, atk: 70, def: 105, spa: 70, spd: 120, spe: 75},
@@ -5111,7 +5113,7 @@ exports.BattlePokedex = {
 	},
 	lileep: {
 		num: 345,
-		species:"", 		name: "Lileep",
+		species:"Sea Lily", 		name: "Lileep",
 		types: ["Rock", "Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 66, atk: 41, def: 77, spa: 61, spd: 87, spe: 23},
@@ -5124,7 +5126,7 @@ exports.BattlePokedex = {
 	},
 	cradily: {
 		num: 346,
-		species:"", 		name: "Cradily",
+		species:"Barnacle", 		name: "Cradily",
 		types: ["Rock", "Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 86, atk: 81, def: 97, spa: 81, spd: 107, spe: 43},
@@ -5138,7 +5140,7 @@ exports.BattlePokedex = {
 	},
 	anorith: {
 		num: 347,
-		species:"", 		name: "Anorith",
+		species:"Old Shrimp", 		name: "Anorith",
 		types: ["Rock", "Bug"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 45, atk: 95, def: 50, spa: 40, spd: 50, spe: 75},
@@ -5151,7 +5153,7 @@ exports.BattlePokedex = {
 	},
 	armaldo: {
 		num: 348,
-		species:"", 		name: "Armaldo",
+		species:"Plate", 		name: "Armaldo",
 		types: ["Rock", "Bug"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 75, atk: 125, def: 100, spa: 70, spd: 80, spe: 45},
@@ -5165,7 +5167,7 @@ exports.BattlePokedex = {
 	},
 	feebas: {
 		num: 349,
-		species:"", 		name: "Feebas",
+		species:"Fish", 		name: "Feebas",
 		types: ["Water"],
 		baseStats: {hp: 20, atk: 15, def: 20, spa: 10, spd: 55, spe: 80},
 		abilities: {0: "Swift Swim", 1: "Oblivious", H: "Adaptability"},
@@ -5177,7 +5179,7 @@ exports.BattlePokedex = {
 	},
 	milotic: {
 		num: 350,
-		species:"", 		name: "Milotic",
+		species:"Tender", 		name: "Milotic",
 		types: ["Water"],
 		baseStats: {hp: 95, atk: 60, def: 79, spa: 100, spd: 125, spe: 81},
 		abilities: {0: "Marvel Scale", 1: "Competitive", H: "Cute Charm"},
@@ -5190,7 +5192,7 @@ exports.BattlePokedex = {
 	},
 	castform: {
 		num: 351,
-		species:"", 		name: "Castform",
+		species:"Weather", 		name: "Castform",
 		types: ["Normal"],
 		baseStats: {hp: 70, atk: 70, def: 70, spa: 70, spd: 70, spe: 70},
 		abilities: {0: "Forecast"},
@@ -5202,7 +5204,7 @@ exports.BattlePokedex = {
 	},
 	castformsunny: {
 		num: 351,
-		species:"", 		name: "Castform-Sunny",
+		species:"Weather", 		name: "Castform-Sunny",
 		baseName: "Castform",
 		forme: "Sunny",
 		formeLetter: "S",
@@ -5216,7 +5218,7 @@ exports.BattlePokedex = {
 	},
 	castformrainy: {
 		num: 351,
-		species:"", 		name: "Castform-Rainy",
+		species:"Weather", 		name: "Castform-Rainy",
 		baseName: "Castform",
 		forme: "Rainy",
 		formeLetter: "R",
@@ -5230,7 +5232,7 @@ exports.BattlePokedex = {
 	},
 	castformsnowy: {
 		num: 351,
-		species:"", 		name: "Castform-Snowy",
+		species:"Weather", 		name: "Castform-Snowy",
 		baseName: "Castform",
 		forme: "Snowy",
 		formeLetter: "S",
@@ -5244,7 +5246,7 @@ exports.BattlePokedex = {
 	},
 	kecleon: {
 		num: 352,
-		species:"", 		name: "Kecleon",
+		species:"Color Swap", 		name: "Kecleon",
 		types: ["Normal"],
 		baseStats: {hp: 60, atk: 90, def: 70, spa: 60, spd: 120, spe: 40},
 		abilities: {0: "Color Change", H: "Protean"},
@@ -5255,7 +5257,7 @@ exports.BattlePokedex = {
 	},
 	shuppet: {
 		num: 353,
-		species:"", 		name: "Shuppet",
+		species:"Puppet", 		name: "Shuppet",
 		types: ["Ghost"],
 		baseStats: {hp: 44, atk: 75, def: 35, spa: 63, spd: 33, spe: 45},
 		abilities: {0: "Insomnia", 1: "Frisk", H: "Cursed Body"},
@@ -5267,7 +5269,7 @@ exports.BattlePokedex = {
 	},
 	banette: {
 		num: 354,
-		species:"", 		name: "Banette",
+		species:"Marionette", 		name: "Banette",
 		types: ["Ghost"],
 		baseStats: {hp: 64, atk: 115, def: 65, spa: 83, spd: 63, spe: 65},
 		abilities: {0: "Insomnia", 1: "Frisk", H: "Cursed Body"},
@@ -5281,7 +5283,7 @@ exports.BattlePokedex = {
 	},
 	banettemega: {
 		num: 354,
-		species:"", 		name: "Banette-Mega",
+		species:"Marionette", 		name: "Banette-Mega",
 		baseName: "Banette",
 		forme: "Mega",
 		formeLetter: "M",
@@ -5295,7 +5297,7 @@ exports.BattlePokedex = {
 	},
 	duskull: {
 		num: 355,
-		species:"", 		name: "Duskull",
+		species:"Requiem", 		name: "Duskull",
 		types: ["Ghost"],
 		baseStats: {hp: 20, atk: 40, def: 90, spa: 30, spd: 90, spe: 25},
 		abilities: {0: "Levitate", H: "Frisk"},
@@ -5307,7 +5309,7 @@ exports.BattlePokedex = {
 	},
 	dusclops: {
 		num: 356,
-		species:"", 		name: "Dusclops",
+		species:"Beckon", 		name: "Dusclops",
 		types: ["Ghost"],
 		baseStats: {hp: 40, atk: 70, def: 130, spa: 60, spd: 130, spe: 25},
 		abilities: {0: "Pressure", H: "Frisk"},
@@ -5321,7 +5323,7 @@ exports.BattlePokedex = {
 	},
 	tropius: {
 		num: 357,
-		species:"", 		name: "Tropius",
+		species:"Fruit", 		name: "Tropius",
 		types: ["Grass", "Flying"],
 		baseStats: {hp: 99, atk: 68, def: 83, spa: 72, spd: 87, spe: 51},
 		abilities: {0: "Chlorophyll", 1: "Solar Power", H: "Harvest"},
@@ -5332,7 +5334,7 @@ exports.BattlePokedex = {
 	},
 	chimecho: {
 		num: 358,
-		species:"", 		name: "Chimecho",
+		species:"Wind Chime", 		name: "Chimecho",
 		types: ["Psychic"],
 		baseStats: {hp: 65, atk: 50, def: 70, spa: 95, spd: 80, spe: 65},
 		abilities: {0: "Levitate"},
@@ -5345,7 +5347,7 @@ exports.BattlePokedex = {
 	},
 	absol: {
 		num: 359,
-		species:"", 		name: "Absol",
+		species:"Disaster", 		name: "Absol",
 		types: ["Dark"],
 		baseStats: {hp: 65, atk: 130, def: 60, spa: 75, spd: 60, spe: 75},
 		abilities: {0: "Pressure", 1: "Super Luck", H: "Justified"},
@@ -5357,7 +5359,7 @@ exports.BattlePokedex = {
 	},
 	absolmega: {
 		num: 359,
-		species:"", 		name: "Absol-Mega",
+		species:"Disaster", 		name: "Absol-Mega",
 		baseName: "Absol",
 		forme: "Mega",
 		formeLetter: "M",
@@ -5371,7 +5373,7 @@ exports.BattlePokedex = {
 	},
 	wynaut: {
 		num: 360,
-		species:"", 		name: "Wynaut",
+		species:"Bright", 		name: "Wynaut",
 		types: ["Psychic"],
 		baseStats: {hp: 95, atk: 23, def: 48, spa: 23, spd: 48, spe: 23},
 		abilities: {0: "Shadow Tag", H: "Telepathy"},
@@ -5383,7 +5385,7 @@ exports.BattlePokedex = {
 	},
 	snorunt: {
 		num: 361,
-		species:"", 		name: "Snorunt",
+		species:"Snow Hat", 		name: "Snorunt",
 		types: ["Ice"],
 		baseStats: {hp: 50, atk: 50, def: 50, spa: 50, spd: 50, spe: 50},
 		abilities: {0: "Inner Focus", 1: "Ice Body", H: "Moody"},
@@ -5395,7 +5397,7 @@ exports.BattlePokedex = {
 	},
 	glalie: {
 		num: 362,
-		species:"", 		name: "Glalie",
+		species:"Face", 		name: "Glalie",
 		types: ["Ice"],
 		baseStats: {hp: 80, atk: 80, def: 80, spa: 80, spd: 80, spe: 80},
 		abilities: {0: "Inner Focus", 1: "Ice Body", H: "Moody"},
@@ -5409,7 +5411,7 @@ exports.BattlePokedex = {
 	},
 	glaliemega: {
 		num: 362,
-		species:"", 		name: "Glalie-Mega",
+		species:"Face", 		name: "Glalie-Mega",
 		baseName: "Glalie",
 		forme: "Mega",
 		formeLetter: "M",
@@ -5423,7 +5425,7 @@ exports.BattlePokedex = {
 	},
 	spheal: {
 		num: 363,
-		species:"", 		name: "Spheal",
+		species:"Clap", 		name: "Spheal",
 		types: ["Ice", "Water"],
 		baseStats: {hp: 70, atk: 40, def: 50, spa: 55, spd: 50, spe: 25},
 		abilities: {0: "Thick Fat", 1: "Ice Body", H: "Oblivious"},
@@ -5435,7 +5437,7 @@ exports.BattlePokedex = {
 	},
 	sealeo: {
 		num: 364,
-		species:"", 		name: "Sealeo",
+		species:"Ball Roll", 		name: "Sealeo",
 		types: ["Ice", "Water"],
 		baseStats: {hp: 90, atk: 60, def: 70, spa: 75, spd: 70, spe: 45},
 		abilities: {0: "Thick Fat", 1: "Ice Body", H: "Oblivious"},
@@ -5449,7 +5451,7 @@ exports.BattlePokedex = {
 	},
 	walrein: {
 		num: 365,
-		species:"", 		name: "Walrein",
+		species:"Ice Break", 		name: "Walrein",
 		types: ["Ice", "Water"],
 		baseStats: {hp: 110, atk: 80, def: 90, spa: 95, spd: 90, spe: 65},
 		abilities: {0: "Thick Fat", 1: "Ice Body", H: "Oblivious"},
@@ -5462,7 +5464,7 @@ exports.BattlePokedex = {
 	},
 	clamperl: {
 		num: 366,
-		species:"", 		name: "Clamperl",
+		species:"Bivalve", 		name: "Clamperl",
 		types: ["Water"],
 		baseStats: {hp: 35, atk: 64, def: 85, spa: 74, spd: 55, spe: 32},
 		abilities: {0: "Shell Armor", H: "Rattled"},
@@ -5474,7 +5476,7 @@ exports.BattlePokedex = {
 	},
 	huntail: {
 		num: 367,
-		species:"", 		name: "Huntail",
+		species:"Deep Sea", 		name: "Huntail",
 		types: ["Water"],
 		baseStats: {hp: 55, atk: 104, def: 105, spa: 94, spd: 75, spe: 52},
 		abilities: {0: "Swift Swim", H: "Water Veil"},
@@ -5487,7 +5489,7 @@ exports.BattlePokedex = {
 	},
 	gorebyss: {
 		num: 368,
-		species:"", 		name: "Gorebyss",
+		species:"South Sea", 		name: "Gorebyss",
 		types: ["Water"],
 		baseStats: {hp: 55, atk: 84, def: 105, spa: 114, spd: 75, spe: 52},
 		abilities: {0: "Swift Swim", H: "Hydration"},
@@ -5500,7 +5502,7 @@ exports.BattlePokedex = {
 	},
 	relicanth: {
 		num: 369,
-		species:"", 		name: "Relicanth",
+		species:"Longevity", 		name: "Relicanth",
 		types: ["Water", "Rock"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 100, atk: 90, def: 130, spa: 45, spd: 65, spe: 55},
@@ -5512,7 +5514,7 @@ exports.BattlePokedex = {
 	},
 	luvdisc: {
 		num: 370,
-		species:"", 		name: "Luvdisc",
+		species:"Rendezvous", 		name: "Luvdisc",
 		types: ["Water"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 43, atk: 30, def: 55, spa: 40, spd: 65, spe: 97},
@@ -5524,7 +5526,7 @@ exports.BattlePokedex = {
 	},
 	bagon: {
 		num: 371,
-		species:"", 		name: "Bagon",
+		species:"Rock Head", 		name: "Bagon",
 		types: ["Dragon"],
 		baseStats: {hp: 45, atk: 75, def: 60, spa: 40, spd: 30, spe: 50},
 		abilities: {0: "Rock Head", H: "Sheer Force"},
@@ -5536,7 +5538,7 @@ exports.BattlePokedex = {
 	},
 	shelgon: {
 		num: 372,
-		species:"", 		name: "Shelgon",
+		species:"Endurance", 		name: "Shelgon",
 		types: ["Dragon"],
 		baseStats: {hp: 65, atk: 95, def: 100, spa: 60, spd: 50, spe: 50},
 		abilities: {0: "Rock Head", H: "Overcoat"},
@@ -5550,7 +5552,7 @@ exports.BattlePokedex = {
 	},
 	salamence: {
 		num: 373,
-		species:"", 		name: "Salamence",
+		species:"Dragon", 		name: "Salamence",
 		types: ["Dragon", "Flying"],
 		baseStats: {hp: 95, atk: 135, def: 80, spa: 110, spd: 80, spe: 100},
 		abilities: {0: "Intimidate", H: "Moxie"},
@@ -5564,7 +5566,7 @@ exports.BattlePokedex = {
 	},
 	salamencemega: {
 		num: 373,
-		species:"", 		name: "Salamence-Mega",
+		species:"Dragon", 		name: "Salamence-Mega",
 		baseName: "Salamence",
 		forme: "Mega",
 		formeLetter: "M",
@@ -5578,7 +5580,7 @@ exports.BattlePokedex = {
 	},
 	beldum: {
 		num: 374,
-		species:"", 		name: "Beldum",
+		species:"Iron Ball", 		name: "Beldum",
 		types: ["Steel", "Psychic"],
 		gender: "N",
 		baseStats: {hp: 40, atk: 55, def: 80, spa: 35, spd: 60, spe: 30},
@@ -5591,7 +5593,7 @@ exports.BattlePokedex = {
 	},
 	metang: {
 		num: 375,
-		species:"", 		name: "Metang",
+		species:"Iron Claw", 		name: "Metang",
 		types: ["Steel", "Psychic"],
 		gender: "N",
 		baseStats: {hp: 60, atk: 75, def: 100, spa: 55, spd: 80, spe: 50},
@@ -5606,7 +5608,7 @@ exports.BattlePokedex = {
 	},
 	metagross: {
 		num: 376,
-		species:"", 		name: "Metagross",
+		species:"Iron Leg", 		name: "Metagross",
 		types: ["Steel", "Psychic"],
 		gender: "N",
 		baseStats: {hp: 80, atk: 135, def: 130, spa: 95, spd: 90, spe: 70},
@@ -5621,7 +5623,7 @@ exports.BattlePokedex = {
 	},
 	metagrossmega: {
 		num: 376,
-		species:"", 		name: "Metagross-Mega",
+		species:"Iron Leg", 		name: "Metagross-Mega",
 		baseName: "Metagross",
 		forme: "Mega",
 		formeLetter: "M",
@@ -5636,7 +5638,7 @@ exports.BattlePokedex = {
 	},
 	regirock: {
 		num: 377,
-		species:"", 		name: "Regirock",
+		species:"Rock Peak", 		name: "Regirock",
 		types: ["Rock"],
 		gender: "N",
 		baseStats: {hp: 80, atk: 100, def: 200, spa: 50, spd: 100, spe: 50},
@@ -5648,7 +5650,7 @@ exports.BattlePokedex = {
 	},
 	regice: {
 		num: 378,
-		species:"", 		name: "Regice",
+		species:"Iceberg", 		name: "Regice",
 		types: ["Ice"],
 		gender: "N",
 		baseStats: {hp: 80, atk: 50, def: 100, spa: 100, spd: 200, spe: 50},
@@ -5660,7 +5662,7 @@ exports.BattlePokedex = {
 	},
 	registeel: {
 		num: 379,
-		species:"", 		name: "Registeel",
+		species:"Iron", 		name: "Registeel",
 		types: ["Steel"],
 		gender: "N",
 		baseStats: {hp: 80, atk: 75, def: 150, spa: 75, spd: 150, spe: 50},
@@ -5672,7 +5674,7 @@ exports.BattlePokedex = {
 	},
 	latias: {
 		num: 380,
-		species:"", 		name: "Latias",
+		species:"Eon", 		name: "Latias",
 		types: ["Dragon", "Psychic"],
 		gender: "F",
 		baseStats: {hp: 80, atk: 80, def: 90, spa: 110, spd: 130, spe: 110},
@@ -5685,7 +5687,7 @@ exports.BattlePokedex = {
 	},
 	latiasmega: {
 		num: 380,
-		species:"", 		name: "Latias-Mega",
+		species:"Eon", 		name: "Latias-Mega",
 		baseName: "Latias",
 		forme: "Mega",
 		formeLetter: "M",
@@ -5700,7 +5702,7 @@ exports.BattlePokedex = {
 	},
 	latios: {
 		num: 381,
-		species:"", 		name: "Latios",
+		species:"Eon", 		name: "Latios",
 		types: ["Dragon", "Psychic"],
 		gender: "M",
 		baseStats: {hp: 80, atk: 90, def: 80, spa: 130, spd: 110, spe: 110},
@@ -5713,7 +5715,7 @@ exports.BattlePokedex = {
 	},
 	latiosmega: {
 		num: 381,
-		species:"", 		name: "Latios-Mega",
+		species:"Eon", 		name: "Latios-Mega",
 		baseName: "Latios",
 		forme: "Mega",
 		formeLetter: "M",
@@ -5728,7 +5730,7 @@ exports.BattlePokedex = {
 	},
 	kyogre: {
 		num: 382,
-		species:"", 		name: "Kyogre",
+		species:"Sea Basin", 		name: "Kyogre",
 		types: ["Water"],
 		gender: "N",
 		baseStats: {hp: 100, atk: 100, def: 90, spa: 150, spd: 140, spe: 90},
@@ -5741,7 +5743,7 @@ exports.BattlePokedex = {
 	},
 	kyogreprimal: {
 		num: 382,
-		species:"", 		name: "Kyogre-Primal",
+		species:"Sea Basin", 		name: "Kyogre-Primal",
 		baseName: "Kyogre",
 		forme: "Primal",
 		formeLetter: "P",
@@ -5756,7 +5758,7 @@ exports.BattlePokedex = {
 	},
 	groudon: {
 		num: 383,
-		species:"", 		name: "Groudon",
+		species:"Continent", 		name: "Groudon",
 		types: ["Ground"],
 		gender: "N",
 		baseStats: {hp: 100, atk: 150, def: 140, spa: 100, spd: 90, spe: 90},
@@ -5769,7 +5771,7 @@ exports.BattlePokedex = {
 	},
 	groudonprimal: {
 		num: 383,
-		species:"", 		name: "Groudon-Primal",
+		species:"Continent", 		name: "Groudon-Primal",
 		baseName: "Groudon",
 		forme: "Primal",
 		formeLetter: "P",
@@ -5784,7 +5786,7 @@ exports.BattlePokedex = {
 	},
 	rayquaza: {
 		num: 384,
-		species:"", 		name: "Rayquaza",
+		species:"Sky High", 		name: "Rayquaza",
 		types: ["Dragon", "Flying"],
 		gender: "N",
 		baseStats: {hp: 105, atk: 150, def: 90, spa: 150, spd: 90, spe: 95},
@@ -5797,7 +5799,7 @@ exports.BattlePokedex = {
 	},
 	rayquazamega: {
 		num: 384,
-		species:"", 		name: "Rayquaza-Mega",
+		species:"Sky High", 		name: "Rayquaza-Mega",
 		baseName: "Rayquaza",
 		forme: "Mega",
 		formeLetter: "M",
@@ -5812,7 +5814,7 @@ exports.BattlePokedex = {
 	},
 	jirachi: {
 		num: 385,
-		species:"", 		name: "Jirachi",
+		species:"Wish", 		name: "Jirachi",
 		types: ["Steel", "Psychic"],
 		gender: "N",
 		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
@@ -5824,7 +5826,7 @@ exports.BattlePokedex = {
 	},
 	deoxys: {
 		num: 386,
-		species:"", 		name: "Deoxys",
+		species:"DNA", 		name: "Deoxys",
 		baseForme: "Normal",
 		types: ["Psychic"],
 		gender: "N",
@@ -5838,7 +5840,7 @@ exports.BattlePokedex = {
 	},
 	deoxysattack: {
 		num: 386,
-		species:"", 		name: "Deoxys-Attack",
+		species:"DNA", 		name: "Deoxys-Attack",
 		baseName: "Deoxys",
 		forme: "Attack",
 		formeLetter: "A",
@@ -5853,7 +5855,7 @@ exports.BattlePokedex = {
 	},
 	deoxysdefense: {
 		num: 386,
-		species:"", 		name: "Deoxys-Defense",
+		species:"DNA", 		name: "Deoxys-Defense",
 		baseName: "Deoxys",
 		forme: "Defense",
 		formeLetter: "D",
@@ -5868,7 +5870,7 @@ exports.BattlePokedex = {
 	},
 	deoxysspeed: {
 		num: 386,
-		species:"", 		name: "Deoxys-Speed",
+		species:"DNA", 		name: "Deoxys-Speed",
 		baseName: "Deoxys",
 		forme: "Speed",
 		formeLetter: "S",
@@ -5883,7 +5885,7 @@ exports.BattlePokedex = {
 	},
 	turtwig: {
 		num: 387,
-		species:"", 		name: "Turtwig",
+		species:"Tiny Leaf", 		name: "Turtwig",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 55, atk: 68, def: 64, spa: 45, spd: 55, spe: 31},
@@ -5896,7 +5898,7 @@ exports.BattlePokedex = {
 	},
 	grotle: {
 		num: 388,
-		species:"", 		name: "Grotle",
+		species:"Grove", 		name: "Grotle",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 75, atk: 89, def: 85, spa: 55, spd: 65, spe: 36},
@@ -5911,7 +5913,7 @@ exports.BattlePokedex = {
 	},
 	torterra: {
 		num: 389,
-		species:"", 		name: "Torterra",
+		species:"Continent", 		name: "Torterra",
 		types: ["Grass", "Ground"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 95, atk: 109, def: 105, spa: 75, spd: 85, spe: 56},
@@ -5925,7 +5927,7 @@ exports.BattlePokedex = {
 	},
 	chimchar: {
 		num: 390,
-		species:"", 		name: "Chimchar",
+		species:"Chimp", 		name: "Chimchar",
 		types: ["Fire"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 44, atk: 58, def: 44, spa: 58, spd: 44, spe: 61},
@@ -5938,7 +5940,7 @@ exports.BattlePokedex = {
 	},
 	monferno: {
 		num: 391,
-		species:"", 		name: "Monferno",
+		species:"Playful", 		name: "Monferno",
 		types: ["Fire", "Fighting"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 64, atk: 78, def: 52, spa: 78, spd: 52, spe: 81},
@@ -5953,7 +5955,7 @@ exports.BattlePokedex = {
 	},
 	infernape: {
 		num: 392,
-		species:"", 		name: "Infernape",
+		species:"Flame", 		name: "Infernape",
 		types: ["Fire", "Fighting"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 76, atk: 104, def: 71, spa: 104, spd: 71, spe: 108},
@@ -5967,7 +5969,7 @@ exports.BattlePokedex = {
 	},
 	piplup: {
 		num: 393,
-		species:"", 		name: "Piplup",
+		species:"Penguin", 		name: "Piplup",
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 53, atk: 51, def: 53, spa: 61, spd: 56, spe: 40},
@@ -5980,7 +5982,7 @@ exports.BattlePokedex = {
 	},
 	prinplup: {
 		num: 394,
-		species:"", 		name: "Prinplup",
+		species:"Penguin", 		name: "Prinplup",
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 64, atk: 66, def: 68, spa: 81, spd: 76, spe: 50},
@@ -5995,7 +5997,7 @@ exports.BattlePokedex = {
 	},
 	empoleon: {
 		num: 395,
-		species:"", 		name: "Empoleon",
+		species:"Emperor", 		name: "Empoleon",
 		types: ["Water", "Steel"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 84, atk: 86, def: 88, spa: 111, spd: 101, spe: 60},
@@ -6009,7 +6011,7 @@ exports.BattlePokedex = {
 	},
 	starly: {
 		num: 396,
-		species:"", 		name: "Starly",
+		species:"Starling", 		name: "Starly",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 40, atk: 55, def: 30, spa: 30, spd: 30, spe: 60},
 		abilities: {0: "Keen Eye", H: "Reckless"},
@@ -6021,7 +6023,7 @@ exports.BattlePokedex = {
 	},
 	staravia: {
 		num: 397,
-		species:"", 		name: "Staravia",
+		species:"Starling", 		name: "Staravia",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 55, atk: 75, def: 50, spa: 40, spd: 40, spe: 80},
 		abilities: {0: "Intimidate", H: "Reckless"},
@@ -6035,7 +6037,7 @@ exports.BattlePokedex = {
 	},
 	staraptor: {
 		num: 398,
-		species:"", 		name: "Staraptor",
+		species:"Predator", 		name: "Staraptor",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 85, atk: 120, def: 70, spa: 50, spd: 60, spe: 100},
 		abilities: {0: "Intimidate", H: "Reckless"},
@@ -6048,7 +6050,7 @@ exports.BattlePokedex = {
 	},
 	bidoof: {
 		num: 399,
-		species:"", 		name: "Bidoof",
+		species:"Plump Mouse", 		name: "Bidoof",
 		types: ["Normal"],
 		baseStats: {hp: 59, atk: 45, def: 40, spa: 35, spd: 40, spe: 31},
 		abilities: {0: "Simple", 1: "Unaware", H: "Moody"},
@@ -6060,7 +6062,7 @@ exports.BattlePokedex = {
 	},
 	bibarel: {
 		num: 400,
-		species:"", 		name: "Bibarel",
+		species:"Beaver", 		name: "Bibarel",
 		types: ["Normal", "Water"],
 		baseStats: {hp: 79, atk: 85, def: 60, spa: 55, spd: 60, spe: 71},
 		abilities: {0: "Simple", 1: "Unaware", H: "Moody"},
@@ -6073,7 +6075,7 @@ exports.BattlePokedex = {
 	},
 	kricketot: {
 		num: 401,
-		species:"", 		name: "Kricketot",
+		species:"Cricket", 		name: "Kricketot",
 		types: ["Bug"],
 		baseStats: {hp: 37, atk: 25, def: 41, spa: 25, spd: 41, spe: 25},
 		abilities: {0: "Shed Skin", H: "Run Away"},
@@ -6085,7 +6087,7 @@ exports.BattlePokedex = {
 	},
 	kricketune: {
 		num: 402,
-		species:"", 		name: "Kricketune",
+		species:"Cricket", 		name: "Kricketune",
 		types: ["Bug"],
 		baseStats: {hp: 77, atk: 85, def: 51, spa: 55, spd: 51, spe: 65},
 		abilities: {0: "Swarm", H: "Technician"},
@@ -6098,7 +6100,7 @@ exports.BattlePokedex = {
 	},
 	shinx: {
 		num: 403,
-		species:"", 		name: "Shinx",
+		species:"Flash", 		name: "Shinx",
 		types: ["Electric"],
 		baseStats: {hp: 45, atk: 65, def: 34, spa: 40, spd: 34, spe: 45},
 		abilities: {0: "Rivalry", 1: "Intimidate", H: "Guts"},
@@ -6110,7 +6112,7 @@ exports.BattlePokedex = {
 	},
 	luxio: {
 		num: 404,
-		species:"", 		name: "Luxio",
+		species:"Spark", 		name: "Luxio",
 		types: ["Electric"],
 		baseStats: {hp: 60, atk: 85, def: 49, spa: 60, spd: 49, spe: 60},
 		abilities: {0: "Rivalry", 1: "Intimidate", H: "Guts"},
@@ -6124,7 +6126,7 @@ exports.BattlePokedex = {
 	},
 	luxray: {
 		num: 405,
-		species:"", 		name: "Luxray",
+		species:"Gleam Eyes", 		name: "Luxray",
 		types: ["Electric"],
 		baseStats: {hp: 80, atk: 120, def: 79, spa: 95, spd: 79, spe: 70},
 		abilities: {0: "Rivalry", 1: "Intimidate", H: "Guts"},
@@ -6137,7 +6139,7 @@ exports.BattlePokedex = {
 	},
 	budew: {
 		num: 406,
-		species:"", 		name: "Budew",
+		species:"Bud", 		name: "Budew",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 40, atk: 30, def: 35, spa: 50, spd: 70, spe: 55},
 		abilities: {0: "Natural Cure", 1: "Poison Point", H: "Leaf Guard"},
@@ -6149,7 +6151,7 @@ exports.BattlePokedex = {
 	},
 	roserade: {
 		num: 407,
-		species:"", 		name: "Roserade",
+		species:"Bouquet", 		name: "Roserade",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 60, atk: 70, def: 65, spa: 125, spd: 105, spe: 90},
 		abilities: {0: "Natural Cure", 1: "Poison Point", H: "Technician"},
@@ -6162,7 +6164,7 @@ exports.BattlePokedex = {
 	},
 	cranidos: {
 		num: 408,
-		species:"", 		name: "Cranidos",
+		species:"Head Butt", 		name: "Cranidos",
 		types: ["Rock"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 67, atk: 125, def: 40, spa: 30, spd: 30, spe: 58},
@@ -6175,7 +6177,7 @@ exports.BattlePokedex = {
 	},
 	rampardos: {
 		num: 409,
-		species:"", 		name: "Rampardos",
+		species:"Head Butt", 		name: "Rampardos",
 		types: ["Rock"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 97, atk: 165, def: 60, spa: 65, spd: 50, spe: 58},
@@ -6189,7 +6191,7 @@ exports.BattlePokedex = {
 	},
 	shieldon: {
 		num: 410,
-		species:"", 		name: "Shieldon",
+		species:"Shield", 		name: "Shieldon",
 		types: ["Rock", "Steel"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 30, atk: 42, def: 118, spa: 42, spd: 88, spe: 30},
@@ -6202,7 +6204,7 @@ exports.BattlePokedex = {
 	},
 	bastiodon: {
 		num: 411,
-		species:"", 		name: "Bastiodon",
+		species:"Shield", 		name: "Bastiodon",
 		types: ["Rock", "Steel"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 60, atk: 52, def: 168, spa: 47, spd: 138, spe: 30},
@@ -6216,7 +6218,7 @@ exports.BattlePokedex = {
 	},
 	burmy: {
 		num: 412,
-		species:"", 		name: "Burmy",
+		species:"Bagworm", 		name: "Burmy",
 		baseForme: "Grass",
 		types: ["Bug"],
 		baseStats: {hp: 40, atk: 29, def: 45, spa: 29, spd: 45, spe: 36},
@@ -6230,7 +6232,7 @@ exports.BattlePokedex = {
 	},
 	wormadam: {
 		num: 413,
-		species:"", 		name: "Wormadam",
+		species:"Bagworm", 		name: "Wormadam",
 		baseForme: "Grass",
 		types: ["Bug", "Grass"],
 		gender: "F",
@@ -6246,7 +6248,7 @@ exports.BattlePokedex = {
 	},
 	wormadamsandy: {
 		num: 413,
-		species:"", 		name: "Wormadam-Sandy",
+		species:"Bagworm", 		name: "Wormadam-Sandy",
 		baseName: "Wormadam",
 		forme: "Sandy",
 		formeLetter: "G",
@@ -6263,7 +6265,7 @@ exports.BattlePokedex = {
 	},
 	wormadamtrash: {
 		num: 413,
-		species:"", 		name: "Wormadam-Trash",
+		species:"Bagworm", 		name: "Wormadam-Trash",
 		baseName: "Wormadam",
 		forme: "Trash",
 		formeLetter: "S",
@@ -6280,7 +6282,7 @@ exports.BattlePokedex = {
 	},
 	mothim: {
 		num: 414,
-		species:"", 		name: "Mothim",
+		species:"Moth", 		name: "Mothim",
 		types: ["Bug", "Flying"],
 		gender: "M",
 		baseStats: {hp: 70, atk: 94, def: 50, spa: 94, spd: 50, spe: 66},
@@ -6294,7 +6296,7 @@ exports.BattlePokedex = {
 	},
 	combee: {
 		num: 415,
-		species:"", 		name: "Combee",
+		species:"Tiny Bee", 		name: "Combee",
 		types: ["Bug", "Flying"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 30, atk: 30, def: 42, spa: 30, spd: 42, spe: 70},
@@ -6307,7 +6309,7 @@ exports.BattlePokedex = {
 	},
 	vespiquen: {
 		num: 416,
-		species:"", 		name: "Vespiquen",
+		species:"Beehive", 		name: "Vespiquen",
 		types: ["Bug", "Flying"],
 		gender: "F",
 		baseStats: {hp: 70, atk: 80, def: 102, spa: 80, spd: 102, spe: 40},
@@ -6321,7 +6323,7 @@ exports.BattlePokedex = {
 	},
 	pachirisu: {
 		num: 417,
-		species:"", 		name: "Pachirisu",
+		species:"EleSquirrel", 		name: "Pachirisu",
 		types: ["Electric"],
 		baseStats: {hp: 60, atk: 45, def: 70, spa: 45, spd: 90, spe: 95},
 		abilities: {0: "Run Away", 1: "Pickup", H: "Volt Absorb"},
@@ -6332,7 +6334,7 @@ exports.BattlePokedex = {
 	},
 	buizel: {
 		num: 418,
-		species:"", 		name: "Buizel",
+		species:"Sea Weasel", 		name: "Buizel",
 		types: ["Water"],
 		baseStats: {hp: 55, atk: 65, def: 35, spa: 60, spd: 30, spe: 85},
 		abilities: {0: "Swift Swim", H: "Water Veil"},
@@ -6344,7 +6346,7 @@ exports.BattlePokedex = {
 	},
 	floatzel: {
 		num: 419,
-		species:"", 		name: "Floatzel",
+		species:"Sea Weasel", 		name: "Floatzel",
 		types: ["Water"],
 		baseStats: {hp: 85, atk: 105, def: 55, spa: 85, spd: 50, spe: 115},
 		abilities: {0: "Swift Swim", H: "Water Veil"},
@@ -6357,7 +6359,7 @@ exports.BattlePokedex = {
 	},
 	cherubi: {
 		num: 420,
-		species:"", 		name: "Cherubi",
+		species:"Cherry", 		name: "Cherubi",
 		types: ["Grass"],
 		baseStats: {hp: 45, atk: 35, def: 45, spa: 62, spd: 53, spe: 35},
 		abilities: {0: "Chlorophyll"},
@@ -6369,7 +6371,7 @@ exports.BattlePokedex = {
 	},
 	cherrim: {
 		num: 421,
-		species:"", 		name: "Cherrim",
+		species:"Blossom", 		name: "Cherrim",
 		baseForme: "Overcast",
 		types: ["Grass"],
 		baseStats: {hp: 70, atk: 60, def: 70, spa: 87, spd: 78, spe: 85},
@@ -6384,7 +6386,7 @@ exports.BattlePokedex = {
 	},
 	cherrimsunshine: {
 		num: 421,
-		species:"", 		name: "Cherrim-Sunshine",
+		species:"Blossom", 		name: "Cherrim-Sunshine",
 		baseName: "Cherrim",
 		forme: "Sunshine",
 		formeLetter: "S",
@@ -6400,7 +6402,7 @@ exports.BattlePokedex = {
 	},
 	shellos: {
 		num: 422,
-		species:"", 		name: "Shellos",
+		species:"Sea Slug", 		name: "Shellos",
 		baseForme: "West",
 		types: ["Water"],
 		baseStats: {hp: 76, atk: 48, def: 48, spa: 57, spd: 62, spe: 34},
@@ -6414,7 +6416,7 @@ exports.BattlePokedex = {
 	},
 	gastrodon: {
 		num: 423,
-		species:"", 		name: "Gastrodon",
+		species:"Sea Slug", 		name: "Gastrodon",
 		baseForme: "West",
 		types: ["Water", "Ground"],
 		baseStats: {hp: 111, atk: 83, def: 68, spa: 92, spd: 82, spe: 39},
@@ -6429,7 +6431,7 @@ exports.BattlePokedex = {
 	},
 	ambipom: {
 		num: 424,
-		species:"", 		name: "Ambipom",
+		species:"Long Tail", 		name: "Ambipom",
 		types: ["Normal"],
 		baseStats: {hp: 75, atk: 100, def: 66, spa: 60, spd: 66, spe: 115},
 		abilities: {0: "Technician", 1: "Pickup", H: "Skill Link"},
@@ -6443,7 +6445,7 @@ exports.BattlePokedex = {
 	},
 	drifloon: {
 		num: 425,
-		species:"", 		name: "Drifloon",
+		species:"Balloon", 		name: "Drifloon",
 		types: ["Ghost", "Flying"],
 		baseStats: {hp: 90, atk: 50, def: 34, spa: 60, spd: 44, spe: 70},
 		abilities: {0: "Aftermath", 1: "Unburden", H: "Flare Boost"},
@@ -6455,7 +6457,7 @@ exports.BattlePokedex = {
 	},
 	drifblim: {
 		num: 426,
-		species:"", 		name: "Drifblim",
+		species:"Blimp", 		name: "Drifblim",
 		types: ["Ghost", "Flying"],
 		baseStats: {hp: 150, atk: 80, def: 44, spa: 90, spd: 54, spe: 80},
 		abilities: {0: "Aftermath", 1: "Unburden", H: "Flare Boost"},
@@ -6468,7 +6470,7 @@ exports.BattlePokedex = {
 	},
 	buneary: {
 		num: 427,
-		species:"", 		name: "Buneary",
+		species:"Rabbit", 		name: "Buneary",
 		types: ["Normal"],
 		baseStats: {hp: 55, atk: 66, def: 44, spa: 44, spd: 56, spe: 85},
 		abilities: {0: "Run Away", 1: "Klutz", H: "Limber"},
@@ -6480,7 +6482,7 @@ exports.BattlePokedex = {
 	},
 	lopunny: {
 		num: 428,
-		species:"", 		name: "Lopunny",
+		species:"Rabbit", 		name: "Lopunny",
 		types: ["Normal"],
 		baseStats: {hp: 65, atk: 76, def: 84, spa: 54, spd: 96, spe: 105},
 		abilities: {0: "Cute Charm", 1: "Klutz", H: "Limber"},
@@ -6494,7 +6496,7 @@ exports.BattlePokedex = {
 	},
 	lopunnymega: {
 		num: 428,
-		species:"", 		name: "Lopunny-Mega",
+		species:"Rabbit", 		name: "Lopunny-Mega",
 		baseName: "Lopunny",
 		forme: "Mega",
 		formeLetter: "M",
@@ -6508,7 +6510,7 @@ exports.BattlePokedex = {
 	},
 	mismagius: {
 		num: 429,
-		species:"", 		name: "Mismagius",
+		species:"Magical", 		name: "Mismagius",
 		types: ["Ghost"],
 		baseStats: {hp: 60, atk: 60, def: 60, spa: 105, spd: 105, spe: 105},
 		abilities: {0: "Levitate"},
@@ -6521,7 +6523,7 @@ exports.BattlePokedex = {
 	},
 	honchkrow: {
 		num: 430,
-		species:"", 		name: "Honchkrow",
+		species:"Big Boss", 		name: "Honchkrow",
 		types: ["Dark", "Flying"],
 		baseStats: {hp: 100, atk: 125, def: 52, spa: 105, spd: 52, spe: 71},
 		abilities: {0: "Insomnia", 1: "Super Luck", H: "Moxie"},
@@ -6534,7 +6536,7 @@ exports.BattlePokedex = {
 	},
 	glameow: {
 		num: 431,
-		species:"", 		name: "Glameow",
+		species:"Catty", 		name: "Glameow",
 		types: ["Normal"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 49, atk: 55, def: 42, spa: 42, spd: 37, spe: 85},
@@ -6547,7 +6549,7 @@ exports.BattlePokedex = {
 	},
 	purugly: {
 		num: 432,
-		species:"", 		name: "Purugly",
+		species:"Tiger Cat", 		name: "Purugly",
 		types: ["Normal"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 71, atk: 82, def: 64, spa: 64, spd: 59, spe: 112},
@@ -6561,7 +6563,7 @@ exports.BattlePokedex = {
 	},
 	chingling: {
 		num: 433,
-		species:"", 		name: "Chingling",
+		species:"Bell", 		name: "Chingling",
 		types: ["Psychic"],
 		baseStats: {hp: 45, atk: 30, def: 50, spa: 65, spd: 50, spe: 45},
 		abilities: {0: "Levitate"},
@@ -6573,7 +6575,7 @@ exports.BattlePokedex = {
 	},
 	stunky: {
 		num: 434,
-		species:"", 		name: "Stunky",
+		species:"Skunk", 		name: "Stunky",
 		types: ["Poison", "Dark"],
 		baseStats: {hp: 63, atk: 63, def: 47, spa: 41, spd: 41, spe: 74},
 		abilities: {0: "Stench", 1: "Aftermath", H: "Keen Eye"},
@@ -6585,7 +6587,7 @@ exports.BattlePokedex = {
 	},
 	skuntank: {
 		num: 435,
-		species:"", 		name: "Skuntank",
+		species:"Skunk", 		name: "Skuntank",
 		types: ["Poison", "Dark"],
 		baseStats: {hp: 103, atk: 93, def: 67, spa: 71, spd: 61, spe: 84},
 		abilities: {0: "Stench", 1: "Aftermath", H: "Keen Eye"},
@@ -6598,7 +6600,7 @@ exports.BattlePokedex = {
 	},
 	bronzor: {
 		num: 436,
-		species:"", 		name: "Bronzor",
+		species:"Bronze", 		name: "Bronzor",
 		types: ["Steel", "Psychic"],
 		gender: "N",
 		baseStats: {hp: 57, atk: 24, def: 86, spa: 24, spd: 86, spe: 23},
@@ -6611,7 +6613,7 @@ exports.BattlePokedex = {
 	},
 	bronzong: {
 		num: 437,
-		species:"", 		name: "Bronzong",
+		species:"Bronze Bell", 		name: "Bronzong",
 		types: ["Steel", "Psychic"],
 		gender: "N",
 		baseStats: {hp: 67, atk: 89, def: 116, spa: 79, spd: 116, spe: 33},
@@ -6625,7 +6627,7 @@ exports.BattlePokedex = {
 	},
 	bonsly: {
 		num: 438,
-		species:"", 		name: "Bonsly",
+		species:"Bonsai", 		name: "Bonsly",
 		types: ["Rock"],
 		baseStats: {hp: 50, atk: 80, def: 95, spa: 10, spd: 45, spe: 10},
 		abilities: {0: "Sturdy", 1: "Rock Head", H: "Rattled"},
@@ -6637,7 +6639,7 @@ exports.BattlePokedex = {
 	},
 	mimejr: {
 		num: 439,
-		species:"", 		name: "Mime Jr.",
+		species:"Mime", 		name: "Mime Jr.",
 		types: ["Psychic", "Fairy"],
 		baseStats: {hp: 20, atk: 25, def: 45, spa: 70, spd: 90, spe: 60},
 		abilities: {0: "Soundproof", 1: "Filter", H: "Technician"},
@@ -6649,7 +6651,7 @@ exports.BattlePokedex = {
 	},
 	happiny: {
 		num: 440,
-		species:"", 		name: "Happiny",
+		species:"Playhouse", 		name: "Happiny",
 		types: ["Normal"],
 		gender: "F",
 		baseStats: {hp: 100, atk: 5, def: 5, spa: 15, spd: 65, spe: 30},
@@ -6662,7 +6664,7 @@ exports.BattlePokedex = {
 	},
 	chatot: {
 		num: 441,
-		species:"", 		name: "Chatot",
+		species:"Music Note", 		name: "Chatot",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 76, atk: 65, def: 45, spa: 92, spd: 42, spe: 91},
 		abilities: {0: "Keen Eye", 1: "Tangled Feet", H: "Big Pecks"},
@@ -6673,7 +6675,7 @@ exports.BattlePokedex = {
 	},
 	spiritomb: {
 		num: 442,
-		species:"", 		name: "Spiritomb",
+		species:"Forbidden", 		name: "Spiritomb",
 		types: ["Ghost", "Dark"],
 		baseStats: {hp: 50, atk: 92, def: 108, spa: 92, spd: 108, spe: 35},
 		abilities: {0: "Pressure", H: "Infiltrator"},
@@ -6684,7 +6686,7 @@ exports.BattlePokedex = {
 	},
 	gible: {
 		num: 443,
-		species:"", 		name: "Gible",
+		species:"Land Shark", 		name: "Gible",
 		types: ["Dragon", "Ground"],
 		baseStats: {hp: 58, atk: 70, def: 45, spa: 40, spd: 45, spe: 42},
 		abilities: {0: "Sand Veil", H: "Rough Skin"},
@@ -6696,7 +6698,7 @@ exports.BattlePokedex = {
 	},
 	gabite: {
 		num: 444,
-		species:"", 		name: "Gabite",
+		species:"Cave", 		name: "Gabite",
 		types: ["Dragon", "Ground"],
 		baseStats: {hp: 68, atk: 90, def: 65, spa: 50, spd: 55, spe: 82},
 		abilities: {0: "Sand Veil", H: "Rough Skin"},
@@ -6710,7 +6712,7 @@ exports.BattlePokedex = {
 	},
 	garchomp: {
 		num: 445,
-		species:"", 		name: "Garchomp",
+		species:"Mach", 		name: "Garchomp",
 		types: ["Dragon", "Ground"],
 		baseStats: {hp: 108, atk: 130, def: 95, spa: 80, spd: 85, spe: 102},
 		abilities: {0: "Sand Veil", H: "Rough Skin"},
@@ -6724,7 +6726,7 @@ exports.BattlePokedex = {
 	},
 	garchompmega: {
 		num: 445,
-		species:"", 		name: "Garchomp-Mega",
+		species:"Mach", 		name: "Garchomp-Mega",
 		baseName: "Garchomp",
 		forme: "Mega",
 		formeLetter: "M",
@@ -6738,7 +6740,7 @@ exports.BattlePokedex = {
 	},
 	munchlax: {
 		num: 446,
-		species:"", 		name: "Munchlax",
+		species:"Big Eater", 		name: "Munchlax",
 		types: ["Normal"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 135, atk: 85, def: 40, spa: 40, spd: 85, spe: 5},
@@ -6751,7 +6753,7 @@ exports.BattlePokedex = {
 	},
 	riolu: {
 		num: 447,
-		species:"", 		name: "Riolu",
+		species:"Emanation", 		name: "Riolu",
 		types: ["Fighting"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 40, atk: 70, def: 40, spa: 35, spd: 40, spe: 60},
@@ -6764,7 +6766,7 @@ exports.BattlePokedex = {
 	},
 	lucario: {
 		num: 448,
-		species:"", 		name: "Lucario",
+		species:"Aura", 		name: "Lucario",
 		types: ["Fighting", "Steel"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 70, atk: 110, def: 70, spa: 115, spd: 70, spe: 90},
@@ -6779,7 +6781,7 @@ exports.BattlePokedex = {
 	},
 	lucariomega: {
 		num: 448,
-		species:"", 		name: "Lucario-Mega",
+		species:"Aura", 		name: "Lucario-Mega",
 		baseName: "Lucario",
 		forme: "Mega",
 		formeLetter: "M",
@@ -6794,7 +6796,7 @@ exports.BattlePokedex = {
 	},
 	hippopotas: {
 		num: 449,
-		species:"", 		name: "Hippopotas",
+		species:"Hippo", 		name: "Hippopotas",
 		types: ["Ground"],
 		baseStats: {hp: 68, atk: 72, def: 78, spa: 38, spd: 42, spe: 32},
 		abilities: {0: "Sand Stream", H: "Sand Force"},
@@ -6806,7 +6808,7 @@ exports.BattlePokedex = {
 	},
 	hippowdon: {
 		num: 450,
-		species:"", 		name: "Hippowdon",
+		species:"Heavyweight", 		name: "Hippowdon",
 		types: ["Ground"],
 		baseStats: {hp: 108, atk: 112, def: 118, spa: 68, spd: 72, spe: 47},
 		abilities: {0: "Sand Stream", H: "Sand Force"},
@@ -6819,7 +6821,7 @@ exports.BattlePokedex = {
 	},
 	skorupi: {
 		num: 451,
-		species:"", 		name: "Skorupi",
+		species:"Scorpion", 		name: "Skorupi",
 		types: ["Poison", "Bug"],
 		baseStats: {hp: 40, atk: 50, def: 90, spa: 30, spd: 55, spe: 65},
 		abilities: {0: "Battle Armor", 1: "Sniper", H: "Keen Eye"},
@@ -6831,7 +6833,7 @@ exports.BattlePokedex = {
 	},
 	drapion: {
 		num: 452,
-		species:"", 		name: "Drapion",
+		species:"Ogre Scorpion", 		name: "Drapion",
 		types: ["Poison", "Dark"],
 		baseStats: {hp: 70, atk: 90, def: 110, spa: 60, spd: 75, spe: 95},
 		abilities: {0: "Battle Armor", 1: "Sniper", H: "Keen Eye"},
@@ -6844,7 +6846,7 @@ exports.BattlePokedex = {
 	},
 	croagunk: {
 		num: 453,
-		species:"", 		name: "Croagunk",
+		species:"Toxic Mouth", 		name: "Croagunk",
 		types: ["Poison", "Fighting"],
 		baseStats: {hp: 48, atk: 61, def: 40, spa: 61, spd: 40, spe: 50},
 		abilities: {0: "Anticipation", 1: "Dry Skin", H: "Poison Touch"},
@@ -6856,7 +6858,7 @@ exports.BattlePokedex = {
 	},
 	toxicroak: {
 		num: 454,
-		species:"", 		name: "Toxicroak",
+		species:"Toxic Mouth", 		name: "Toxicroak",
 		types: ["Poison", "Fighting"],
 		baseStats: {hp: 83, atk: 106, def: 65, spa: 86, spd: 65, spe: 85},
 		abilities: {0: "Anticipation", 1: "Dry Skin", H: "Poison Touch"},
@@ -6869,7 +6871,7 @@ exports.BattlePokedex = {
 	},
 	carnivine: {
 		num: 455,
-		species:"", 		name: "Carnivine",
+		species:"Bug Catcher", 		name: "Carnivine",
 		types: ["Grass"],
 		baseStats: {hp: 74, atk: 100, def: 72, spa: 90, spd: 72, spe: 46},
 		abilities: {0: "Levitate"},
@@ -6880,7 +6882,7 @@ exports.BattlePokedex = {
 	},
 	finneon: {
 		num: 456,
-		species:"", 		name: "Finneon",
+		species:"Wing Fish", 		name: "Finneon",
 		types: ["Water"],
 		baseStats: {hp: 49, atk: 49, def: 56, spa: 49, spd: 61, spe: 66},
 		abilities: {0: "Swift Swim", 1: "Storm Drain", H: "Water Veil"},
@@ -6892,7 +6894,7 @@ exports.BattlePokedex = {
 	},
 	lumineon: {
 		num: 457,
-		species:"", 		name: "Lumineon",
+		species:"Neon", 		name: "Lumineon",
 		types: ["Water"],
 		baseStats: {hp: 69, atk: 69, def: 76, spa: 69, spd: 86, spe: 91},
 		abilities: {0: "Swift Swim", 1: "Storm Drain", H: "Water Veil"},
@@ -6905,7 +6907,7 @@ exports.BattlePokedex = {
 	},
 	mantyke: {
 		num: 458,
-		species:"", 		name: "Mantyke",
+		species:"Kite", 		name: "Mantyke",
 		types: ["Water", "Flying"],
 		baseStats: {hp: 45, atk: 20, def: 50, spa: 60, spd: 120, spe: 50},
 		abilities: {0: "Swift Swim", 1: "Water Absorb", H: "Water Veil"},
@@ -6917,7 +6919,7 @@ exports.BattlePokedex = {
 	},
 	snover: {
 		num: 459,
-		species:"", 		name: "Snover",
+		species:"Frost Tree", 		name: "Snover",
 		types: ["Grass", "Ice"],
 		baseStats: {hp: 60, atk: 62, def: 50, spa: 62, spd: 60, spe: 40},
 		abilities: {0: "Snow Warning", H: "Soundproof"},
@@ -6929,7 +6931,7 @@ exports.BattlePokedex = {
 	},
 	abomasnow: {
 		num: 460,
-		species:"", 		name: "Abomasnow",
+		species:"Frost Tree", 		name: "Abomasnow",
 		types: ["Grass", "Ice"],
 		baseStats: {hp: 90, atk: 92, def: 75, spa: 92, spd: 85, spe: 60},
 		abilities: {0: "Snow Warning", H: "Soundproof"},
@@ -6943,7 +6945,7 @@ exports.BattlePokedex = {
 	},
 	abomasnowmega: {
 		num: 460,
-		species:"", 		name: "Abomasnow-Mega",
+		species:"Frost Tree", 		name: "Abomasnow-Mega",
 		baseName: "Abomasnow",
 		forme: "Mega",
 		formeLetter: "M",
@@ -6957,7 +6959,7 @@ exports.BattlePokedex = {
 	},
 	weavile: {
 		num: 461,
-		species:"", 		name: "Weavile",
+		species:"Sharp Claw", 		name: "Weavile",
 		types: ["Dark", "Ice"],
 		baseStats: {hp: 70, atk: 120, def: 65, spa: 45, spd: 85, spe: 125},
 		abilities: {0: "Pressure", H: "Pickpocket"},
@@ -6970,7 +6972,7 @@ exports.BattlePokedex = {
 	},
 	magnezone: {
 		num: 462,
-		species:"", 		name: "Magnezone",
+		species:"Magnet Area", 		name: "Magnezone",
 		types: ["Electric", "Steel"],
 		gender: "N",
 		baseStats: {hp: 70, atk: 70, def: 115, spa: 130, spd: 90, spe: 60},
@@ -6984,7 +6986,7 @@ exports.BattlePokedex = {
 	},
 	lickilicky: {
 		num: 463,
-		species:"", 		name: "Lickilicky",
+		species:"Licking", 		name: "Lickilicky",
 		types: ["Normal"],
 		baseStats: {hp: 110, atk: 85, def: 95, spa: 80, spd: 95, spe: 50},
 		abilities: {0: "Own Tempo", 1: "Oblivious", H: "Cloud Nine"},
@@ -6998,7 +7000,7 @@ exports.BattlePokedex = {
 	},
 	rhyperior: {
 		num: 464,
-		species:"", 		name: "Rhyperior",
+		species:"Drill", 		name: "Rhyperior",
 		types: ["Ground", "Rock"],
 		baseStats: {hp: 115, atk: 140, def: 130, spa: 55, spd: 55, spe: 40},
 		abilities: {0: "Lightning Rod", 1: "Solid Rock", H: "Reckless"},
@@ -7011,7 +7013,7 @@ exports.BattlePokedex = {
 	},
 	tangrowth: {
 		num: 465,
-		species:"", 		name: "Tangrowth",
+		species:"Vine", 		name: "Tangrowth",
 		types: ["Grass"],
 		baseStats: {hp: 100, atk: 100, def: 125, spa: 110, spd: 50, spe: 50},
 		abilities: {0: "Chlorophyll", 1: "Leaf Guard", H: "Regenerator"},
@@ -7025,7 +7027,7 @@ exports.BattlePokedex = {
 	},
 	electivire: {
 		num: 466,
-		species:"", 		name: "Electivire",
+		species:"Thunderbolt", 		name: "Electivire",
 		types: ["Electric"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 75, atk: 123, def: 67, spa: 95, spd: 85, spe: 95},
@@ -7039,7 +7041,7 @@ exports.BattlePokedex = {
 	},
 	magmortar: {
 		num: 467,
-		species:"", 		name: "Magmortar",
+		species:"Blast", 		name: "Magmortar",
 		types: ["Fire"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 75, atk: 95, def: 67, spa: 125, spd: 95, spe: 83},
@@ -7053,7 +7055,7 @@ exports.BattlePokedex = {
 	},
 	togekiss: {
 		num: 468,
-		species:"", 		name: "Togekiss",
+		species:"Jubilee", 		name: "Togekiss",
 		types: ["Fairy", "Flying"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 85, atk: 50, def: 95, spa: 120, spd: 115, spe: 80},
@@ -7067,7 +7069,7 @@ exports.BattlePokedex = {
 	},
 	yanmega: {
 		num: 469,
-		species:"", 		name: "Yanmega",
+		species:"Ogre Darner", 		name: "Yanmega",
 		types: ["Bug", "Flying"],
 		baseStats: {hp: 86, atk: 76, def: 86, spa: 116, spd: 56, spe: 95},
 		abilities: {0: "Speed Boost", 1: "Tinted Lens", H: "Frisk"},
@@ -7081,7 +7083,7 @@ exports.BattlePokedex = {
 	},
 	leafeon: {
 		num: 470,
-		species:"", 		name: "Leafeon",
+		species:"Verdant", 		name: "Leafeon",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 65, atk: 110, def: 130, spa: 60, spd: 65, spe: 95},
@@ -7095,7 +7097,7 @@ exports.BattlePokedex = {
 	},
 	glaceon: {
 		num: 471,
-		species:"", 		name: "Glaceon",
+		species:"Fresh Snow", 		name: "Glaceon",
 		types: ["Ice"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 65, atk: 60, def: 110, spa: 130, spd: 95, spe: 65},
@@ -7109,7 +7111,7 @@ exports.BattlePokedex = {
 	},
 	gliscor: {
 		num: 472,
-		species:"", 		name: "Gliscor",
+		species:"Fang Scorpion", 		name: "Gliscor",
 		types: ["Ground", "Flying"],
 		baseStats: {hp: 75, atk: 95, def: 125, spa: 45, spd: 75, spe: 95},
 		abilities: {0: "Hyper Cutter", 1: "Sand Veil", H: "Poison Heal"},
@@ -7122,7 +7124,7 @@ exports.BattlePokedex = {
 	},
 	mamoswine: {
 		num: 473,
-		species:"", 		name: "Mamoswine",
+		species:"Twin Tusk", 		name: "Mamoswine",
 		types: ["Ice", "Ground"],
 		baseStats: {hp: 110, atk: 130, def: 80, spa: 70, spd: 60, spe: 80},
 		abilities: {0: "Oblivious", 1: "Snow Cloak", H: "Thick Fat"},
@@ -7136,7 +7138,7 @@ exports.BattlePokedex = {
 	},
 	porygonz: {
 		num: 474,
-		species:"", 		name: "Porygon-Z",
+		species:"Virtual", 		name: "Porygon-Z",
 		types: ["Normal"],
 		gender: "N",
 		baseStats: {hp: 85, atk: 80, def: 70, spa: 135, spd: 75, spe: 90},
@@ -7150,7 +7152,7 @@ exports.BattlePokedex = {
 	},
 	gallade: {
 		num: 475,
-		species:"", 		name: "Gallade",
+		species:"Blade", 		name: "Gallade",
 		types: ["Psychic", "Fighting"],
 		gender: "M",
 		baseStats: {hp: 68, atk: 125, def: 65, spa: 65, spd: 115, spe: 80},
@@ -7165,7 +7167,7 @@ exports.BattlePokedex = {
 	},
 	gallademega: {
 		num: 475,
-		species:"", 		name: "Gallade-Mega",
+		species:"Blade", 		name: "Gallade-Mega",
 		baseName: "Gallade",
 		forme: "Mega",
 		formeLetter: "M",
@@ -7180,7 +7182,7 @@ exports.BattlePokedex = {
 	},
 	probopass: {
 		num: 476,
-		species:"", 		name: "Probopass",
+		species:"Compass", 		name: "Probopass",
 		types: ["Rock", "Steel"],
 		baseStats: {hp: 60, atk: 55, def: 145, spa: 75, spd: 150, spe: 40},
 		abilities: {0: "Sturdy", 1: "Magnet Pull", H: "Sand Force"},
@@ -7193,7 +7195,7 @@ exports.BattlePokedex = {
 	},
 	dusknoir: {
 		num: 477,
-		species:"", 		name: "Dusknoir",
+		species:"Gripper", 		name: "Dusknoir",
 		types: ["Ghost"],
 		baseStats: {hp: 45, atk: 100, def: 135, spa: 65, spd: 135, spe: 45},
 		abilities: {0: "Pressure", H: "Frisk"},
@@ -7206,7 +7208,7 @@ exports.BattlePokedex = {
 	},
 	froslass: {
 		num: 478,
-		species:"", 		name: "Froslass",
+		species:"Snow Land", 		name: "Froslass",
 		types: ["Ice", "Ghost"],
 		gender: "F",
 		baseStats: {hp: 70, atk: 80, def: 70, spa: 80, spd: 70, spe: 110},
@@ -7220,7 +7222,7 @@ exports.BattlePokedex = {
 	},
 	rotom: {
 		num: 479,
-		species:"", 		name: "Rotom",
+		species:"Plasma", 		name: "Rotom",
 		types: ["Electric", "Ghost"],
 		gender: "N",
 		baseStats: {hp: 50, atk: 50, def: 77, spa: 95, spd: 77, spe: 91},
@@ -7233,7 +7235,7 @@ exports.BattlePokedex = {
 	},
 	rotomheat: {
 		num: 479,
-		species:"", 		name: "Rotom-Heat",
+		species:"Plasma", 		name: "Rotom-Heat",
 		baseName: "Rotom",
 		forme: "Heat",
 		formeLetter: "H",
@@ -7248,7 +7250,7 @@ exports.BattlePokedex = {
 	},
 	rotomwash: {
 		num: 479,
-		species:"", 		name: "Rotom-Wash",
+		species:"Plasma", 		name: "Rotom-Wash",
 		baseName: "Rotom",
 		forme: "Wash",
 		formeLetter: "W",
@@ -7263,7 +7265,7 @@ exports.BattlePokedex = {
 	},
 	rotomfrost: {
 		num: 479,
-		species:"", 		name: "Rotom-Frost",
+		species:"Plasma", 		name: "Rotom-Frost",
 		baseName: "Rotom",
 		forme: "Frost",
 		formeLetter: "F",
@@ -7278,7 +7280,7 @@ exports.BattlePokedex = {
 	},
 	rotomfan: {
 		num: 479,
-		species:"", 		name: "Rotom-Fan",
+		species:"Plasma", 		name: "Rotom-Fan",
 		baseName: "Rotom",
 		forme: "Fan",
 		formeLetter: "S",
@@ -7293,7 +7295,7 @@ exports.BattlePokedex = {
 	},
 	rotommow: {
 		num: 479,
-		species:"", 		name: "Rotom-Mow",
+		species:"Plasma", 		name: "Rotom-Mow",
 		baseName: "Rotom",
 		forme: "Mow",
 		formeLetter: "C",
@@ -7308,7 +7310,7 @@ exports.BattlePokedex = {
 	},
 	uxie: {
 		num: 480,
-		species:"", 		name: "Uxie",
+		species:"Knowledge", 		name: "Uxie",
 		types: ["Psychic"],
 		gender: "N",
 		baseStats: {hp: 75, atk: 75, def: 130, spa: 75, spd: 130, spe: 95},
@@ -7320,7 +7322,7 @@ exports.BattlePokedex = {
 	},
 	mesprit: {
 		num: 481,
-		species:"", 		name: "Mesprit",
+		species:"Emotion", 		name: "Mesprit",
 		types: ["Psychic"],
 		gender: "N",
 		baseStats: {hp: 80, atk: 105, def: 105, spa: 105, spd: 105, spe: 80},
@@ -7332,7 +7334,7 @@ exports.BattlePokedex = {
 	},
 	azelf: {
 		num: 482,
-		species:"", 		name: "Azelf",
+		species:"Willpower", 		name: "Azelf",
 		types: ["Psychic"],
 		gender: "N",
 		baseStats: {hp: 75, atk: 125, def: 70, spa: 125, spd: 70, spe: 115},
@@ -7344,7 +7346,7 @@ exports.BattlePokedex = {
 	},
 	dialga: {
 		num: 483,
-		species:"", 		name: "Dialga",
+		species:"Temporal", 		name: "Dialga",
 		types: ["Steel", "Dragon"],
 		gender: "N",
 		baseStats: {hp: 100, atk: 120, def: 120, spa: 150, spd: 100, spe: 90},
@@ -7356,7 +7358,7 @@ exports.BattlePokedex = {
 	},
 	palkia: {
 		num: 484,
-		species:"", 		name: "Palkia",
+		species:"Spatial", 		name: "Palkia",
 		types: ["Water", "Dragon"],
 		gender: "N",
 		baseStats: {hp: 90, atk: 120, def: 100, spa: 150, spd: 120, spe: 100},
@@ -7368,7 +7370,7 @@ exports.BattlePokedex = {
 	},
 	heatran: {
 		num: 485,
-		species:"", 		name: "Heatran",
+		species:"Lava Dome", 		name: "Heatran",
 		types: ["Fire", "Steel"],
 		baseStats: {hp: 91, atk: 90, def: 106, spa: 130, spd: 106, spe: 77},
 		abilities: {0: "Flash Fire", H: "Flame Body"},
@@ -7379,7 +7381,7 @@ exports.BattlePokedex = {
 	},
 	regigigas: {
 		num: 486,
-		species:"", 		name: "Regigigas",
+		species:"Colossal", 		name: "Regigigas",
 		types: ["Normal"],
 		gender: "N",
 		baseStats: {hp: 110, atk: 160, def: 110, spa: 80, spd: 110, spe: 100},
@@ -7391,7 +7393,7 @@ exports.BattlePokedex = {
 	},
 	giratina: {
 		num: 487,
-		species:"", 		name: "Giratina",
+		species:"Renegade", 		name: "Giratina",
 		baseForme: "Altered",
 		types: ["Ghost", "Dragon"],
 		gender: "N",
@@ -7405,7 +7407,7 @@ exports.BattlePokedex = {
 	},
 	giratinaorigin: {
 		num: 487,
-		species:"", 		name: "Giratina-Origin",
+		species:"Renegade", 		name: "Giratina-Origin",
 		baseName: "Giratina",
 		forme: "Origin",
 		formeLetter: "O",
@@ -7420,7 +7422,7 @@ exports.BattlePokedex = {
 	},
 	cresselia: {
 		num: 488,
-		species:"", 		name: "Cresselia",
+		species:"Lunar", 		name: "Cresselia",
 		types: ["Psychic"],
 		gender: "F",
 		baseStats: {hp: 120, atk: 70, def: 120, spa: 75, spd: 130, spe: 85},
@@ -7432,7 +7434,7 @@ exports.BattlePokedex = {
 	},
 	phione: {
 		num: 489,
-		species:"", 		name: "Phione",
+		species:"Sea Drifter", 		name: "Phione",
 		types: ["Water"],
 		gender: "N",
 		baseStats: {hp: 80, atk: 80, def: 80, spa: 80, spd: 80, spe: 80},
@@ -7444,7 +7446,7 @@ exports.BattlePokedex = {
 	},
 	manaphy: {
 		num: 490,
-		species:"", 		name: "Manaphy",
+		species:"Deafaring", 		name: "Manaphy",
 		types: ["Water"],
 		gender: "N",
 		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
@@ -7456,7 +7458,7 @@ exports.BattlePokedex = {
 	},
 	darkrai: {
 		num: 491,
-		species:"", 		name: "Darkrai",
+		species:"Pitch-Black", 		name: "Darkrai",
 		types: ["Dark"],
 		gender: "N",
 		baseStats: {hp: 70, atk: 90, def: 90, spa: 135, spd: 90, spe: 125},
@@ -7468,7 +7470,7 @@ exports.BattlePokedex = {
 	},
 	shaymin: {
 		num: 492,
-		species:"", 		name: "Shaymin",
+		species:"Gratitude", 		name: "Shaymin",
 		baseForme: "Land",
 		types: ["Grass"],
 		gender: "N",
@@ -7482,7 +7484,7 @@ exports.BattlePokedex = {
 	},
 	shayminsky: {
 		num: 492,
-		species:"", 		name: "Shaymin-Sky",
+		species:"Gratitude", 		name: "Shaymin-Sky",
 		baseName: "Shaymin",
 		forme: "Sky",
 		formeLetter: "S",
@@ -7497,7 +7499,7 @@ exports.BattlePokedex = {
 	},
 	arceus: {
 		num: 493,
-		species:"", 		name: "Arceus",
+		species:"Alpha", 		name: "Arceus",
 		baseForme: "Normal",
 		types: ["Normal"],
 		gender: "N",
@@ -7511,7 +7513,7 @@ exports.BattlePokedex = {
 	},
 	arceusbug: {
 		num: 493,
-		species:"", 		name: "Arceus-Bug",
+		species:"Alpha", 		name: "Arceus-Bug",
 		baseName: "Arceus",
 		forme: "Bug",
 		formeLetter: "B",
@@ -7526,7 +7528,7 @@ exports.BattlePokedex = {
 	},
 	arceusdark: {
 		num: 493,
-		species:"", 		name: "Arceus-Dark",
+		species:"Alpha", 		name: "Arceus-Dark",
 		baseName: "Arceus",
 		forme: "Dark",
 		formeLetter: "D",
@@ -7541,7 +7543,7 @@ exports.BattlePokedex = {
 	},
 	arceusdragon: {
 		num: 493,
-		species:"", 		name: "Arceus-Dragon",
+		species:"Alpha", 		name: "Arceus-Dragon",
 		baseName: "Arceus",
 		forme: "Dragon",
 		formeLetter: "D",
@@ -7556,7 +7558,7 @@ exports.BattlePokedex = {
 	},
 	arceuselectric: {
 		num: 493,
-		species:"", 		name: "Arceus-Electric",
+		species:"Alpha", 		name: "Arceus-Electric",
 		baseName: "Arceus",
 		forme: "Electric",
 		formeLetter: "E",
@@ -7571,7 +7573,7 @@ exports.BattlePokedex = {
 	},
 	arceusfairy: {
 		num: 493,
-		species:"", 		name: "Arceus-Fairy",
+		species:"Alpha", 		name: "Arceus-Fairy",
 		baseName: "Arceus",
 		forme: "Fairy",
 		formeLetter: "F",
@@ -7586,7 +7588,7 @@ exports.BattlePokedex = {
 	},
 	arceusfighting: {
 		num: 493,
-		species:"", 		name: "Arceus-Fighting",
+		species:"Alpha", 		name: "Arceus-Fighting",
 		baseName: "Arceus",
 		forme: "Fighting",
 		formeLetter: "F",
@@ -7601,7 +7603,7 @@ exports.BattlePokedex = {
 	},
 	arceusfire: {
 		num: 493,
-		species:"", 		name: "Arceus-Fire",
+		species:"Alpha", 		name: "Arceus-Fire",
 		baseName: "Arceus",
 		forme: "Fire",
 		formeLetter: "F",
@@ -7616,7 +7618,7 @@ exports.BattlePokedex = {
 	},
 	arceusflying: {
 		num: 493,
-		species:"", 		name: "Arceus-Flying",
+		species:"Alpha", 		name: "Arceus-Flying",
 		baseName: "Arceus",
 		forme: "Flying",
 		formeLetter: "F",
@@ -7631,7 +7633,7 @@ exports.BattlePokedex = {
 	},
 	arceusghost: {
 		num: 493,
-		species:"", 		name: "Arceus-Ghost",
+		species:"Alpha", 		name: "Arceus-Ghost",
 		baseName: "Arceus",
 		forme: "Ghost",
 		formeLetter: "G",
@@ -7646,7 +7648,7 @@ exports.BattlePokedex = {
 	},
 	arceusgrass: {
 		num: 493,
-		species:"", 		name: "Arceus-Grass",
+		species:"Alpha", 		name: "Arceus-Grass",
 		baseName: "Arceus",
 		forme: "Grass",
 		formeLetter: "G",
@@ -7661,7 +7663,7 @@ exports.BattlePokedex = {
 	},
 	arceusground: {
 		num: 493,
-		species:"", 		name: "Arceus-Ground",
+		species:"Alpha", 		name: "Arceus-Ground",
 		baseName: "Arceus",
 		forme: "Ground",
 		formeLetter: "G",
@@ -7676,7 +7678,7 @@ exports.BattlePokedex = {
 	},
 	arceusice: {
 		num: 493,
-		species:"", 		name: "Arceus-Ice",
+		species:"Alpha", 		name: "Arceus-Ice",
 		baseName: "Arceus",
 		forme: "Ice",
 		formeLetter: "I",
@@ -7691,7 +7693,7 @@ exports.BattlePokedex = {
 	},
 	arceuspoison: {
 		num: 493,
-		species:"", 		name: "Arceus-Poison",
+		species:"Alpha", 		name: "Arceus-Poison",
 		baseName: "Arceus",
 		forme: "Poison",
 		formeLetter: "P",
@@ -7706,7 +7708,7 @@ exports.BattlePokedex = {
 	},
 	arceuspsychic: {
 		num: 493,
-		species:"", 		name: "Arceus-Psychic",
+		species:"Alpha", 		name: "Arceus-Psychic",
 		baseName: "Arceus",
 		forme: "Psychic",
 		formeLetter: "P",
@@ -7721,7 +7723,7 @@ exports.BattlePokedex = {
 	},
 	arceusrock: {
 		num: 493,
-		species:"", 		name: "Arceus-Rock",
+		species:"Alpha", 		name: "Arceus-Rock",
 		baseName: "Arceus",
 		forme: "Rock",
 		formeLetter: "R",
@@ -7736,7 +7738,7 @@ exports.BattlePokedex = {
 	},
 	arceussteel: {
 		num: 493,
-		species:"", 		name: "Arceus-Steel",
+		species:"Alpha", 		name: "Arceus-Steel",
 		baseName: "Arceus",
 		forme: "Steel",
 		formeLetter: "S",
@@ -7751,7 +7753,7 @@ exports.BattlePokedex = {
 	},
 	arceuswater: {
 		num: 493,
-		species:"", 		name: "Arceus-Water",
+		species:"Alpha", 		name: "Arceus-Water",
 		baseName: "Arceus",
 		forme: "Water",
 		formeLetter: "W",
@@ -7766,7 +7768,7 @@ exports.BattlePokedex = {
 	},
 	victini: {
 		num: 494,
-		species:"", 		name: "Victini",
+		species:"Victory", 		name: "Victini",
 		types: ["Psychic", "Fire"],
 		gender: "N",
 		baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
@@ -7778,7 +7780,7 @@ exports.BattlePokedex = {
 	},
 	snivy: {
 		num: 495,
-		species:"", 		name: "Snivy",
+		species:"Grass Snake", 		name: "Snivy",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 45, atk: 45, def: 55, spa: 45, spd: 55, spe: 63},
@@ -7791,7 +7793,7 @@ exports.BattlePokedex = {
 	},
 	servine: {
 		num: 496,
-		species:"", 		name: "Servine",
+		species:"Grass Snake", 		name: "Servine",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 60, atk: 60, def: 75, spa: 60, spd: 75, spe: 83},
@@ -7806,7 +7808,7 @@ exports.BattlePokedex = {
 	},
 	serperior: {
 		num: 497,
-		species:"", 		name: "Serperior",
+		species:"Regal", 		name: "Serperior",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 75, atk: 75, def: 95, spa: 75, spd: 95, spe: 113},
@@ -7820,7 +7822,7 @@ exports.BattlePokedex = {
 	},
 	tepig: {
 		num: 498,
-		species:"", 		name: "Tepig",
+		species:"Fire Pig", 		name: "Tepig",
 		types: ["Fire"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 65, atk: 63, def: 45, spa: 45, spd: 45, spe: 45},
@@ -7833,7 +7835,7 @@ exports.BattlePokedex = {
 	},
 	pignite: {
 		num: 499,
-		species:"", 		name: "Pignite",
+		species:"Fire Pig", 		name: "Pignite",
 		types: ["Fire", "Fighting"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 90, atk: 93, def: 55, spa: 70, spd: 55, spe: 55},
@@ -7848,7 +7850,7 @@ exports.BattlePokedex = {
 	},
 	emboar: {
 		num: 500,
-		species:"", 		name: "Emboar",
+		species:"Mega Fire Pig", 		name: "Emboar",
 		types: ["Fire", "Fighting"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 110, atk: 123, def: 65, spa: 100, spd: 65, spe: 65},
@@ -7862,7 +7864,7 @@ exports.BattlePokedex = {
 	},
 	oshawott: {
 		num: 501,
-		species:"", 		name: "Oshawott",
+		species:"Sea Otter", 		name: "Oshawott",
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 55, atk: 55, def: 45, spa: 63, spd: 45, spe: 45},
@@ -7875,7 +7877,7 @@ exports.BattlePokedex = {
 	},
 	dewott: {
 		num: 502,
-		species:"", 		name: "Dewott",
+		species:"Discipline", 		name: "Dewott",
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 75, atk: 75, def: 60, spa: 83, spd: 60, spe: 60},
@@ -7890,7 +7892,7 @@ exports.BattlePokedex = {
 	},
 	samurott: {
 		num: 503,
-		species:"", 		name: "Samurott",
+		species:"Formidable", 		name: "Samurott",
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 95, atk: 100, def: 85, spa: 108, spd: 70, spe: 70},
@@ -7904,7 +7906,7 @@ exports.BattlePokedex = {
 	},
 	patrat: {
 		num: 504,
-		species:"", 		name: "Patrat",
+		species:"Scout", 		name: "Patrat",
 		types: ["Normal"],
 		baseStats: {hp: 45, atk: 55, def: 39, spa: 35, spd: 39, spe: 42},
 		abilities: {0: "Run Away", 1: "Keen Eye", H: "Analytic"},
@@ -7916,7 +7918,7 @@ exports.BattlePokedex = {
 	},
 	watchog: {
 		num: 505,
-		species:"", 		name: "Watchog",
+		species:"Lookout", 		name: "Watchog",
 		types: ["Normal"],
 		baseStats: {hp: 60, atk: 85, def: 69, spa: 60, spd: 69, spe: 77},
 		abilities: {0: "Illuminate", 1: "Keen Eye", H: "Analytic"},
@@ -7929,7 +7931,7 @@ exports.BattlePokedex = {
 	},
 	lillipup: {
 		num: 506,
-		species:"", 		name: "Lillipup",
+		species:"Puppy", 		name: "Lillipup",
 		types: ["Normal"],
 		baseStats: {hp: 45, atk: 60, def: 45, spa: 25, spd: 45, spe: 55},
 		abilities: {0: "Vital Spirit", 1: "Pickup", H: "Run Away"},
@@ -7941,7 +7943,7 @@ exports.BattlePokedex = {
 	},
 	herdier: {
 		num: 507,
-		species:"", 		name: "Herdier",
+		species:"Loyal Dog", 		name: "Herdier",
 		types: ["Normal"],
 		baseStats: {hp: 65, atk: 80, def: 65, spa: 35, spd: 65, spe: 60},
 		abilities: {0: "Intimidate", 1: "Sand Rush", H: "Scrappy"},
@@ -7955,7 +7957,7 @@ exports.BattlePokedex = {
 	},
 	stoutland: {
 		num: 508,
-		species:"", 		name: "Stoutland",
+		species:"Big-Hearted", 		name: "Stoutland",
 		types: ["Normal"],
 		baseStats: {hp: 85, atk: 110, def: 90, spa: 45, spd: 90, spe: 80},
 		abilities: {0: "Intimidate", 1: "Sand Rush", H: "Scrappy"},
@@ -7968,7 +7970,7 @@ exports.BattlePokedex = {
 	},
 	purrloin: {
 		num: 509,
-		species:"", 		name: "Purrloin",
+		species:"Devious", 		name: "Purrloin",
 		types: ["Dark"],
 		baseStats: {hp: 41, atk: 50, def: 37, spa: 50, spd: 37, spe: 66},
 		abilities: {0: "Limber", 1: "Unburden", H: "Prankster"},
@@ -7980,7 +7982,7 @@ exports.BattlePokedex = {
 	},
 	liepard: {
 		num: 510,
-		species:"", 		name: "Liepard",
+		species:"Cruel", 		name: "Liepard",
 		types: ["Dark"],
 		baseStats: {hp: 64, atk: 88, def: 50, spa: 88, spd: 50, spe: 106},
 		abilities: {0: "Limber", 1: "Unburden", H: "Prankster"},
@@ -7993,7 +7995,7 @@ exports.BattlePokedex = {
 	},
 	pansage: {
 		num: 511,
-		species:"", 		name: "Pansage",
+		species:"Grass Monkey", 		name: "Pansage",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64},
@@ -8006,7 +8008,7 @@ exports.BattlePokedex = {
 	},
 	simisage: {
 		num: 512,
-		species:"", 		name: "Simisage",
+		species:"Thorn Monkey", 		name: "Simisage",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101},
@@ -8020,7 +8022,7 @@ exports.BattlePokedex = {
 	},
 	pansear: {
 		num: 513,
-		species:"", 		name: "Pansear",
+		species:"High Temp", 		name: "Pansear",
 		types: ["Fire"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64},
@@ -8033,7 +8035,7 @@ exports.BattlePokedex = {
 	},
 	simisear: {
 		num: 514,
-		species:"", 		name: "Simisear",
+		species:"Ember", 		name: "Simisear",
 		types: ["Fire"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101},
@@ -8047,7 +8049,7 @@ exports.BattlePokedex = {
 	},
 	panpour: {
 		num: 515,
-		species:"", 		name: "Panpour",
+		species:"Spray", 		name: "Panpour",
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 50, atk: 53, def: 48, spa: 53, spd: 48, spe: 64},
@@ -8060,7 +8062,7 @@ exports.BattlePokedex = {
 	},
 	simipour: {
 		num: 516,
-		species:"", 		name: "Simipour",
+		species:"Geyser", 		name: "Simipour",
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 75, atk: 98, def: 63, spa: 98, spd: 63, spe: 101},
@@ -8074,7 +8076,7 @@ exports.BattlePokedex = {
 	},
 	munna: {
 		num: 517,
-		species:"", 		name: "Munna",
+		species:"Dream Eater", 		name: "Munna",
 		types: ["Psychic"],
 		baseStats: {hp: 76, atk: 25, def: 45, spa: 67, spd: 55, spe: 24},
 		abilities: {0: "Forewarn", 1: "Synchronize", H: "Telepathy"},
@@ -8086,7 +8088,7 @@ exports.BattlePokedex = {
 	},
 	musharna: {
 		num: 518,
-		species:"", 		name: "Musharna",
+		species:"Drowsing", 		name: "Musharna",
 		types: ["Psychic"],
 		baseStats: {hp: 116, atk: 55, def: 85, spa: 107, spd: 95, spe: 29},
 		abilities: {0: "Forewarn", 1: "Synchronize", H: "Telepathy"},
@@ -8099,7 +8101,7 @@ exports.BattlePokedex = {
 	},
 	pidove: {
 		num: 519,
-		species:"", 		name: "Pidove",
+		species:"Tiny Pigeon", 		name: "Pidove",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 50, atk: 55, def: 50, spa: 36, spd: 30, spe: 43},
 		abilities: {0: "Big Pecks", 1: "Super Luck", H: "Rivalry"},
@@ -8111,7 +8113,7 @@ exports.BattlePokedex = {
 	},
 	tranquill: {
 		num: 520,
-		species:"", 		name: "Tranquill",
+		species:"Wild Pigeon", 		name: "Tranquill",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 62, atk: 77, def: 62, spa: 50, spd: 42, spe: 65},
 		abilities: {0: "Big Pecks", 1: "Super Luck", H: "Rivalry"},
@@ -8125,7 +8127,7 @@ exports.BattlePokedex = {
 	},
 	unfezant: {
 		num: 521,
-		species:"", 		name: "Unfezant",
+		species:"Proud", 		name: "Unfezant",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 80, atk: 115, def: 80, spa: 65, spd: 55, spe: 93},
 		abilities: {0: "Big Pecks", 1: "Super Luck", H: "Rivalry"},
@@ -8138,7 +8140,7 @@ exports.BattlePokedex = {
 	},
 	blitzle: {
 		num: 522,
-		species:"", 		name: "Blitzle",
+		species:"Electrified", 		name: "Blitzle",
 		types: ["Electric"],
 		baseStats: {hp: 45, atk: 60, def: 32, spa: 50, spd: 32, spe: 76},
 		abilities: {0: "Lightning Rod", 1: "Motor Drive", H: "Sap Sipper"},
@@ -8150,7 +8152,7 @@ exports.BattlePokedex = {
 	},
 	zebstrika: {
 		num: 523,
-		species:"", 		name: "Zebstrika",
+		species:"Thunderbolt", 		name: "Zebstrika",
 		types: ["Electric"],
 		baseStats: {hp: 75, atk: 100, def: 63, spa: 80, spd: 63, spe: 116},
 		abilities: {0: "Lightning Rod", 1: "Motor Drive", H: "Sap Sipper"},
@@ -8163,7 +8165,7 @@ exports.BattlePokedex = {
 	},
 	roggenrola: {
 		num: 524,
-		species:"", 		name: "Roggenrola",
+		species:"Mantle", 		name: "Roggenrola",
 		types: ["Rock"],
 		baseStats: {hp: 55, atk: 75, def: 85, spa: 25, spd: 25, spe: 15},
 		abilities: {0: "Sturdy", H: "Sand Force"},
@@ -8175,7 +8177,7 @@ exports.BattlePokedex = {
 	},
 	boldore: {
 		num: 525,
-		species:"", 		name: "Boldore",
+		species:"Ore", 		name: "Boldore",
 		types: ["Rock"],
 		baseStats: {hp: 70, atk: 105, def: 105, spa: 50, spd: 40, spe: 20},
 		abilities: {0: "Sturdy", H: "Sand Force"},
@@ -8189,7 +8191,7 @@ exports.BattlePokedex = {
 	},
 	gigalith: {
 		num: 526,
-		species:"", 		name: "Gigalith",
+		species:"Compressed", 		name: "Gigalith",
 		types: ["Rock"],
 		baseStats: {hp: 85, atk: 135, def: 130, spa: 60, spd: 80, spe: 25},
 		abilities: {0: "Sturdy", H: "Sand Force"},
@@ -8202,7 +8204,7 @@ exports.BattlePokedex = {
 	},
 	woobat: {
 		num: 527,
-		species:"", 		name: "Woobat",
+		species:"Bat", 		name: "Woobat",
 		types: ["Psychic", "Flying"],
 		baseStats: {hp: 55, atk: 45, def: 43, spa: 55, spd: 43, spe: 72},
 		abilities: {0: "Unaware", 1: "Klutz", H: "Simple"},
@@ -8214,7 +8216,7 @@ exports.BattlePokedex = {
 	},
 	swoobat: {
 		num: 528,
-		species:"", 		name: "Swoobat",
+		species:"Courting", 		name: "Swoobat",
 		types: ["Psychic", "Flying"],
 		baseStats: {hp: 67, atk: 57, def: 55, spa: 77, spd: 55, spe: 114},
 		abilities: {0: "Unaware", 1: "Klutz", H: "Simple"},
@@ -8227,7 +8229,7 @@ exports.BattlePokedex = {
 	},
 	drilbur: {
 		num: 529,
-		species:"", 		name: "Drilbur",
+		species:"Mole", 		name: "Drilbur",
 		types: ["Ground"],
 		baseStats: {hp: 60, atk: 85, def: 40, spa: 30, spd: 45, spe: 68},
 		abilities: {0: "Sand Rush", 1: "Sand Force", H: "Mold Breaker"},
@@ -8239,7 +8241,7 @@ exports.BattlePokedex = {
 	},
 	excadrill: {
 		num: 530,
-		species:"", 		name: "Excadrill",
+		species:"Subterrene", 		name: "Excadrill",
 		types: ["Ground", "Steel"],
 		baseStats: {hp: 110, atk: 135, def: 60, spa: 50, spd: 65, spe: 88},
 		abilities: {0: "Sand Rush", 1: "Sand Force", H: "Mold Breaker"},
@@ -8252,7 +8254,7 @@ exports.BattlePokedex = {
 	},
 	audino: {
 		num: 531,
-		species:"", 		name: "Audino",
+		species:"Hearing", 		name: "Audino",
 		types: ["Normal"],
 		baseStats: {hp: 103, atk: 60, def: 86, spa: 60, spd: 86, spe: 50},
 		abilities: {0: "Healer", 1: "Regenerator", H: "Klutz"},
@@ -8264,7 +8266,7 @@ exports.BattlePokedex = {
 	},
 	audinomega: {
 		num: 531,
-		species:"", 		name: "Audino-Mega",
+		species:"Hearing", 		name: "Audino-Mega",
 		baseName: "Audino",
 		forme: "Mega",
 		formeLetter: "M",
@@ -8278,7 +8280,7 @@ exports.BattlePokedex = {
 	},
 	timburr: {
 		num: 532,
-		species:"", 		name: "Timburr",
+		species:"Muscular", 		name: "Timburr",
 		types: ["Fighting"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 75, atk: 80, def: 55, spa: 25, spd: 35, spe: 35},
@@ -8291,7 +8293,7 @@ exports.BattlePokedex = {
 	},
 	gurdurr: {
 		num: 533,
-		species:"", 		name: "Gurdurr",
+		species:"Muscular", 		name: "Gurdurr",
 		types: ["Fighting"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 85, atk: 105, def: 85, spa: 40, spd: 50, spe: 40},
@@ -8306,7 +8308,7 @@ exports.BattlePokedex = {
 	},
 	conkeldurr: {
 		num: 534,
-		species:"", 		name: "Conkeldurr",
+		species:"Muscular", 		name: "Conkeldurr",
 		types: ["Fighting"],
 		genderRatio: {M: 0.75, F: 0.25},
 		baseStats: {hp: 105, atk: 140, def: 95, spa: 55, spd: 65, spe: 45},
@@ -8320,7 +8322,7 @@ exports.BattlePokedex = {
 	},
 	tympole: {
 		num: 535,
-		species:"", 		name: "Tympole",
+		species:"Tadpole", 		name: "Tympole",
 		types: ["Water"],
 		baseStats: {hp: 50, atk: 50, def: 40, spa: 50, spd: 40, spe: 64},
 		abilities: {0: "Swift Swim", 1: "Hydration", H: "Water Absorb"},
@@ -8332,7 +8334,7 @@ exports.BattlePokedex = {
 	},
 	palpitoad: {
 		num: 536,
-		species:"", 		name: "Palpitoad",
+		species:"Vibration", 		name: "Palpitoad",
 		types: ["Water", "Ground"],
 		baseStats: {hp: 75, atk: 65, def: 55, spa: 65, spd: 55, spe: 69},
 		abilities: {0: "Swift Swim", 1: "Hydration", H: "Water Absorb"},
@@ -8346,7 +8348,7 @@ exports.BattlePokedex = {
 	},
 	seismitoad: {
 		num: 537,
-		species:"", 		name: "Seismitoad",
+		species:"Vibration", 		name: "Seismitoad",
 		types: ["Water", "Ground"],
 		baseStats: {hp: 105, atk: 95, def: 75, spa: 85, spd: 75, spe: 74},
 		abilities: {0: "Swift Swim", 1: "Poison Touch", H: "Water Absorb"},
@@ -8359,7 +8361,7 @@ exports.BattlePokedex = {
 	},
 	throh: {
 		num: 538,
-		species:"", 		name: "Throh",
+		species:"Judo", 		name: "Throh",
 		types: ["Fighting"],
 		gender: "M",
 		baseStats: {hp: 120, atk: 100, def: 85, spa: 30, spd: 85, spe: 45},
@@ -8371,7 +8373,7 @@ exports.BattlePokedex = {
 	},
 	sawk: {
 		num: 539,
-		species:"", 		name: "Sawk",
+		species:"Karate", 		name: "Sawk",
 		types: ["Fighting"],
 		gender: "M",
 		baseStats: {hp: 75, atk: 125, def: 75, spa: 30, spd: 75, spe: 85},
@@ -8383,7 +8385,7 @@ exports.BattlePokedex = {
 	},
 	sewaddle: {
 		num: 540,
-		species:"", 		name: "Sewaddle",
+		species:"Sewing", 		name: "Sewaddle",
 		types: ["Bug", "Grass"],
 		baseStats: {hp: 45, atk: 53, def: 70, spa: 40, spd: 60, spe: 42},
 		abilities: {0: "Swarm", 1: "Chlorophyll", H: "Overcoat"},
@@ -8395,7 +8397,7 @@ exports.BattlePokedex = {
 	},
 	swadloon: {
 		num: 541,
-		species:"", 		name: "Swadloon",
+		species:"Leaf-Wrapped", 		name: "Swadloon",
 		types: ["Bug", "Grass"],
 		baseStats: {hp: 55, atk: 63, def: 90, spa: 50, spd: 80, spe: 42},
 		abilities: {0: "Leaf Guard", 1: "Chlorophyll", H: "Overcoat"},
@@ -8409,7 +8411,7 @@ exports.BattlePokedex = {
 	},
 	leavanny: {
 		num: 542,
-		species:"", 		name: "Leavanny",
+		species:"Nurturing", 		name: "Leavanny",
 		types: ["Bug", "Grass"],
 		baseStats: {hp: 75, atk: 103, def: 80, spa: 70, spd: 80, spe: 92},
 		abilities: {0: "Swarm", 1: "Chlorophyll", H: "Overcoat"},
@@ -8422,7 +8424,7 @@ exports.BattlePokedex = {
 	},
 	venipede: {
 		num: 543,
-		species:"", 		name: "Venipede",
+		species:"Centipede", 		name: "Venipede",
 		types: ["Bug", "Poison"],
 		baseStats: {hp: 30, atk: 45, def: 59, spa: 30, spd: 39, spe: 57},
 		abilities: {0: "Poison Point", 1: "Swarm", H: "Speed Boost"},
@@ -8434,7 +8436,7 @@ exports.BattlePokedex = {
 	},
 	whirlipede: {
 		num: 544,
-		species:"", 		name: "Whirlipede",
+		species:"Curlipede", 		name: "Whirlipede",
 		types: ["Bug", "Poison"],
 		baseStats: {hp: 40, atk: 55, def: 99, spa: 40, spd: 79, spe: 47},
 		abilities: {0: "Poison Point", 1: "Swarm", H: "Speed Boost"},
@@ -8448,7 +8450,7 @@ exports.BattlePokedex = {
 	},
 	scolipede: {
 		num: 545,
-		species:"", 		name: "Scolipede",
+		species:"Megapede", 		name: "Scolipede",
 		types: ["Bug", "Poison"],
 		baseStats: {hp: 60, atk: 100, def: 89, spa: 55, spd: 69, spe: 112},
 		abilities: {0: "Poison Point", 1: "Swarm", H: "Speed Boost"},
@@ -8461,7 +8463,7 @@ exports.BattlePokedex = {
 	},
 	cottonee: {
 		num: 546,
-		species:"", 		name: "Cottonee",
+		species:"Cotton Puff", 		name: "Cottonee",
 		types: ["Grass", "Fairy"],
 		baseStats: {hp: 40, atk: 27, def: 60, spa: 37, spd: 50, spe: 66},
 		abilities: {0: "Prankster", 1: "Infiltrator", H: "Chlorophyll"},
@@ -8473,7 +8475,7 @@ exports.BattlePokedex = {
 	},
 	whimsicott: {
 		num: 547,
-		species:"", 		name: "Whimsicott",
+		species:"Windveiled", 		name: "Whimsicott",
 		types: ["Grass", "Fairy"],
 		baseStats: {hp: 60, atk: 67, def: 85, spa: 77, spd: 75, spe: 116},
 		abilities: {0: "Prankster", 1: "Infiltrator", H: "Chlorophyll"},
@@ -8486,7 +8488,7 @@ exports.BattlePokedex = {
 	},
 	petilil: {
 		num: 548,
-		species:"", 		name: "Petilil",
+		species:"Bulb", 		name: "Petilil",
 		types: ["Grass"],
 		gender: "F",
 		baseStats: {hp: 45, atk: 35, def: 50, spa: 70, spd: 50, spe: 30},
@@ -8499,7 +8501,7 @@ exports.BattlePokedex = {
 	},
 	lilligant: {
 		num: 549,
-		species:"", 		name: "Lilligant",
+		species:"Flowering", 		name: "Lilligant",
 		types: ["Grass"],
 		gender: "F",
 		baseStats: {hp: 70, atk: 60, def: 75, spa: 110, spd: 75, spe: 90},
@@ -8513,7 +8515,7 @@ exports.BattlePokedex = {
 	},
 	basculin: {
 		num: 550,
-		species:"", 		name: "Basculin",
+		species:"Hostile", 		name: "Basculin",
 		baseForme: "Red-Striped",
 		types: ["Water"],
 		baseStats: {hp: 70, atk: 92, def: 65, spa: 80, spd: 55, spe: 98},
@@ -8526,7 +8528,7 @@ exports.BattlePokedex = {
 	},
 	basculinbluestriped: {
 		num: 550,
-		species:"", 		name: "Basculin-Blue-Striped",
+		species:"Hostile", 		name: "Basculin-Blue-Striped",
 		baseName: "Basculin",
 		forme: "Blue-Striped",
 		formeLetter: "B",
@@ -8540,7 +8542,7 @@ exports.BattlePokedex = {
 	},
 	sandile: {
 		num: 551,
-		species:"", 		name: "Sandile",
+		species:"Desert Croc", 		name: "Sandile",
 		types: ["Ground", "Dark"],
 		baseStats: {hp: 50, atk: 72, def: 35, spa: 35, spd: 35, spe: 65},
 		abilities: {0: "Intimidate", 1: "Moxie", H: "Anger Point"},
@@ -8552,7 +8554,7 @@ exports.BattlePokedex = {
 	},
 	krokorok: {
 		num: 552,
-		species:"", 		name: "Krokorok",
+		species:"Desert Croc", 		name: "Krokorok",
 		types: ["Ground", "Dark"],
 		baseStats: {hp: 60, atk: 82, def: 45, spa: 45, spd: 45, spe: 74},
 		abilities: {0: "Intimidate", 1: "Moxie", H: "Anger Point"},
@@ -8566,7 +8568,7 @@ exports.BattlePokedex = {
 	},
 	krookodile: {
 		num: 553,
-		species:"", 		name: "Krookodile",
+		species:"Intimidation", 		name: "Krookodile",
 		types: ["Ground", "Dark"],
 		baseStats: {hp: 95, atk: 117, def: 80, spa: 65, spd: 70, spe: 92},
 		abilities: {0: "Intimidate", 1: "Moxie", H: "Anger Point"},
@@ -8579,7 +8581,7 @@ exports.BattlePokedex = {
 	},
 	darumaka: {
 		num: 554,
-		species:"", 		name: "Darumaka",
+		species:"Zen Charm", 		name: "Darumaka",
 		types: ["Fire"],
 		baseStats: {hp: 70, atk: 90, def: 45, spa: 15, spd: 45, spe: 50},
 		abilities: {0: "Hustle", H: "Inner Focus"},
@@ -8591,7 +8593,7 @@ exports.BattlePokedex = {
 	},
 	darmanitan: {
 		num: 555,
-		species:"", 		name: "Darmanitan",
+		species:"Blazing", 		name: "Darmanitan",
 		baseForme: "Standard",
 		types: ["Fire"],
 		baseStats: {hp: 105, atk: 140, def: 55, spa: 30, spd: 55, spe: 95},
@@ -8606,7 +8608,7 @@ exports.BattlePokedex = {
 	},
 	darmanitanzen: {
 		num: 555,
-		species:"", 		name: "Darmanitan-Zen",
+		species:"Blazing", 		name: "Darmanitan-Zen",
 		baseName: "Darmanitan",
 		forme: "Zen",
 		formeLetter: "Z",
@@ -8622,7 +8624,7 @@ exports.BattlePokedex = {
 	},
 	maractus: {
 		num: 556,
-		species:"", 		name: "Maractus",
+		species:"Cactus", 		name: "Maractus",
 		types: ["Grass"],
 		baseStats: {hp: 75, atk: 86, def: 67, spa: 106, spd: 67, spe: 60},
 		abilities: {0: "Water Absorb", 1: "Chlorophyll", H: "Storm Drain"},
@@ -8633,7 +8635,7 @@ exports.BattlePokedex = {
 	},
 	dwebble: {
 		num: 557,
-		species:"", 		name: "Dwebble",
+		species:"Rock Inn", 		name: "Dwebble",
 		types: ["Bug", "Rock"],
 		baseStats: {hp: 50, atk: 65, def: 85, spa: 35, spd: 35, spe: 55},
 		abilities: {0: "Sturdy", 1: "Shell Armor", H: "Weak Armor"},
@@ -8645,7 +8647,7 @@ exports.BattlePokedex = {
 	},
 	crustle: {
 		num: 558,
-		species:"", 		name: "Crustle",
+		species:"Stone Home", 		name: "Crustle",
 		types: ["Bug", "Rock"],
 		baseStats: {hp: 70, atk: 95, def: 125, spa: 65, spd: 75, spe: 45},
 		abilities: {0: "Sturdy", 1: "Shell Armor", H: "Weak Armor"},
@@ -8658,7 +8660,7 @@ exports.BattlePokedex = {
 	},
 	scraggy: {
 		num: 559,
-		species:"", 		name: "Scraggy",
+		species:"Shedding", 		name: "Scraggy",
 		types: ["Dark", "Fighting"],
 		baseStats: {hp: 50, atk: 75, def: 70, spa: 35, spd: 70, spe: 48},
 		abilities: {0: "Shed Skin", 1: "Moxie", H: "Intimidate"},
@@ -8670,7 +8672,7 @@ exports.BattlePokedex = {
 	},
 	scrafty: {
 		num: 560,
-		species:"", 		name: "Scrafty",
+		species:"Hoodlum", 		name: "Scrafty",
 		types: ["Dark", "Fighting"],
 		baseStats: {hp: 65, atk: 90, def: 115, spa: 45, spd: 115, spe: 58},
 		abilities: {0: "Shed Skin", 1: "Moxie", H: "Intimidate"},
@@ -8683,7 +8685,7 @@ exports.BattlePokedex = {
 	},
 	sigilyph: {
 		num: 561,
-		species:"", 		name: "Sigilyph",
+		species:"Avianoid", 		name: "Sigilyph",
 		types: ["Psychic", "Flying"],
 		baseStats: {hp: 72, atk: 58, def: 80, spa: 103, spd: 80, spe: 97},
 		abilities: {0: "Wonder Skin", 1: "Magic Guard", H: "Tinted Lens"},
@@ -8694,7 +8696,7 @@ exports.BattlePokedex = {
 	},
 	yamask: {
 		num: 562,
-		species:"", 		name: "Yamask",
+		species:"Spirit", 		name: "Yamask",
 		types: ["Ghost"],
 		baseStats: {hp: 38, atk: 30, def: 85, spa: 55, spd: 65, spe: 30},
 		abilities: {0: "Mummy"},
@@ -8706,7 +8708,7 @@ exports.BattlePokedex = {
 	},
 	cofagrigus: {
 		num: 563,
-		species:"", 		name: "Cofagrigus",
+		species:"Coffin", 		name: "Cofagrigus",
 		types: ["Ghost"],
 		baseStats: {hp: 58, atk: 50, def: 145, spa: 95, spd: 105, spe: 30},
 		abilities: {0: "Mummy"},
@@ -8719,7 +8721,7 @@ exports.BattlePokedex = {
 	},
 	tirtouga: {
 		num: 564,
-		species:"", 		name: "Tirtouga",
+		species:"Prototurtle", 		name: "Tirtouga",
 		types: ["Water", "Rock"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 54, atk: 78, def: 103, spa: 53, spd: 45, spe: 22},
@@ -8732,7 +8734,7 @@ exports.BattlePokedex = {
 	},
 	carracosta: {
 		num: 565,
-		species:"", 		name: "Carracosta",
+		species:"Prototurtle", 		name: "Carracosta",
 		types: ["Water", "Rock"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 74, atk: 108, def: 133, spa: 83, spd: 65, spe: 32},
@@ -8746,7 +8748,7 @@ exports.BattlePokedex = {
 	},
 	archen: {
 		num: 566,
-		species:"", 		name: "Archen",
+		species:"First Bird", 		name: "Archen",
 		types: ["Rock", "Flying"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 55, atk: 112, def: 45, spa: 74, spd: 45, spe: 70},
@@ -8759,7 +8761,7 @@ exports.BattlePokedex = {
 	},
 	archeops: {
 		num: 567,
-		species:"", 		name: "Archeops",
+		species:"First Bird", 		name: "Archeops",
 		types: ["Rock", "Flying"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 75, atk: 140, def: 65, spa: 112, spd: 65, spe: 110},
@@ -8773,7 +8775,7 @@ exports.BattlePokedex = {
 	},
 	trubbish: {
 		num: 568,
-		species:"", 		name: "Trubbish",
+		species:"Trash Bag", 		name: "Trubbish",
 		types: ["Poison"],
 		baseStats: {hp: 50, atk: 50, def: 62, spa: 40, spd: 62, spe: 65},
 		abilities: {0: "Stench", 1: "Sticky Hold", H: "Aftermath"},
@@ -8785,7 +8787,7 @@ exports.BattlePokedex = {
 	},
 	garbodor: {
 		num: 569,
-		species:"", 		name: "Garbodor",
+		species:"Trash Heap", 		name: "Garbodor",
 		types: ["Poison"],
 		baseStats: {hp: 80, atk: 95, def: 82, spa: 60, spd: 82, spe: 75},
 		abilities: {0: "Stench", 1: "Weak Armor", H: "Aftermath"},
@@ -8798,7 +8800,7 @@ exports.BattlePokedex = {
 	},
 	zorua: {
 		num: 570,
-		species:"", 		name: "Zorua",
+		species:"Tricky Fox", 		name: "Zorua",
 		types: ["Dark"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 40, atk: 65, def: 40, spa: 80, spd: 40, spe: 65},
@@ -8811,7 +8813,7 @@ exports.BattlePokedex = {
 	},
 	zoroark: {
 		num: 571,
-		species:"", 		name: "Zoroark",
+		species:"Illusion Fox", 		name: "Zoroark",
 		types: ["Dark"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 60, atk: 105, def: 60, spa: 120, spd: 60, spe: 105},
@@ -8825,7 +8827,7 @@ exports.BattlePokedex = {
 	},
 	minccino: {
 		num: 572,
-		species:"", 		name: "Minccino",
+		species:"Chinchilla", 		name: "Minccino",
 		types: ["Normal"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 55, atk: 50, def: 40, spa: 40, spd: 40, spe: 75},
@@ -8838,7 +8840,7 @@ exports.BattlePokedex = {
 	},
 	cinccino: {
 		num: 573,
-		species:"", 		name: "Cinccino",
+		species:"Scarf", 		name: "Cinccino",
 		types: ["Normal"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 75, atk: 95, def: 60, spa: 65, spd: 60, spe: 115},
@@ -8852,7 +8854,7 @@ exports.BattlePokedex = {
 	},
 	gothita: {
 		num: 574,
-		species:"", 		name: "Gothita",
+		species:"Fixation", 		name: "Gothita",
 		types: ["Psychic"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 45, atk: 30, def: 50, spa: 55, spd: 65, spe: 45},
@@ -8865,7 +8867,7 @@ exports.BattlePokedex = {
 	},
 	gothorita: {
 		num: 575,
-		species:"", 		name: "Gothorita",
+		species:"Manipulate", 		name: "Gothorita",
 		types: ["Psychic"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 60, atk: 45, def: 70, spa: 75, spd: 85, spe: 55},
@@ -8880,7 +8882,7 @@ exports.BattlePokedex = {
 	},
 	gothitelle: {
 		num: 576,
-		species:"", 		name: "Gothitelle",
+		species:"Astral Body", 		name: "Gothitelle",
 		types: ["Psychic"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 70, atk: 55, def: 95, spa: 95, spd: 110, spe: 65},
@@ -8894,7 +8896,7 @@ exports.BattlePokedex = {
 	},
 	solosis: {
 		num: 577,
-		species:"", 		name: "Solosis",
+		species:"Cell", 		name: "Solosis",
 		types: ["Psychic"],
 		baseStats: {hp: 45, atk: 30, def: 40, spa: 105, spd: 50, spe: 20},
 		abilities: {0: "Overcoat", 1: "Magic Guard", H: "Regenerator"},
@@ -8906,7 +8908,7 @@ exports.BattlePokedex = {
 	},
 	duosion: {
 		num: 578,
-		species:"", 		name: "Duosion",
+		species:"Mitosis", 		name: "Duosion",
 		types: ["Psychic"],
 		baseStats: {hp: 65, atk: 40, def: 50, spa: 125, spd: 60, spe: 30},
 		abilities: {0: "Overcoat", 1: "Magic Guard", H: "Regenerator"},
@@ -8920,7 +8922,7 @@ exports.BattlePokedex = {
 	},
 	reuniclus: {
 		num: 579,
-		species:"", 		name: "Reuniclus",
+		species:"Multiplying", 		name: "Reuniclus",
 		types: ["Psychic"],
 		baseStats: {hp: 110, atk: 65, def: 75, spa: 125, spd: 85, spe: 30},
 		abilities: {0: "Overcoat", 1: "Magic Guard", H: "Regenerator"},
@@ -8933,7 +8935,7 @@ exports.BattlePokedex = {
 	},
 	ducklett: {
 		num: 580,
-		species:"", 		name: "Ducklett",
+		species:"Water Bird", 		name: "Ducklett",
 		types: ["Water", "Flying"],
 		baseStats: {hp: 62, atk: 44, def: 50, spa: 44, spd: 50, spe: 55},
 		abilities: {0: "Keen Eye", 1: "Big Pecks", H: "Hydration"},
@@ -8945,7 +8947,7 @@ exports.BattlePokedex = {
 	},
 	swanna: {
 		num: 581,
-		species:"", 		name: "Swanna",
+		species:"White Bird", 		name: "Swanna",
 		types: ["Water", "Flying"],
 		baseStats: {hp: 75, atk: 87, def: 63, spa: 87, spd: 63, spe: 98},
 		abilities: {0: "Keen Eye", 1: "Big Pecks", H: "Hydration"},
@@ -8958,7 +8960,7 @@ exports.BattlePokedex = {
 	},
 	vanillite: {
 		num: 582,
-		species:"", 		name: "Vanillite",
+		species:"Fresh Snow", 		name: "Vanillite",
 		types: ["Ice"],
 		baseStats: {hp: 36, atk: 50, def: 50, spa: 65, spd: 60, spe: 44},
 		abilities: {0: "Ice Body", H: "Weak Armor"},
@@ -8970,7 +8972,7 @@ exports.BattlePokedex = {
 	},
 	vanillish: {
 		num: 583,
-		species:"", 		name: "Vanillish",
+		species:"Icy Snow", 		name: "Vanillish",
 		types: ["Ice"],
 		baseStats: {hp: 51, atk: 65, def: 65, spa: 80, spd: 75, spe: 59},
 		abilities: {0: "Ice Body", H: "Weak Armor"},
@@ -8984,7 +8986,7 @@ exports.BattlePokedex = {
 	},
 	vanilluxe: {
 		num: 584,
-		species:"", 		name: "Vanilluxe",
+		species:"Snowstorm", 		name: "Vanilluxe",
 		types: ["Ice"],
 		baseStats: {hp: 71, atk: 95, def: 85, spa: 110, spd: 95, spe: 79},
 		abilities: {0: "Ice Body", H: "Weak Armor"},
@@ -8997,7 +8999,7 @@ exports.BattlePokedex = {
 	},
 	deerling: {
 		num: 585,
-		species:"", 		name: "Deerling",
+		species:"Season", 		name: "Deerling",
 		baseForme: "Spring",
 		types: ["Normal", "Grass"],
 		baseStats: {hp: 60, atk: 60, def: 50, spa: 40, spd: 50, spe: 75},
@@ -9011,7 +9013,7 @@ exports.BattlePokedex = {
 	},
 	sawsbuck: {
 		num: 586,
-		species:"", 		name: "Sawsbuck",
+		species:"Season", 		name: "Sawsbuck",
 		baseForme: "Spring",
 		types: ["Normal", "Grass"],
 		baseStats: {hp: 80, atk: 100, def: 70, spa: 60, spd: 70, spe: 95},
@@ -9026,7 +9028,7 @@ exports.BattlePokedex = {
 	},
 	emolga: {
 		num: 587,
-		species:"", 		name: "Emolga",
+		species:"Sky Squirrel", 		name: "Emolga",
 		types: ["Electric", "Flying"],
 		baseStats: {hp: 55, atk: 75, def: 60, spa: 75, spd: 60, spe: 103},
 		abilities: {0: "Static", H: "Motor Drive"},
@@ -9037,7 +9039,7 @@ exports.BattlePokedex = {
 	},
 	karrablast: {
 		num: 588,
-		species:"", 		name: "Karrablast",
+		species:"Clamping", 		name: "Karrablast",
 		types: ["Bug"],
 		baseStats: {hp: 50, atk: 75, def: 45, spa: 40, spd: 45, spe: 60},
 		abilities: {0: "Swarm", 1: "Shed Skin", H: "No Guard"},
@@ -9049,7 +9051,7 @@ exports.BattlePokedex = {
 	},
 	escavalier: {
 		num: 589,
-		species:"", 		name: "Escavalier",
+		species:"Cavalry", 		name: "Escavalier",
 		types: ["Bug", "Steel"],
 		baseStats: {hp: 70, atk: 135, def: 105, spa: 60, spd: 105, spe: 20},
 		abilities: {0: "Swarm", 1: "Shell Armor", H: "Overcoat"},
@@ -9062,7 +9064,7 @@ exports.BattlePokedex = {
 	},
 	foongus: {
 		num: 590,
-		species:"", 		name: "Foongus",
+		species:"Mushroom", 		name: "Foongus",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 69, atk: 55, def: 45, spa: 55, spd: 55, spe: 15},
 		abilities: {0: "Effect Spore", H: "Regenerator"},
@@ -9074,7 +9076,7 @@ exports.BattlePokedex = {
 	},
 	amoonguss: {
 		num: 591,
-		species:"", 		name: "Amoonguss",
+		species:"Mushroom", 		name: "Amoonguss",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 114, atk: 85, def: 70, spa: 85, spd: 80, spe: 30},
 		abilities: {0: "Effect Spore", H: "Regenerator"},
@@ -9087,7 +9089,7 @@ exports.BattlePokedex = {
 	},
 	frillish: {
 		num: 592,
-		species:"", 		name: "Frillish",
+		species:"Floating", 		name: "Frillish",
 		types: ["Water", "Ghost"],
 		baseStats: {hp: 55, atk: 40, def: 50, spa: 65, spd: 85, spe: 40},
 		abilities: {0: "Water Absorb", 1: "Cursed Body", H: "Damp"},
@@ -9099,7 +9101,7 @@ exports.BattlePokedex = {
 	},
 	jellicent: {
 		num: 593,
-		species:"", 		name: "Jellicent",
+		species:"Floating", 		name: "Jellicent",
 		types: ["Water", "Ghost"],
 		baseStats: {hp: 100, atk: 60, def: 70, spa: 85, spd: 105, spe: 60},
 		abilities: {0: "Water Absorb", 1: "Cursed Body", H: "Damp"},
@@ -9112,7 +9114,7 @@ exports.BattlePokedex = {
 	},
 	alomomola: {
 		num: 594,
-		species:"", 		name: "Alomomola",
+		species:"Caring", 		name: "Alomomola",
 		types: ["Water"],
 		baseStats: {hp: 165, atk: 75, def: 80, spa: 40, spd: 45, spe: 65},
 		abilities: {0: "Healer", 1: "Hydration", H: "Regenerator"},
@@ -9123,7 +9125,7 @@ exports.BattlePokedex = {
 	},
 	joltik: {
 		num: 595,
-		species:"", 		name: "Joltik",
+		species:"Attaching", 		name: "Joltik",
 		types: ["Bug", "Electric"],
 		baseStats: {hp: 50, atk: 47, def: 50, spa: 57, spd: 50, spe: 65},
 		abilities: {0: "Compound Eyes", 1: "Unnerve", H: "Swarm"},
@@ -9135,7 +9137,7 @@ exports.BattlePokedex = {
 	},
 	galvantula: {
 		num: 596,
-		species:"", 		name: "Galvantula",
+		species:"EleSpider", 		name: "Galvantula",
 		types: ["Bug", "Electric"],
 		baseStats: {hp: 70, atk: 77, def: 60, spa: 97, spd: 60, spe: 108},
 		abilities: {0: "Compound Eyes", 1: "Unnerve", H: "Swarm"},
@@ -9148,7 +9150,7 @@ exports.BattlePokedex = {
 	},
 	ferroseed: {
 		num: 597,
-		species:"", 		name: "Ferroseed",
+		species:"Thorn Seed", 		name: "Ferroseed",
 		types: ["Grass", "Steel"],
 		baseStats: {hp: 44, atk: 50, def: 91, spa: 24, spd: 86, spe: 10},
 		abilities: {0: "Iron Barbs"},
@@ -9160,7 +9162,7 @@ exports.BattlePokedex = {
 	},
 	ferrothorn: {
 		num: 598,
-		species:"", 		name: "Ferrothorn",
+		species:"Thorn Pod", 		name: "Ferrothorn",
 		types: ["Grass", "Steel"],
 		baseStats: {hp: 74, atk: 94, def: 131, spa: 54, spd: 116, spe: 20},
 		abilities: {0: "Iron Barbs", H: "Anticipation"},
@@ -9173,7 +9175,7 @@ exports.BattlePokedex = {
 	},
 	klink: {
 		num: 599,
-		species:"", 		name: "Klink",
+		species:"Gear", 		name: "Klink",
 		types: ["Steel"],
 		gender: "N",
 		baseStats: {hp: 40, atk: 55, def: 70, spa: 45, spd: 60, spe: 30},
@@ -9186,7 +9188,7 @@ exports.BattlePokedex = {
 	},
 	klang: {
 		num: 600,
-		species:"", 		name: "Klang",
+		species:"Gear", 		name: "Klang",
 		types: ["Steel"],
 		gender: "N",
 		baseStats: {hp: 60, atk: 80, def: 95, spa: 70, spd: 85, spe: 50},
@@ -9201,7 +9203,7 @@ exports.BattlePokedex = {
 	},
 	klinklang: {
 		num: 601,
-		species:"", 		name: "Klinklang",
+		species:"Gear", 		name: "Klinklang",
 		types: ["Steel"],
 		gender: "N",
 		baseStats: {hp: 60, atk: 100, def: 115, spa: 70, spd: 85, spe: 90},
@@ -9215,7 +9217,7 @@ exports.BattlePokedex = {
 	},
 	tynamo: {
 		num: 602,
-		species:"", 		name: "Tynamo",
+		species:"EleFish", 		name: "Tynamo",
 		types: ["Electric"],
 		baseStats: {hp: 35, atk: 55, def: 40, spa: 45, spd: 40, spe: 60},
 		abilities: {0: "Levitate"},
@@ -9227,7 +9229,7 @@ exports.BattlePokedex = {
 	},
 	eelektrik: {
 		num: 603,
-		species:"", 		name: "Eelektrik",
+		species:"EleFish", 		name: "Eelektrik",
 		types: ["Electric"],
 		baseStats: {hp: 65, atk: 85, def: 70, spa: 75, spd: 70, spe: 40},
 		abilities: {0: "Levitate"},
@@ -9241,7 +9243,7 @@ exports.BattlePokedex = {
 	},
 	eelektross: {
 		num: 604,
-		species:"", 		name: "Eelektross",
+		species:"EleFish", 		name: "Eelektross",
 		types: ["Electric"],
 		baseStats: {hp: 85, atk: 115, def: 80, spa: 105, spd: 80, spe: 50},
 		abilities: {0: "Levitate"},
@@ -9254,7 +9256,7 @@ exports.BattlePokedex = {
 	},
 	elgyem: {
 		num: 605,
-		species:"", 		name: "Elgyem",
+		species:"Cerebral", 		name: "Elgyem",
 		types: ["Psychic"],
 		baseStats: {hp: 55, atk: 55, def: 55, spa: 85, spd: 55, spe: 30},
 		abilities: {0: "Telepathy", 1: "Synchronize", H: "Analytic"},
@@ -9266,7 +9268,7 @@ exports.BattlePokedex = {
 	},
 	beheeyem: {
 		num: 606,
-		species:"", 		name: "Beheeyem",
+		species:"Cerebral", 		name: "Beheeyem",
 		types: ["Psychic"],
 		baseStats: {hp: 75, atk: 75, def: 75, spa: 125, spd: 95, spe: 40},
 		abilities: {0: "Telepathy", 1: "Synchronize", H: "Analytic"},
@@ -9279,7 +9281,7 @@ exports.BattlePokedex = {
 	},
 	litwick: {
 		num: 607,
-		species:"", 		name: "Litwick",
+		species:"Candle", 		name: "Litwick",
 		types: ["Ghost", "Fire"],
 		baseStats: {hp: 50, atk: 30, def: 55, spa: 65, spd: 55, spe: 20},
 		abilities: {0: "Flash Fire", 1: "Flame Body", H: "Infiltrator"},
@@ -9291,7 +9293,7 @@ exports.BattlePokedex = {
 	},
 	lampent: {
 		num: 608,
-		species:"", 		name: "Lampent",
+		species:"Lamp", 		name: "Lampent",
 		types: ["Ghost", "Fire"],
 		baseStats: {hp: 60, atk: 40, def: 60, spa: 95, spd: 60, spe: 55},
 		abilities: {0: "Flash Fire", 1: "Flame Body", H: "Infiltrator"},
@@ -9305,7 +9307,7 @@ exports.BattlePokedex = {
 	},
 	chandelure: {
 		num: 609,
-		species:"", 		name: "Chandelure",
+		species:"Luring", 		name: "Chandelure",
 		types: ["Ghost", "Fire"],
 		baseStats: {hp: 60, atk: 55, def: 90, spa: 145, spd: 90, spe: 80},
 		abilities: {0: "Flash Fire", 1: "Flame Body", H: "Infiltrator"},
@@ -9318,7 +9320,7 @@ exports.BattlePokedex = {
 	},
 	axew: {
 		num: 610,
-		species:"", 		name: "Axew",
+		species:"Tusk", 		name: "Axew",
 		types: ["Dragon"],
 		baseStats: {hp: 46, atk: 87, def: 60, spa: 30, spd: 40, spe: 57},
 		abilities: {0: "Rivalry", 1: "Mold Breaker", H: "Unnerve"},
@@ -9330,7 +9332,7 @@ exports.BattlePokedex = {
 	},
 	fraxure: {
 		num: 611,
-		species:"", 		name: "Fraxure",
+		species:"Axe Jaw", 		name: "Fraxure",
 		types: ["Dragon"],
 		baseStats: {hp: 66, atk: 117, def: 70, spa: 40, spd: 50, spe: 67},
 		abilities: {0: "Rivalry", 1: "Mold Breaker", H: "Unnerve"},
@@ -9344,7 +9346,7 @@ exports.BattlePokedex = {
 	},
 	haxorus: {
 		num: 612,
-		species:"", 		name: "Haxorus",
+		species:"Axe Jaw", 		name: "Haxorus",
 		types: ["Dragon"],
 		baseStats: {hp: 76, atk: 147, def: 90, spa: 60, spd: 70, spe: 97},
 		abilities: {0: "Rivalry", 1: "Mold Breaker", H: "Unnerve"},
@@ -9357,7 +9359,7 @@ exports.BattlePokedex = {
 	},
 	cubchoo: {
 		num: 613,
-		species:"", 		name: "Cubchoo",
+		species:"Chill", 		name: "Cubchoo",
 		types: ["Ice"],
 		baseStats: {hp: 55, atk: 70, def: 40, spa: 60, spd: 40, spe: 40},
 		abilities: {0: "Snow Cloak", H: "Rattled"},
@@ -9369,7 +9371,7 @@ exports.BattlePokedex = {
 	},
 	beartic: {
 		num: 614,
-		species:"", 		name: "Beartic",
+		species:"Freezing", 		name: "Beartic",
 		types: ["Ice"],
 		baseStats: {hp: 95, atk: 110, def: 80, spa: 70, spd: 80, spe: 50},
 		abilities: {0: "Snow Cloak", H: "Swift Swim"},
@@ -9382,7 +9384,7 @@ exports.BattlePokedex = {
 	},
 	cryogonal: {
 		num: 615,
-		species:"", 		name: "Cryogonal",
+		species:"Crystallizing", 		name: "Cryogonal",
 		types: ["Ice"],
 		gender: "N",
 		baseStats: {hp: 70, atk: 50, def: 30, spa: 95, spd: 135, spe: 105},
@@ -9394,7 +9396,7 @@ exports.BattlePokedex = {
 	},
 	shelmet: {
 		num: 616,
-		species:"", 		name: "Shelmet",
+		species:"Snail", 		name: "Shelmet",
 		types: ["Bug"],
 		baseStats: {hp: 50, atk: 40, def: 85, spa: 40, spd: 65, spe: 25},
 		abilities: {0: "Hydration", 1: "Shell Armor", H: "Overcoat"},
@@ -9406,7 +9408,7 @@ exports.BattlePokedex = {
 	},
 	accelgor: {
 		num: 617,
-		species:"", 		name: "Accelgor",
+		species:"Shell Out", 		name: "Accelgor",
 		types: ["Bug"],
 		baseStats: {hp: 80, atk: 70, def: 40, spa: 100, spd: 60, spe: 145},
 		abilities: {0: "Hydration", 1: "Sticky Hold", H: "Unburden"},
@@ -9419,7 +9421,7 @@ exports.BattlePokedex = {
 	},
 	stunfisk: {
 		num: 618,
-		species:"", 		name: "Stunfisk",
+		species:"Trap", 		name: "Stunfisk",
 		types: ["Ground", "Electric"],
 		baseStats: {hp: 109, atk: 66, def: 84, spa: 81, spd: 99, spe: 32},
 		abilities: {0: "Static", 1: "Limber", H: "Sand Veil"},
@@ -9430,7 +9432,7 @@ exports.BattlePokedex = {
 	},
 	mienfoo: {
 		num: 619,
-		species:"", 		name: "Mienfoo",
+		species:"Martial Arts", 		name: "Mienfoo",
 		types: ["Fighting"],
 		baseStats: {hp: 45, atk: 85, def: 50, spa: 55, spd: 50, spe: 65},
 		abilities: {0: "Inner Focus", 1: "Regenerator", H: "Reckless"},
@@ -9442,7 +9444,7 @@ exports.BattlePokedex = {
 	},
 	mienshao: {
 		num: 620,
-		species:"", 		name: "Mienshao",
+		species:"Martial Arts", 		name: "Mienshao",
 		types: ["Fighting"],
 		baseStats: {hp: 65, atk: 125, def: 60, spa: 95, spd: 60, spe: 105},
 		abilities: {0: "Inner Focus", 1: "Regenerator", H: "Reckless"},
@@ -9455,7 +9457,7 @@ exports.BattlePokedex = {
 	},
 	druddigon: {
 		num: 621,
-		species:"", 		name: "Druddigon",
+		species:"Cave", 		name: "Druddigon",
 		types: ["Dragon"],
 		baseStats: {hp: 77, atk: 120, def: 90, spa: 60, spd: 90, spe: 48},
 		abilities: {0: "Rough Skin", 1: "Sheer Force", H: "Mold Breaker"},
@@ -9466,7 +9468,7 @@ exports.BattlePokedex = {
 	},
 	golett: {
 		num: 622,
-		species:"", 		name: "Golett",
+		species:"Automaton", 		name: "Golett",
 		types: ["Ground", "Ghost"],
 		gender: "N",
 		baseStats: {hp: 59, atk: 74, def: 50, spa: 35, spd: 50, spe: 35},
@@ -9479,7 +9481,7 @@ exports.BattlePokedex = {
 	},
 	golurk: {
 		num: 623,
-		species:"", 		name: "Golurk",
+		species:"Automaton", 		name: "Golurk",
 		types: ["Ground", "Ghost"],
 		gender: "N",
 		baseStats: {hp: 89, atk: 124, def: 80, spa: 55, spd: 80, spe: 55},
@@ -9493,7 +9495,7 @@ exports.BattlePokedex = {
 	},
 	pawniard: {
 		num: 624,
-		species:"", 		name: "Pawniard",
+		species:"Sharp Blade", 		name: "Pawniard",
 		types: ["Dark", "Steel"],
 		baseStats: {hp: 45, atk: 85, def: 70, spa: 40, spd: 40, spe: 60},
 		abilities: {0: "Defiant", 1: "Inner Focus", H: "Pressure"},
@@ -9505,7 +9507,7 @@ exports.BattlePokedex = {
 	},
 	bisharp: {
 		num: 625,
-		species:"", 		name: "Bisharp",
+		species:"Sword Blade", 		name: "Bisharp",
 		types: ["Dark", "Steel"],
 		baseStats: {hp: 65, atk: 125, def: 100, spa: 60, spd: 70, spe: 70},
 		abilities: {0: "Defiant", 1: "Inner Focus", H: "Pressure"},
@@ -9518,7 +9520,7 @@ exports.BattlePokedex = {
 	},
 	bouffalant: {
 		num: 626,
-		species:"", 		name: "Bouffalant",
+		species:"Bash Buffalo", 		name: "Bouffalant",
 		types: ["Normal"],
 		baseStats: {hp: 95, atk: 110, def: 95, spa: 40, spd: 95, spe: 55},
 		abilities: {0: "Reckless", 1: "Sap Sipper", H: "Soundproof"},
@@ -9529,7 +9531,7 @@ exports.BattlePokedex = {
 	},
 	rufflet: {
 		num: 627,
-		species:"", 		name: "Rufflet",
+		species:"Eaglet", 		name: "Rufflet",
 		types: ["Normal", "Flying"],
 		gender: "M",
 		baseStats: {hp: 70, atk: 83, def: 50, spa: 37, spd: 50, spe: 60},
@@ -9542,7 +9544,7 @@ exports.BattlePokedex = {
 	},
 	braviary: {
 		num: 628,
-		species:"", 		name: "Braviary",
+		species:"Valiant", 		name: "Braviary",
 		types: ["Normal", "Flying"],
 		gender: "M",
 		baseStats: {hp: 100, atk: 123, def: 75, spa: 57, spd: 75, spe: 80},
@@ -9556,7 +9558,7 @@ exports.BattlePokedex = {
 	},
 	vullaby: {
 		num: 629,
-		species:"", 		name: "Vullaby",
+		species:"Diapered", 		name: "Vullaby",
 		types: ["Dark", "Flying"],
 		gender: "F",
 		baseStats: {hp: 70, atk: 55, def: 75, spa: 45, spd: 65, spe: 60},
@@ -9569,7 +9571,7 @@ exports.BattlePokedex = {
 	},
 	mandibuzz: {
 		num: 630,
-		species:"", 		name: "Mandibuzz",
+		species:"Bone Vulture", 		name: "Mandibuzz",
 		types: ["Dark", "Flying"],
 		gender: "F",
 		baseStats: {hp: 110, atk: 65, def: 105, spa: 55, spd: 95, spe: 80},
@@ -9583,7 +9585,7 @@ exports.BattlePokedex = {
 	},
 	heatmor: {
 		num: 631,
-		species:"", 		name: "Heatmor",
+		species:"Anteater", 		name: "Heatmor",
 		types: ["Fire"],
 		baseStats: {hp: 85, atk: 97, def: 66, spa: 105, spd: 66, spe: 65},
 		abilities: {0: "Gluttony", 1: "Flash Fire", H: "White Smoke"},
@@ -9594,7 +9596,7 @@ exports.BattlePokedex = {
 	},
 	durant: {
 		num: 632,
-		species:"", 		name: "Durant",
+		species:"Iron Ant", 		name: "Durant",
 		types: ["Bug", "Steel"],
 		baseStats: {hp: 58, atk: 109, def: 112, spa: 48, spd: 48, spe: 109},
 		abilities: {0: "Swarm", 1: "Hustle", H: "Truant"},
@@ -9605,7 +9607,7 @@ exports.BattlePokedex = {
 	},
 	deino: {
 		num: 633,
-		species:"", 		name: "Deino",
+		species:"Irate", 		name: "Deino",
 		types: ["Dark", "Dragon"],
 		baseStats: {hp: 52, atk: 65, def: 50, spa: 45, spd: 50, spe: 38},
 		abilities: {0: "Hustle"},
@@ -9617,7 +9619,7 @@ exports.BattlePokedex = {
 	},
 	zweilous: {
 		num: 634,
-		species:"", 		name: "Zweilous",
+		species:"Hostile", 		name: "Zweilous",
 		types: ["Dark", "Dragon"],
 		baseStats: {hp: 72, atk: 85, def: 70, spa: 65, spd: 70, spe: 58},
 		abilities: {0: "Hustle"},
@@ -9631,7 +9633,7 @@ exports.BattlePokedex = {
 	},
 	hydreigon: {
 		num: 635,
-		species:"", 		name: "Hydreigon",
+		species:"Brutal", 		name: "Hydreigon",
 		types: ["Dark", "Dragon"],
 		baseStats: {hp: 92, atk: 105, def: 90, spa: 125, spd: 90, spe: 98},
 		abilities: {0: "Levitate"},
@@ -9644,7 +9646,7 @@ exports.BattlePokedex = {
 	},
 	larvesta: {
 		num: 636,
-		species:"", 		name: "Larvesta",
+		species:"Torch", 		name: "Larvesta",
 		types: ["Bug", "Fire"],
 		baseStats: {hp: 55, atk: 85, def: 55, spa: 50, spd: 55, spe: 60},
 		abilities: {0: "Flame Body", H: "Swarm"},
@@ -9656,7 +9658,7 @@ exports.BattlePokedex = {
 	},
 	volcarona: {
 		num: 637,
-		species:"", 		name: "Volcarona",
+		species:"Sun", 		name: "Volcarona",
 		types: ["Bug", "Fire"],
 		baseStats: {hp: 85, atk: 60, def: 65, spa: 135, spd: 105, spe: 100},
 		abilities: {0: "Flame Body", H: "Swarm"},
@@ -9669,7 +9671,7 @@ exports.BattlePokedex = {
 	},
 	cobalion: {
 		num: 638,
-		species:"", 		name: "Cobalion",
+		species:"Iron Will", 		name: "Cobalion",
 		types: ["Steel", "Fighting"],
 		gender: "N",
 		baseStats: {hp: 91, atk: 90, def: 129, spa: 90, spd: 72, spe: 108},
@@ -9681,7 +9683,7 @@ exports.BattlePokedex = {
 	},
 	terrakion: {
 		num: 639,
-		species:"", 		name: "Terrakion",
+		species:"Cavern", 		name: "Terrakion",
 		types: ["Rock", "Fighting"],
 		gender: "N",
 		baseStats: {hp: 91, atk: 129, def: 90, spa: 72, spd: 90, spe: 108},
@@ -9693,7 +9695,7 @@ exports.BattlePokedex = {
 	},
 	virizion: {
 		num: 640,
-		species:"", 		name: "Virizion",
+		species:"Grassland", 		name: "Virizion",
 		types: ["Grass", "Fighting"],
 		gender: "N",
 		baseStats: {hp: 91, atk: 90, def: 72, spa: 90, spd: 129, spe: 108},
@@ -9705,7 +9707,7 @@ exports.BattlePokedex = {
 	},
 	tornadus: {
 		num: 641,
-		species:"", 		name: "Tornadus",
+		species:"Cyclone", 		name: "Tornadus",
 		baseForme: "Incarnate",
 		types: ["Flying"],
 		gender: "M",
@@ -9719,7 +9721,7 @@ exports.BattlePokedex = {
 	},
 	tornadustherian: {
 		num: 641,
-		species:"", 		name: "Tornadus-Therian",
+		species:"Cyclone", 		name: "Tornadus-Therian",
 		baseName: "Tornadus",
 		forme: "Therian",
 		formeLetter: "T",
@@ -9734,7 +9736,7 @@ exports.BattlePokedex = {
 	},
 	thundurus: {
 		num: 642,
-		species:"", 		name: "Thundurus",
+		species:"Bolt Strike", 		name: "Thundurus",
 		baseForme: "Incarnate",
 		types: ["Electric", "Flying"],
 		gender: "M",
@@ -9748,7 +9750,7 @@ exports.BattlePokedex = {
 	},
 	thundurustherian: {
 		num: 642,
-		species:"", 		name: "Thundurus-Therian",
+		species:"Bolt Strike", 		name: "Thundurus-Therian",
 		baseName: "Thundurus",
 		forme: "Therian",
 		formeLetter: "T",
@@ -9763,7 +9765,7 @@ exports.BattlePokedex = {
 	},
 	reshiram: {
 		num: 643,
-		species:"", 		name: "Reshiram",
+		species:"Vast White", 		name: "Reshiram",
 		types: ["Dragon", "Fire"],
 		gender: "N",
 		baseStats: {hp: 100, atk: 120, def: 100, spa: 150, spd: 120, spe: 90},
@@ -9775,7 +9777,7 @@ exports.BattlePokedex = {
 	},
 	zekrom: {
 		num: 644,
-		species:"", 		name: "Zekrom",
+		species:"Deep Black", 		name: "Zekrom",
 		types: ["Dragon", "Electric"],
 		gender: "N",
 		baseStats: {hp: 100, atk: 150, def: 120, spa: 120, spd: 100, spe: 90},
@@ -9787,7 +9789,7 @@ exports.BattlePokedex = {
 	},
 	landorus: {
 		num: 645,
-		species:"", 		name: "Landorus",
+		species:"Abundant", 		name: "Landorus",
 		baseForme: "Incarnate",
 		types: ["Ground", "Flying"],
 		gender: "M",
@@ -9801,7 +9803,7 @@ exports.BattlePokedex = {
 	},
 	landorustherian: {
 		num: 645,
-		species:"", 		name: "Landorus-Therian",
+		species:"Abundant", 		name: "Landorus-Therian",
 		baseName: "Landorus",
 		forme: "Therian",
 		formeLetter: "T",
@@ -9816,7 +9818,7 @@ exports.BattlePokedex = {
 	},
 	kyurem: {
 		num: 646,
-		species:"", 		name: "Kyurem",
+		species:"Boundary", 		name: "Kyurem",
 		types: ["Dragon", "Ice"],
 		gender: "N",
 		baseStats: {hp: 125, atk: 130, def: 90, spa: 130, spd: 90, spe: 95},
@@ -9829,7 +9831,7 @@ exports.BattlePokedex = {
 	},
 	kyuremblack: {
 		num: 646,
-		species:"", 		name: "Kyurem-Black",
+		species:"Boundary", 		name: "Kyurem-Black",
 		baseName: "Kyurem",
 		forme: "Black",
 		formeLetter: "B",
@@ -9844,7 +9846,7 @@ exports.BattlePokedex = {
 	},
 	kyuremwhite: {
 		num: 646,
-		species:"", 		name: "Kyurem-White",
+		species:"Boundary", 		name: "Kyurem-White",
 		baseName: "Kyurem",
 		forme: "White",
 		formeLetter: "W",
@@ -9859,7 +9861,7 @@ exports.BattlePokedex = {
 	},
 	keldeo: {
 		num: 647,
-		species:"", 		name: "Keldeo",
+		species:"Colt", 		name: "Keldeo",
 		baseForme: "Ordinary",
 		types: ["Water", "Fighting"],
 		gender: "N",
@@ -9873,7 +9875,7 @@ exports.BattlePokedex = {
 	},
 	keldeoresolute: {
 		num: 647,
-		species:"", 		name: "Keldeo-Resolute",
+		species:"Colt", 		name: "Keldeo-Resolute",
 		baseName: "Keldeo",
 		forme: "Resolute",
 		formeLetter: "R",
@@ -9888,7 +9890,7 @@ exports.BattlePokedex = {
 	},
 	meloetta: {
 		num: 648,
-		species:"", 		name: "Meloetta",
+		species:"Melody", 		name: "Meloetta",
 		baseForme: "Aria",
 		types: ["Normal", "Psychic"],
 		gender: "N",
@@ -9902,7 +9904,7 @@ exports.BattlePokedex = {
 	},
 	meloettapirouette: {
 		num: 648,
-		species:"", 		name: "Meloetta-Pirouette",
+		species:"Melody", 		name: "Meloetta-Pirouette",
 		baseName: "Meloetta",
 		forme: "Pirouette",
 		formeLetter: "P",
@@ -9917,7 +9919,7 @@ exports.BattlePokedex = {
 	},
 	genesect: {
 		num: 649,
-		species:"", 		name: "Genesect",
+		species:"Paleozoic", 		name: "Genesect",
 		types: ["Bug", "Steel"],
 		gender: "N",
 		baseStats: {hp: 71, atk: 120, def: 95, spa: 120, spd: 95, spe: 99},
@@ -9930,7 +9932,7 @@ exports.BattlePokedex = {
 	},
 	genesectdouse: {
 		num: 649,
-		species:"", 		name: "Genesect-Douse",
+		species:"Paleozoic", 		name: "Genesect-Douse",
 		baseName: "Genesect",
 		forme: "Douse",
 		formeLetter: "D",
@@ -9945,7 +9947,7 @@ exports.BattlePokedex = {
 	},
 	genesectshock: {
 		num: 649,
-		species:"", 		name: "Genesect-Shock",
+		species:"Paleozoic", 		name: "Genesect-Shock",
 		baseName: "Genesect",
 		forme: "Shock",
 		formeLetter: "S",
@@ -9960,7 +9962,7 @@ exports.BattlePokedex = {
 	},
 	genesectburn: {
 		num: 649,
-		species:"", 		name: "Genesect-Burn",
+		species:"Paleozoic", 		name: "Genesect-Burn",
 		baseName: "Genesect",
 		forme: "Burn",
 		formeLetter: "B",
@@ -9975,7 +9977,7 @@ exports.BattlePokedex = {
 	},
 	genesectchill: {
 		num: 649,
-		species:"", 		name: "Genesect-Chill",
+		species:"Paleozoic", 		name: "Genesect-Chill",
 		baseName: "Genesect",
 		forme: "Chill",
 		formeLetter: "C",
@@ -9990,7 +9992,7 @@ exports.BattlePokedex = {
 	},
 	chespin: {
 		num: 650,
-		species:"", 		name: "Chespin",
+		species:"Spiny Nut", 		name: "Chespin",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 56, atk: 61, def: 65, spa: 48, spd: 45, spe: 38},
@@ -10003,7 +10005,7 @@ exports.BattlePokedex = {
 	},
 	quilladin: {
 		num: 651,
-		species:"", 		name: "Quilladin",
+		species:"Spiny Armor", 		name: "Quilladin",
 		types: ["Grass"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 61, atk: 78, def: 95, spa: 56, spd: 58, spe: 57},
@@ -10018,7 +10020,7 @@ exports.BattlePokedex = {
 	},
 	chesnaught: {
 		num: 652,
-		species:"", 		name: "Chesnaught",
+		species:"Spiny Armor", 		name: "Chesnaught",
 		types: ["Grass", "Fighting"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 88, atk: 107, def: 122, spa: 74, spd: 75, spe: 64},
@@ -10032,7 +10034,7 @@ exports.BattlePokedex = {
 	},
 	fennekin: {
 		num: 653,
-		species:"", 		name: "Fennekin",
+		species:"Fox", 		name: "Fennekin",
 		types: ["Fire"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 40, atk: 45, def: 40, spa: 62, spd: 60, spe: 60},
@@ -10045,7 +10047,7 @@ exports.BattlePokedex = {
 	},
 	braixen: {
 		num: 654,
-		species:"", 		name: "Braixen",
+		species:"Fox", 		name: "Braixen",
 		types: ["Fire"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 59, atk: 59, def: 58, spa: 90, spd: 70, spe: 73},
@@ -10060,7 +10062,7 @@ exports.BattlePokedex = {
 	},
 	delphox: {
 		num: 655,
-		species:"", 		name: "Delphox",
+		species:"Fox", 		name: "Delphox",
 		types: ["Fire", "Psychic"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 75, atk: 69, def: 72, spa: 114, spd: 100, spe: 104},
@@ -10074,7 +10076,7 @@ exports.BattlePokedex = {
 	},
 	froakie: {
 		num: 656,
-		species:"", 		name: "Froakie",
+		species:"Bubble Frog", 		name: "Froakie",
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 41, atk: 56, def: 40, spa: 62, spd: 44, spe: 71},
@@ -10087,7 +10089,7 @@ exports.BattlePokedex = {
 	},
 	frogadier: {
 		num: 657,
-		species:"", 		name: "Frogadier",
+		species:"Bubble Frog", 		name: "Frogadier",
 		types: ["Water"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 54, atk: 63, def: 52, spa: 83, spd: 56, spe: 97},
@@ -10102,7 +10104,7 @@ exports.BattlePokedex = {
 	},
 	greninja: {
 		num: 658,
-		species:"", 		name: "Greninja",
+		species:"Ninja", 		name: "Greninja",
 		types: ["Water", "Dark"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 72, atk: 95, def: 67, spa: 103, spd: 71, spe: 122},
@@ -10116,7 +10118,7 @@ exports.BattlePokedex = {
 	},
 	bunnelby: {
 		num: 659,
-		species:"", 		name: "Bunnelby",
+		species:"Digging", 		name: "Bunnelby",
 		types: ["Normal"],
 		baseStats: {hp: 38, atk: 36, def: 38, spa: 32, spd: 36, spe: 57},
 		abilities: {0: "Pickup", 1: "Cheek Pouch", H: "Huge Power"},
@@ -10128,7 +10130,7 @@ exports.BattlePokedex = {
 	},
 	diggersby: {
 		num: 660,
-		species:"", 		name: "Diggersby",
+		species:"Digging", 		name: "Diggersby",
 		types: ["Normal", "Ground"],
 		baseStats: {hp: 85, atk: 56, def: 77, spa: 50, spd: 77, spe: 78},
 		abilities: {0: "Pickup", 1: "Cheek Pouch", H: "Huge Power"},
@@ -10141,7 +10143,7 @@ exports.BattlePokedex = {
 	},
 	fletchling: {
 		num: 661,
-		species:"", 		name: "Fletchling",
+		species:"Tiny Robin", 		name: "Fletchling",
 		types: ["Normal", "Flying"],
 		baseStats: {hp: 45, atk: 50, def: 43, spa: 40, spd: 38, spe: 62},
 		abilities: {0: "Big Pecks", H: "Gale Wings"},
@@ -10153,7 +10155,7 @@ exports.BattlePokedex = {
 	},
 	fletchinder: {
 		num: 662,
-		species:"", 		name: "Fletchinder",
+		species:"Ember", 		name: "Fletchinder",
 		types: ["Fire", "Flying"],
 		baseStats: {hp: 62, atk: 73, def: 55, spa: 56, spd: 52, spe: 84},
 		abilities: {0: "Flame Body", H: "Gale Wings"},
@@ -10167,7 +10169,7 @@ exports.BattlePokedex = {
 	},
 	talonflame: {
 		num: 663,
-		species:"", 		name: "Talonflame",
+		species:"Scorching", 		name: "Talonflame",
 		types: ["Fire", "Flying"],
 		baseStats: {hp: 78, atk: 81, def: 71, spa: 74, spd: 69, spe: 126},
 		abilities: {0: "Flame Body", H: "Gale Wings"},
@@ -10180,7 +10182,7 @@ exports.BattlePokedex = {
 	},
 	scatterbug: {
 		num: 664,
-		species:"", 		name: "Scatterbug",
+		species:"Scatterdust", 		name: "Scatterbug",
 		types: ["Bug"],
 		baseStats: {hp: 38, atk: 35, def: 40, spa: 27, spd: 25, spe: 35},
 		abilities: {0: "Shield Dust", 1: "Compound Eyes", H: "Friend Guard"},
@@ -10192,7 +10194,7 @@ exports.BattlePokedex = {
 	},
 	spewpa: {
 		num: 665,
-		species:"", 		name: "Spewpa",
+		species:"Scatterdust", 		name: "Spewpa",
 		types: ["Bug"],
 		baseStats: {hp: 45, atk: 22, def: 60, spa: 27, spd: 30, spe: 29},
 		abilities: {0: "Shed Skin", H: "Friend Guard"},
@@ -10206,7 +10208,7 @@ exports.BattlePokedex = {
 	},
 	vivillon: {
 		num: 666,
-		species:"", 		name: "Vivillon",
+		species:"Scale", 		name: "Vivillon",
 		types: ["Bug", "Flying"],
 		baseStats: {hp: 80, atk: 52, def: 50, spa: 90, spd: 50, spe: 89},
 		abilities: {0: "Shield Dust", 1: "Compound Eyes", H: "Friend Guard"},
@@ -10221,7 +10223,7 @@ exports.BattlePokedex = {
 	},
 	vivillonfancy: {
 		num: 666,
-		species:"", 		name: "Vivillon-Fancy",
+		species:"Scale", 		name: "Vivillon-Fancy",
 		baseName: "Vivillon",
 		forme: "Fancy",
 		formeLetter: "F",
@@ -10235,7 +10237,7 @@ exports.BattlePokedex = {
 	},
 	vivillonpokeball: {
 		num: 666,
-		species:"", 		name: "Vivillon-Pokeball",
+		species:"Scale", 		name: "Vivillon-Pokeball",
 		baseName: "Vivillon",
 		forme: "Pokeball",
 		formeLetter: "P",
@@ -10249,7 +10251,7 @@ exports.BattlePokedex = {
 	},
 	litleo: {
 		num: 667,
-		species:"", 		name: "Litleo",
+		species:"Lion Cub", 		name: "Litleo",
 		types: ["Fire", "Normal"],
 		baseStats: {hp: 62, atk: 50, def: 58, spa: 73, spd: 54, spe: 72},
 		abilities: {0: "Rivalry", 1: "Unnerve", H: "Moxie"},
@@ -10261,7 +10263,7 @@ exports.BattlePokedex = {
 	},
 	pyroar: {
 		num: 668,
-		species:"", 		name: "Pyroar",
+		species:"Royal", 		name: "Pyroar",
 		types: ["Fire", "Normal"],
 		genderRatio: {M: 0.25, F: 0.75},
 		baseStats: {hp: 86, atk: 68, def: 72, spa: 109, spd: 66, spe: 106},
@@ -10275,7 +10277,7 @@ exports.BattlePokedex = {
 	},
 	flabebe: {
 		num: 669,
-		species:"", 		name: "Flabebe",
+		species:"Single Bloom", 		name: "Flabebe",
 		types: ["Fairy"],
 		gender: "F",
 		baseStats: {hp: 44, atk: 38, def: 39, spa: 61, spd: 79, spe: 42},
@@ -10289,7 +10291,7 @@ exports.BattlePokedex = {
 	},
 	floette: {
 		num: 670,
-		species:"", 		name: "Floette",
+		species:"Single Bloom", 		name: "Floette",
 		baseForme: "Red-Flower",
 		types: ["Fairy"],
 		gender: "F",
@@ -10307,7 +10309,7 @@ exports.BattlePokedex = {
 	},
 	floetteeternal: {
 		num: 670,
-		species:"", 		name: "Floette-Eternal",
+		species:"Single Bloom", 		name: "Floette-Eternal",
 		baseName: "Floette",
 		forme: "Eternal",
 		formeLetter: "E",
@@ -10322,7 +10324,7 @@ exports.BattlePokedex = {
 	},
 	florges: {
 		num: 671,
-		species:"", 		name: "Florges",
+		species:"Garden", 		name: "Florges",
 		types: ["Fairy"],
 		gender: "F",
 		baseStats: {hp: 78, atk: 65, def: 68, spa: 112, spd: 154, spe: 75},
@@ -10337,7 +10339,7 @@ exports.BattlePokedex = {
 	},
 	skiddo: {
 		num: 672,
-		species:"", 		name: "Skiddo",
+		species:"Mount", 		name: "Skiddo",
 		types: ["Grass"],
 		baseStats: {hp: 66, atk: 65, def: 48, spa: 62, spd: 57, spe: 52},
 		abilities: {0: "Sap Sipper", H: "Grass Pelt"},
@@ -10349,7 +10351,7 @@ exports.BattlePokedex = {
 	},
 	gogoat: {
 		num: 673,
-		species:"", 		name: "Gogoat",
+		species:"Mount", 		name: "Gogoat",
 		types: ["Grass"],
 		baseStats: {hp: 123, atk: 100, def: 62, spa: 97, spd: 81, spe: 68},
 		abilities: {0: "Sap Sipper", H: "Grass Pelt"},
@@ -10362,7 +10364,7 @@ exports.BattlePokedex = {
 	},
 	pancham: {
 		num: 674,
-		species:"", 		name: "Pancham",
+		species:"Playful", 		name: "Pancham",
 		types: ["Fighting"],
 		baseStats: {hp: 67, atk: 82, def: 62, spa: 46, spd: 48, spe: 43},
 		abilities: {0: "Iron Fist", 1: "Mold Breaker", H: "Scrappy"},
@@ -10374,7 +10376,7 @@ exports.BattlePokedex = {
 	},
 	pangoro: {
 		num: 675,
-		species:"", 		name: "Pangoro",
+		species:"Daunting", 		name: "Pangoro",
 		types: ["Fighting", "Dark"],
 		baseStats: {hp: 95, atk: 124, def: 78, spa: 69, spd: 71, spe: 58},
 		abilities: {0: "Iron Fist", 1: "Mold Breaker", H: "Scrappy"},
@@ -10387,7 +10389,7 @@ exports.BattlePokedex = {
 	},
 	furfrou: {
 		num: 676,
-		species:"", 		name: "Furfrou",
+		species:"Poodle", 		name: "Furfrou",
 		types: ["Normal"],
 		baseStats: {hp: 75, atk: 80, def: 60, spa: 65, spd: 90, spe: 102},
 		abilities: {0: "Fur Coat"},
@@ -10398,7 +10400,7 @@ exports.BattlePokedex = {
 	},
 	espurr: {
 		num: 677,
-		species:"", 		name: "Espurr",
+		species:"Restraint", 		name: "Espurr",
 		types: ["Psychic"],
 		baseStats: {hp: 62, atk: 48, def: 54, spa: 63, spd: 60, spe: 68},
 		abilities: {0: "Keen Eye", 1: "Infiltrator", H: "Own Tempo"},
@@ -10410,7 +10412,7 @@ exports.BattlePokedex = {
 	},
 	meowstic: {
 		num: 678,
-		species:"", 		name: "Meowstic",
+		species:"Constraint", 		name: "Meowstic",
 		baseForme: "M",
 		types: ["Psychic"],
 		gender: "M",
@@ -10426,7 +10428,7 @@ exports.BattlePokedex = {
 	},
 	meowsticf: {
 		num: 678,
-		species:"", 		name: "Meowstic-F",
+		species:"Constraint", 		name: "Meowstic-F",
 		baseName: "Meowstic",
 		forme: "F",
 		formeLetter: "F",
@@ -10443,7 +10445,7 @@ exports.BattlePokedex = {
 	},
 	honedge: {
 		num: 679,
-		species:"", 		name: "Honedge",
+		species:"Sword", 		name: "Honedge",
 		types: ["Steel", "Ghost"],
 		baseStats: {hp: 45, atk: 80, def: 100, spa: 35, spd: 37, spe: 28},
 		abilities: {0: "No Guard"},
@@ -10455,7 +10457,7 @@ exports.BattlePokedex = {
 	},
 	doublade: {
 		num: 680,
-		species:"", 		name: "Doublade",
+		species:"Sword", 		name: "Doublade",
 		types: ["Steel", "Ghost"],
 		baseStats: {hp: 59, atk: 110, def: 150, spa: 45, spd: 49, spe: 35},
 		abilities: {0: "No Guard"},
@@ -10469,7 +10471,7 @@ exports.BattlePokedex = {
 	},
 	aegislash: {
 		num: 681,
-		species:"", 		name: "Aegislash",
+		species:"Royal Sword", 		name: "Aegislash",
 		baseForme: "Shield",
 		types: ["Steel", "Ghost"],
 		baseStats: {hp: 60, atk: 50, def: 150, spa: 50, spd: 150, spe: 60},
@@ -10484,7 +10486,7 @@ exports.BattlePokedex = {
 	},
 	aegislashblade: {
 		num: 681,
-		species:"", 		name: "Aegislash-Blade",
+		species:"Royal Sword", 		name: "Aegislash-Blade",
 		baseName: "Aegislash",
 		forme: "Blade",
 		formeLetter: "B",
@@ -10500,7 +10502,7 @@ exports.BattlePokedex = {
 	},
 	spritzee: {
 		num: 682,
-		species:"", 		name: "Spritzee",
+		species:"Perfume", 		name: "Spritzee",
 		types: ["Fairy"],
 		baseStats: {hp: 78, atk: 52, def: 60, spa: 63, spd: 65, spe: 23},
 		abilities: {0: "Healer", H: "Aroma Veil"},
@@ -10512,7 +10514,7 @@ exports.BattlePokedex = {
 	},
 	aromatisse: {
 		num: 683,
-		species:"", 		name: "Aromatisse",
+		species:"Fragrance", 		name: "Aromatisse",
 		types: ["Fairy"],
 		baseStats: {hp: 101, atk: 72, def: 72, spa: 99, spd: 89, spe: 29},
 		abilities: {0: "Healer", H: "Aroma Veil"},
@@ -10525,7 +10527,7 @@ exports.BattlePokedex = {
 	},
 	swirlix: {
 		num: 684,
-		species:"", 		name: "Swirlix",
+		species:"Cotton Candy", 		name: "Swirlix",
 		types: ["Fairy"],
 		baseStats: {hp: 62, atk: 48, def: 66, spa: 59, spd: 57, spe: 49},
 		abilities: {0: "Sweet Veil", H: "Unburden"},
@@ -10537,7 +10539,7 @@ exports.BattlePokedex = {
 	},
 	slurpuff: {
 		num: 685,
-		species:"", 		name: "Slurpuff",
+		species:"Meringue", 		name: "Slurpuff",
 		types: ["Fairy"],
 		baseStats: {hp: 82, atk: 80, def: 86, spa: 85, spd: 75, spe: 72},
 		abilities: {0: "Sweet Veil", H: "Unburden"},
@@ -10550,7 +10552,7 @@ exports.BattlePokedex = {
 	},
 	inkay: {
 		num: 686,
-		species:"", 		name: "Inkay",
+		species:"Revolving", 		name: "Inkay",
 		types: ["Dark", "Psychic"],
 		baseStats: {hp: 53, atk: 54, def: 53, spa: 37, spd: 46, spe: 45},
 		abilities: {0: "Contrary", 1: "Suction Cups", H: "Infiltrator"},
@@ -10562,7 +10564,7 @@ exports.BattlePokedex = {
 	},
 	malamar: {
 		num: 687,
-		species:"", 		name: "Malamar",
+		species:"Overturning", 		name: "Malamar",
 		types: ["Dark", "Psychic"],
 		baseStats: {hp: 86, atk: 92, def: 88, spa: 68, spd: 75, spe: 73},
 		abilities: {0: "Contrary", 1: "Suction Cups", H: "Infiltrator"},
@@ -10575,7 +10577,7 @@ exports.BattlePokedex = {
 	},
 	binacle: {
 		num: 688,
-		species:"", 		name: "Binacle",
+		species:"Two-Handed", 		name: "Binacle",
 		types: ["Rock", "Water"],
 		baseStats: {hp: 42, atk: 52, def: 67, spa: 39, spd: 56, spe: 50},
 		abilities: {0: "Tough Claws", 1: "Sniper", H: "Pickpocket"},
@@ -10587,7 +10589,7 @@ exports.BattlePokedex = {
 	},
 	barbaracle: {
 		num: 689,
-		species:"", 		name: "Barbaracle",
+		species:"Collective", 		name: "Barbaracle",
 		types: ["Rock", "Water"],
 		baseStats: {hp: 72, atk: 105, def: 115, spa: 54, spd: 86, spe: 68},
 		abilities: {0: "Tough Claws", 1: "Sniper", H: "Pickpocket"},
@@ -10600,7 +10602,7 @@ exports.BattlePokedex = {
 	},
 	skrelp: {
 		num: 690,
-		species:"", 		name: "Skrelp",
+		species:"Mock Kelp", 		name: "Skrelp",
 		types: ["Poison", "Water"],
 		baseStats: {hp: 50, atk: 60, def: 60, spa: 60, spd: 60, spe: 30},
 		abilities: {0: "Poison Point", 1: "Poison Touch", H: "Adaptability"},
@@ -10612,7 +10614,7 @@ exports.BattlePokedex = {
 	},
 	dragalge: {
 		num: 691,
-		species:"", 		name: "Dragalge",
+		species:"Mock Kelp", 		name: "Dragalge",
 		types: ["Poison", "Dragon"],
 		baseStats: {hp: 65, atk: 75, def: 90, spa: 97, spd: 123, spe: 44},
 		abilities: {0: "Poison Point", 1: "Poison Touch", H: "Adaptability"},
@@ -10625,7 +10627,7 @@ exports.BattlePokedex = {
 	},
 	clauncher: {
 		num: 692,
-		species:"", 		name: "Clauncher",
+		species:"Water Gun", 		name: "Clauncher",
 		types: ["Water"],
 		baseStats: {hp: 50, atk: 53, def: 62, spa: 58, spd: 63, spe: 44},
 		abilities: {0: "Mega Launcher"},
@@ -10637,7 +10639,7 @@ exports.BattlePokedex = {
 	},
 	clawitzer: {
 		num: 693,
-		species:"", 		name: "Clawitzer",
+		species:"Howitzer", 		name: "Clawitzer",
 		types: ["Water"],
 		baseStats: {hp: 71, atk: 73, def: 88, spa: 120, spd: 89, spe: 59},
 		abilities: {0: "Mega Launcher"},
@@ -10650,7 +10652,7 @@ exports.BattlePokedex = {
 	},
 	helioptile: {
 		num: 694,
-		species:"", 		name: "Helioptile",
+		species:"Generator", 		name: "Helioptile",
 		types: ["Electric", "Normal"],
 		baseStats: {hp: 44, atk: 38, def: 33, spa: 61, spd: 43, spe: 70},
 		abilities: {0: "Dry Skin", 1: "Sand Veil", H: "Solar Power"},
@@ -10662,7 +10664,7 @@ exports.BattlePokedex = {
 	},
 	heliolisk: {
 		num: 695,
-		species:"", 		name: "Heliolisk",
+		species:"Generator", 		name: "Heliolisk",
 		types: ["Electric", "Normal"],
 		baseStats: {hp: 62, atk: 55, def: 52, spa: 109, spd: 94, spe: 109},
 		abilities: {0: "Dry Skin", 1: "Sand Veil", H: "Solar Power"},
@@ -10675,7 +10677,7 @@ exports.BattlePokedex = {
 	},
 	tyrunt: {
 		num: 696,
-		species:"", 		name: "Tyrunt",
+		species:"Royal Heir", 		name: "Tyrunt",
 		types: ["Rock", "Dragon"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 58, atk: 89, def: 77, spa: 45, spd: 45, spe: 48},
@@ -10688,7 +10690,7 @@ exports.BattlePokedex = {
 	},
 	tyrantrum: {
 		num: 697,
-		species:"", 		name: "Tyrantrum",
+		species:"Despot", 		name: "Tyrantrum",
 		types: ["Rock", "Dragon"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 82, atk: 121, def: 119, spa: 69, spd: 59, spe: 71},
@@ -10702,7 +10704,7 @@ exports.BattlePokedex = {
 	},
 	amaura: {
 		num: 698,
-		species:"", 		name: "Amaura",
+		species:"Tundra", 		name: "Amaura",
 		types: ["Rock", "Ice"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 77, atk: 59, def: 50, spa: 67, spd: 63, spe: 46},
@@ -10715,7 +10717,7 @@ exports.BattlePokedex = {
 	},
 	aurorus: {
 		num: 699,
-		species:"", 		name: "Aurorus",
+		species:"Tundra", 		name: "Aurorus",
 		types: ["Rock", "Ice"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 123, atk: 77, def: 72, spa: 99, spd: 92, spe: 58},
@@ -10729,7 +10731,7 @@ exports.BattlePokedex = {
 	},
 	sylveon: {
 		num: 700,
-		species:"", 		name: "Sylveon",
+		species:"Intertwining", 		name: "Sylveon",
 		types: ["Fairy"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 95, atk: 65, def: 65, spa: 110, spd: 130, spe: 60},
@@ -10743,7 +10745,7 @@ exports.BattlePokedex = {
 	},
 	hawlucha: {
 		num: 701,
-		species:"", 		name: "Hawlucha",
+		species:"Wrestling", 		name: "Hawlucha",
 		types: ["Fighting", "Flying"],
 		baseStats: {hp: 78, atk: 92, def: 75, spa: 74, spd: 63, spe: 118},
 		abilities: {0: "Limber", 1: "Unburden", H: "Mold Breaker"},
@@ -10754,7 +10756,7 @@ exports.BattlePokedex = {
 	},
 	dedenne: {
 		num: 702,
-		species:"", 		name: "Dedenne",
+		species:"Antenna", 		name: "Dedenne",
 		types: ["Electric", "Fairy"],
 		baseStats: {hp: 67, atk: 58, def: 57, spa: 81, spd: 67, spe: 101},
 		abilities: {0: "Cheek Pouch", 1: "Pickup", H: "Plus"},
@@ -10765,7 +10767,7 @@ exports.BattlePokedex = {
 	},
 	carbink: {
 		num: 703,
-		species:"", 		name: "Carbink",
+		species:"Jewel", 		name: "Carbink",
 		types: ["Rock", "Fairy"],
 		gender: "N",
 		baseStats: {hp: 50, atk: 50, def: 150, spa: 50, spd: 150, spe: 50},
@@ -10777,7 +10779,7 @@ exports.BattlePokedex = {
 	},
 	goomy: {
 		num: 704,
-		species:"", 		name: "Goomy",
+		species:"Soft Tissue", 		name: "Goomy",
 		types: ["Dragon"],
 		baseStats: {hp: 45, atk: 50, def: 35, spa: 55, spd: 75, spe: 40},
 		abilities: {0: "Sap Sipper", 1: "Hydration", H: "Gooey"},
@@ -10789,7 +10791,7 @@ exports.BattlePokedex = {
 	},
 	sliggoo: {
 		num: 705,
-		species:"", 		name: "Sliggoo",
+		species:"Soft Tissue", 		name: "Sliggoo",
 		types: ["Dragon"],
 		baseStats: {hp: 68, atk: 75, def: 53, spa: 83, spd: 113, spe: 60},
 		abilities: {0: "Sap Sipper", 1: "Hydration", H: "Gooey"},
@@ -10803,7 +10805,7 @@ exports.BattlePokedex = {
 	},
 	goodra: {
 		num: 706,
-		species:"", 		name: "Goodra",
+		species:"Dragon", 		name: "Goodra",
 		types: ["Dragon"],
 		baseStats: {hp: 90, atk: 100, def: 70, spa: 110, spd: 150, spe: 80},
 		abilities: {0: "Sap Sipper", 1: "Hydration", H: "Gooey"},
@@ -10816,7 +10818,7 @@ exports.BattlePokedex = {
 	},
 	klefki: {
 		num: 707,
-		species:"", 		name: "Klefki",
+		species:"Key Ring", 		name: "Klefki",
 		types: ["Steel", "Fairy"],
 		baseStats: {hp: 57, atk: 80, def: 91, spa: 80, spd: 87, spe: 75},
 		abilities: {0: "Prankster", H: "Magician"},
@@ -10827,7 +10829,7 @@ exports.BattlePokedex = {
 	},
 	phantump: {
 		num: 708,
-		species:"", 		name: "Phantump",
+		species:"Stump", 		name: "Phantump",
 		types: ["Ghost", "Grass"],
 		baseStats: {hp: 43, atk: 70, def: 48, spa: 50, spd: 60, spe: 38},
 		abilities: {0: "Natural Cure", 1: "Frisk", H: "Harvest"},
@@ -10839,7 +10841,7 @@ exports.BattlePokedex = {
 	},
 	trevenant: {
 		num: 709,
-		species:"", 		name: "Trevenant",
+		species:"Elder Tree", 		name: "Trevenant",
 		types: ["Ghost", "Grass"],
 		baseStats: {hp: 85, atk: 110, def: 76, spa: 65, spd: 82, spe: 56},
 		abilities: {0: "Natural Cure", 1: "Frisk", H: "Harvest"},
@@ -10852,7 +10854,7 @@ exports.BattlePokedex = {
 	},
 	pumpkaboo: {
 		num: 710,
-		species:"", 		name: "Pumpkaboo",
+		species:"Pumpkin", 		name: "Pumpkaboo",
 		baseForme: "Average",
 		types: ["Ghost", "Grass"],
 		baseStats: {hp: 49, atk: 66, def: 70, spa: 44, spd: 55, spe: 51},
@@ -10866,7 +10868,7 @@ exports.BattlePokedex = {
 	},
 	pumpkaboosmall: {
 		num: 710,
-		species:"", 		name: "Pumpkaboo-Small",
+		species:"Pumpkin", 		name: "Pumpkaboo-Small",
 		baseName: "Pumpkaboo",
 		forme: "Small",
 		formeLetter: "S",
@@ -10881,7 +10883,7 @@ exports.BattlePokedex = {
 	},
 	pumpkaboolarge: {
 		num: 710,
-		species:"", 		name: "Pumpkaboo-Large",
+		species:"Pumpkin", 		name: "Pumpkaboo-Large",
 		baseName: "Pumpkaboo",
 		forme: "Large",
 		formeLetter: "L",
@@ -10896,7 +10898,7 @@ exports.BattlePokedex = {
 	},
 	pumpkaboosuper: {
 		num: 710,
-		species:"", 		name: "Pumpkaboo-Super",
+		species:"Pumpkin", 		name: "Pumpkaboo-Super",
 		baseName: "Pumpkaboo",
 		forme: "Super",
 		formeLetter: "S",
@@ -10911,7 +10913,7 @@ exports.BattlePokedex = {
 	},
 	gourgeist: {
 		num: 711,
-		species:"", 		name: "Gourgeist",
+		species:"Pumpkin", 		name: "Gourgeist",
 		baseForme: "Average",
 		types: ["Ghost", "Grass"],
 		baseStats: {hp: 65, atk: 90, def: 122, spa: 58, spd: 75, spe: 84},
@@ -10926,7 +10928,7 @@ exports.BattlePokedex = {
 	},
 	gourgeistsmall: {
 		num: 711,
-		species:"", 		name: "Gourgeist-Small",
+		species:"Pumpkin", 		name: "Gourgeist-Small",
 		baseName: "Gourgeist",
 		forme: "Small",
 		formeLetter: "S",
@@ -10942,7 +10944,7 @@ exports.BattlePokedex = {
 	},
 	gourgeistlarge: {
 		num: 711,
-		species:"", 		name: "Gourgeist-Large",
+		species:"Pumpkin", 		name: "Gourgeist-Large",
 		baseName: "Gourgeist",
 		forme: "Large",
 		formeLetter: "L",
@@ -10958,7 +10960,7 @@ exports.BattlePokedex = {
 	},
 	gourgeistsuper: {
 		num: 711,
-		species:"", 		name: "Gourgeist-Super",
+		species:"Pumpkin", 		name: "Gourgeist-Super",
 		baseName: "Gourgeist",
 		forme: "Super",
 		formeLetter: "S",
@@ -10974,7 +10976,7 @@ exports.BattlePokedex = {
 	},
 	bergmite: {
 		num: 712,
-		species:"", 		name: "Bergmite",
+		species:"Ice Chunk", 		name: "Bergmite",
 		types: ["Ice"],
 		baseStats: {hp: 55, atk: 69, def: 85, spa: 32, spd: 35, spe: 28},
 		abilities: {0: "Own Tempo", 1: "Ice Body", H: "Sturdy"},
@@ -10986,7 +10988,7 @@ exports.BattlePokedex = {
 	},
 	avalugg: {
 		num: 713,
-		species:"", 		name: "Avalugg",
+		species:"Iceberg", 		name: "Avalugg",
 		types: ["Ice"],
 		baseStats: {hp: 95, atk: 117, def: 184, spa: 44, spd: 46, spe: 28},
 		abilities: {0: "Own Tempo", 1: "Ice Body", H: "Sturdy"},
@@ -10999,7 +11001,7 @@ exports.BattlePokedex = {
 	},
 	noibat: {
 		num: 714,
-		species:"", 		name: "Noibat",
+		species:"Sound Wave", 		name: "Noibat",
 		types: ["Flying", "Dragon"],
 		baseStats: {hp: 40, atk: 30, def: 35, spa: 45, spd: 40, spe: 55},
 		abilities: {0: "Frisk", 1: "Infiltrator", H: "Telepathy"},
@@ -11011,7 +11013,7 @@ exports.BattlePokedex = {
 	},
 	noivern: {
 		num: 715,
-		species:"", 		name: "Noivern",
+		species:"Sound Wave", 		name: "Noivern",
 		types: ["Flying", "Dragon"],
 		baseStats: {hp: 85, atk: 70, def: 80, spa: 97, spd: 80, spe: 123},
 		abilities: {0: "Frisk", 1: "Infiltrator", H: "Telepathy"},
@@ -11024,7 +11026,7 @@ exports.BattlePokedex = {
 	},
 	xerneas: {
 		num: 716,
-		species:"", 		name: "Xerneas",
+		species:"Life", 		name: "Xerneas",
 		types: ["Fairy"],
 		gender: "N",
 		baseStats: {hp: 126, atk: 131, def: 95, spa: 131, spd: 98, spe: 99},
@@ -11036,7 +11038,7 @@ exports.BattlePokedex = {
 	},
 	yveltal: {
 		num: 717,
-		species:"", 		name: "Yveltal",
+		species:"Destruction", 		name: "Yveltal",
 		types: ["Dark", "Flying"],
 		gender: "N",
 		baseStats: {hp: 126, atk: 131, def: 95, spa: 131, spd: 98, spe: 99},
@@ -11048,7 +11050,7 @@ exports.BattlePokedex = {
 	},
 	zygarde: {
 		num: 718,
-		species:"", 		name: "Zygarde",
+		species:"Order", 		name: "Zygarde",
 		types: ["Dragon", "Ground"],
 		gender: "N",
 		baseStats: {hp: 108, atk: 100, def: 121, spa: 81, spd: 95, spe: 95},
@@ -11060,7 +11062,7 @@ exports.BattlePokedex = {
 	},
 	diancie: {
 		num: 719,
-		species:"", 		name: "Diancie",
+		species:"Jewel", 		name: "Diancie",
 		types: ["Rock", "Fairy"],
 		gender: "N",
 		baseStats: {hp: 50, atk: 100, def: 150, spa: 100, spd: 150, spe: 50},
@@ -11073,7 +11075,7 @@ exports.BattlePokedex = {
 	},
 	dianciemega: {
 		num: 719,
-		species:"", 		name: "Diancie-Mega",
+		species:"Jewel", 		name: "Diancie-Mega",
 		baseName: "Diancie",
 		forme: "Mega",
 		formeLetter: "M",
@@ -11088,7 +11090,7 @@ exports.BattlePokedex = {
 	},
 	hoopa: {
 		num: 720,
-		species:"", 		name: "Hoopa",
+		species:"Mischief", 		name: "Hoopa",
 		baseForme: "Confined",
 		types: ["Psychic", "Ghost"],
 		gender: "N",
@@ -11102,7 +11104,7 @@ exports.BattlePokedex = {
 	},
 	hoopaunbound: {
 		num: 720,
-		species:"", 		name: "Hoopa-Unbound",
+		species:"Djinn", 		name: "Hoopa-Unbound",
 		baseName: "Hoopa",
 		forme: "Unbound",
 		formeLetter: "U",
@@ -11117,7 +11119,7 @@ exports.BattlePokedex = {
 	},
 	volcanion: {
 		num: 721,
-		species:"", 		name: "Volcanion",
+		species:"Steam", 		name: "Volcanion",
 		types: ["Fire", "Water"],
 		gender: "N",
 		baseStats: {hp: 80, atk: 110, def: 120, spa: 130, spd: 90, spe: 70},
@@ -11126,266 +11128,5 @@ exports.BattlePokedex = {
 		weightkg: 195,
 		color: "Brown",
 		eggGroups: ["Undiscovered"],
-	},
-	missingno: {
-		num: 0,
-		species:"", 		name: "Missingno.",
-		types: ["Bird", "Normal"],
-		baseStats: {hp: 33, atk: 136, def: 0, spa: 6, spd: 6, spe: 29},
-		abilities: {0: "", H: ""},
-		heightm: 3,
-		weightkg: 1590.8,
-		color: "Gray",
-		eggGroups: ["Undiscovered"],
-	},
-	tomohawk: {
-		num: -1,
-		species:"", 		name: "Tomohawk",
-		types: ["Flying", "Fighting"],
-		baseStats: {hp: 105, atk: 60, def: 90, spa: 115, spd: 80, spe: 85},
-		abilities: {0: "Intimidate", 1: "Prankster", H: "Justified"},
-		heightm: 1.27,
-		weightkg: 37.2,
-		color: "Red",
-		eggGroups: ["Field", "Flying"],
-	},
-	necturna: {
-		num: -2,
-		species:"", 		name: "Necturna",
-		types: ["Grass", "Ghost"],
-		gender: "F",
-		baseStats: {hp: 64, atk: 120, def: 100, spa: 85, spd: 120, spe: 81},
-		abilities: {0: "Forewarn", H: "Telepathy"},
-		heightm: 1.65,
-		weightkg: 49.6,
-		color: "Black",
-		eggGroups: ["Grass", "Field"],
-	},
-	mollux: {
-		num: -3,
-		species:"", 		name: "Mollux",
-		types: ["Fire", "Poison"],
-		baseStats: {hp: 95, atk: 45, def: 83, spa: 131, spd: 105, spe: 76},
-		abilities: {0: "Dry Skin", H: "Illuminate"},
-		heightm: 1.2,
-		weightkg: 41,
-		color: "Pink",
-		eggGroups: ["Fairy", "Field"],
-	},
-	aurumoth: {
-		num: -4,
-		species:"", 		name: "Aurumoth",
-		types: ["Bug", "Psychic"],
-		baseStats: {hp: 110, atk: 120, def: 99, spa: 117, spd: 60, spe: 94},
-		abilities: {0: "Weak Armor", 1: "No Guard", H: "Illusion"},
-		heightm: 2.1,
-		weightkg: 193,
-		color: "Purple",
-		eggGroups: ["Bug"],
-	},
-	malaconda: {
-		num: -5,
-		species:"", 		name: "Malaconda",
-		types: ["Dark", "Grass"],
-		baseStats: {hp: 115, atk: 100, def: 60, spa: 40, spd: 130, spe: 55},
-		abilities: {0: "Harvest", 1: "Infiltrator"},
-		heightm: 5.5,
-		weightkg: 108.8,
-		color: "Brown",
-		eggGroups: ["Grass", "Dragon"],
-	},
-	cawmodore: {
-		num: -6,
-		species:"", 		name: "Cawmodore",
-		types: ["Steel", "Flying"],
-		baseStats: {hp: 50, atk: 92, def: 130, spa: 65, spd: 75, spe: 118},
-		abilities: {0: "Intimidate", 1: "Volt Absorb", H: "Big Pecks"},
-		heightm: 1.7,
-		weightkg: 37,
-		color: "Black",
-		eggGroups: ["Flying"],
-	},
-	volkraken: {
-		num: -7,
-		species:"", 		name: "Volkraken",
-		types: ["Water", "Fire"],
-		baseStats: {hp: 100, atk: 45, def: 80, spa: 135, spd: 100, spe: 95},
-		abilities: {0: "Analytic", 1: "Infiltrator", H: "Pressure"},
-		heightm: 1.3,
-		weightkg: 44.5,
-		color: "Red",
-		eggGroups: ["Water 1", "Water 2"],
-	},
-	plasmanta: {
-		num: -8,
-		species:"", 		name: "Plasmanta",
-		types: ["Electric", "Poison"],
-		baseStats: {hp: 60, atk: 57, def: 119, spa: 131, spd: 98, spe: 100},
-		abilities: {0: "Storm Drain", 1: "Vital Spirit", H: "Telepathy"},
-		heightm: 7,
-		weightkg: 460,
-		color: "Purple",
-		eggGroups: ["Water 1", "Water 2"],
-	},
-	naviathan: {
-		num: -9,
-		species:"", 		name: "Naviathan",
-		types: ["Water", "Steel"],
-		baseStats: {hp: 103, atk: 110, def: 90, spa: 95, spd: 65, spe: 97},
-		abilities: {0: "Water Veil", 1: "Heatproof", H: "Light Metal"},
-		heightm: 3,
-		weightkg: 510,
-		color: "Gray",
-		eggGroups: ["Water 1", "Field"],
-	},
-	crucibelle: {
-		num: -10,
-		species:"", 		name: "Crucibelle",
-		types: ["Rock", "Poison"],
-		genderRatio: {M: 0.25, F: 0.75},
-		baseStats: {hp: 106, atk: 105, def: 65, spa: 75, spd: 85, spe: 104},
-		abilities: {0: "Regenerator", 1: "Mold Breaker", H: "Liquid Ooze"},
-		heightm: 1.3,
-		weightkg: 23.6,
-		color: "Purple",
-		eggGroups: ["Amorphous", "Mineral"],
-		otherFormes: ["crucibellemega"],
-	},
-	crucibellemega: {
-		num: -10,
-		species:"", 		name: "Crucibelle-Mega",
-		baseName: "Crucibelle",
-		forme: "Mega",
-		formeLetter: "M",
-		types: ["Rock", "Poison"],
-		genderRatio: {M: 0.25, F: 0.75},
-		baseStats: {hp: 106, atk: 135, def: 75, spa: 85, spd: 125, spe: 114},
-		abilities: {0: "Magic Guard"},
-		heightm: 1.4,
-		weightkg: 22.5,
-		color: "Purple",
-		eggGroups: ["Amorphous", "Mineral"],
-	},
-	syclant: {
-		num: -51,
-		species:"", 		name: "Syclant",
-		types: ["Ice", "Bug"],
-		baseStats: {hp: 70, atk: 116, def: 70, spa: 114, spd: 64, spe: 121},
-		abilities: {0: "Compound Eyes", 1: "Mountaineer"},
-		heightm: 1.7,
-		weightkg: 52,
-		color: "Blue",
-		eggGroups: ["Bug"],
-	},
-	revenankh: {
-		num: -52,
-		species:"", 		name: "Revenankh",
-		types: ["Ghost", "Fighting"],
-		baseStats: {hp: 90, atk: 105, def: 90, spa: 65, spd: 110, spe: 65},
-		abilities: {0: "Shed Skin", 1: "Air Lock"},
-		heightm: 1.8,
-		weightkg: 44,
-		color: "White",
-		eggGroups: ["Amorphous", "Human-Like"],
-	},
-	pyroak: {
-		num: -53,
-		species:"", 		name: "Pyroak",
-		types: ["Fire", "Grass"],
-		baseStats: {hp: 120, atk: 70, def: 105, spa: 95, spd: 90, spe: 60},
-		abilities: {0: "Rock Head", 1: "Battle Armor"},
-		heightm: 2.1,
-		weightkg: 168,
-		color: "Brown",
-		eggGroups: ["Monster", "Dragon"],
-	},
-	fidgit: {
-		num: -54,
-		species:"", 		name: "Fidgit",
-		types: ["Poison", "Ground"],
-		baseStats: {hp: 95, atk: 76, def: 109, spa: 90, spd: 80, spe: 105},
-		abilities: {0: "Persistent", 1: "Vital Spirit"},
-		heightm: 0.9,
-		weightkg: 53,
-		color: "Purple",
-		eggGroups: ["Field"],
-	},
-	stratagem: {
-		num: -55,
-		species:"", 		name: "Stratagem",
-		types: ["Rock"],
-		gender: "N",
-		baseStats: {hp: 90, atk: 60, def: 65, spa: 120, spd: 70, spe: 130},
-		abilities: {0: "Levitate", 1: "Technician"},
-		heightm: 0.9,
-		weightkg: 45,
-		color: "Gray",
-		eggGroups: ["Undiscovered"],
-	},
-	arghonaut: {
-		num: -56,
-		species:"", 		name: "Arghonaut",
-		types: ["Water", "Fighting"],
-		baseStats: {hp: 105, atk: 110, def: 95, spa: 70, spd: 100, spe: 75},
-		abilities: {0: "Unaware"},
-		heightm: 1.7,
-		weightkg: 151,
-		color: "Green",
-		eggGroups: ["Water 1", "Water 3"],
-	},
-	kitsunoh: {
-		num: -57,
-		species:"", 		name: "Kitsunoh",
-		types: ["Steel", "Ghost"],
-		baseStats: {hp: 80, atk: 103, def: 85, spa: 55, spd: 80, spe: 110},
-		abilities: {0: "Frisk", 1: "Limber"},
-		heightm: 1.1,
-		weightkg: 51,
-		color: "Gray",
-		eggGroups: ["Field"],
-	},
-	cyclohm: {
-		num: -58,
-		species:"", 		name: "Cyclohm",
-		types: ["Electric", "Dragon"],
-		baseStats: {hp: 108, atk: 60, def: 118, spa: 112, spd: 70, spe: 80},
-		abilities: {0: "Shield Dust", 1: "Static"},
-		heightm: 1.6,
-		weightkg: 59,
-		color: "Yellow",
-		eggGroups: ["Dragon", "Monster"],
-	},
-	colossoil: {
-		num: -59,
-		species:"", 		name: "Colossoil",
-		types: ["Dark", "Ground"],
-		baseStats: {hp: 133, atk: 122, def: 72, spa: 71, spd: 72, spe: 95},
-		abilities: {0: "Rebound", 1: "Guts"},
-		heightm: 2.6,
-		weightkg: 683.6,
-		color: "Brown",
-		eggGroups: ["Water 2", "Field"],
-	},
-	krilowatt: {
-		num: -60,
-		species:"", 		name: "Krilowatt",
-		types: ["Electric", "Water"],
-		baseStats: {hp: 151, atk: 84, def: 73, spa: 83, spd: 74, spe: 105},
-		abilities: {0: "Trace", 1: "Magic Guard"},
-		heightm: 0.7,
-		weightkg: 10.6,
-		color: "Red",
-		eggGroups: ["Water 1", "Fairy"],
-	},
-	voodoom: {
-		num: -61,
-		species:"", 		name: "Voodoom",
-		types: ["Fighting", "Dark"],
-		baseStats: {hp: 90, atk: 85, def: 80, spa: 105, spd: 80, spe: 110},
-		abilities: {0: "Volt Absorb", 1: "Lightning Rod"},
-		heightm: 2,
-		weightkg: 75.5,
-		color: "Brown",
-		eggGroups: ["Human-Like", "Ground"],
 	},
 };

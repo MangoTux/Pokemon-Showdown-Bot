@@ -5,14 +5,25 @@ exports.commands = {
      *
      * These commands are here to provide information about the bot.
      */
+    info: 'help',
+    help: function(arg, by, room) {
+        if (room.charAt(0) === ',') {
+            var text_base = '';
+        }
+        else {
+            var text_base = '/pm ' + by + ', ';
+        }
+        help_page = "http://pastebin.com/kgtSFwnW";
+        Bot.say(by, room, text_base + help_page);
+    },
     credits: function(arg, by, room) {
         if (room.charAt(0) === ',') {
             var text_base = '';
         }
         else {
-            text_base = '/pm ' + by + ', ';
+            var text_base = '/pm ' + by + ', ';
         }
-        text = "I'm currently being developed by mirf. I'm based on Pokémon Showdown Bot by: Quinella, TalkTakesTime, and Morfent, and a derivative bot by sparkychild";
+        var text = "I'm currently being developed by mirf. I'm based on Pokémon Showdown Bot by: Quinella, TalkTakesTime, and Morfent, and a derivative bot by sparkychild";
         Bot.say(by, room, text_base + text);
     },
     about: function(arg, by, room) {
@@ -20,7 +31,7 @@ exports.commands = {
             var text_base = '';
         }
         else {
-            text_base = '/pm ' + by + ', ';
+            var text_base = '/pm ' + by + ', ';
         }
         text = 'Hello! Hulloo! What\'s up? What\'s new? I\'m PlantBot: a Pokemon Lookup & ANalytics Tool designed to extend the functionalities of current tools.';
         Bot.say(by, room, text_base + text);

@@ -219,13 +219,6 @@ exports.parse = {
 			case 'pm':
 				var by = spl[2];
 				this.chatMessage(spl.slice(4).join('|'), by, ',' + by);
-				if (Bot.isDev(by) && spl.slice(4).join('|').slice(0, 4) === '>>>>') {
-					Bot.eval(spl.slice(4).join('|'), ',' + by);
-				}
-				if (by.trim() != "PlantBot" && config.commandcharacter.indexOf(spl.slice(4).join('|').charAt(0)) === -1 && spl.slice(4).join('|').indexOf('/invite') !== 0 && spl.slice(4).join('|').indexOf('>>>>') !== 0) {
-					Bot.talk(',' + by, config.message[Math.floor(Math.random()*config.message.length)]);
-				}
-
 				break;
 		}
 	},
@@ -233,7 +226,7 @@ exports.parse = {
 		var cmdrMessage = '["' + room + '|' + by + '|' + message + '"]';
 		message = message.trim();
 		// auto accept invitations to rooms
-		if (room.charAt(0) === ',' && message.substr(0, 8) === '/invite ' && Bot.hasRank(by, '+%@&~') && !Bot.roomIsBanned(message.substr(8))) {
+		if (room.charAt(0) === ',' && message.substr(0, 8) === '/invite ') {
 			invite(by, message.substr(8));
 			Bot.say('', '/join ' + message.substr(8));
 		}
@@ -246,7 +239,7 @@ exports.parse = {
 			}
 		}
 
-		if (isCommand === 0 || toId(by) === toId(config.nick)) return;
+		//if (isCommand === 0 || toId(by) === toId(config.nick)) return;
 
 		message = message.slice(isCommand);
 		var index = message.indexOf(' ');
@@ -277,7 +270,7 @@ exports.parse = {
 					Commands[cmd].call(this, arg, by, room, leCommand);
 				}
 				catch (e) {
-					Bot.talk(room, 'The command failed! :o');
+					Bot.talk(room, 'The command failed!');
 					error(sys.inspect(e).toString().split('\n').join(' '))
 					if (config.debuglevel <= 3) {
 						console.log(e.stack);
@@ -285,7 +278,7 @@ exports.parse = {
 				}
 			}
 			else {
-				error("invalid command type for " + cmd + ": " + (typeof Commands[cmd]));
+				error("Invalid command type for " + cmd + ": " + (typeof Commands[cmd]));
 			}
 		}
 	},
