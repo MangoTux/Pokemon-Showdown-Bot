@@ -223,6 +223,8 @@ exports.parse = {
 		}
 	},
 	chatMessage: function(message, by, room) {
+        if (by.trim() != "PlantBot")
+        console.log(by.trim() + " said '" + message + "'");
 		var cmdrMessage = '["' + room + '|' + by + '|' + message + '"]';
 		message = message.trim();
 		// auto accept invitations to rooms

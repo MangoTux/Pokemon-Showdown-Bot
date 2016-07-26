@@ -3,7 +3,7 @@ exports.url = 'sim.smogon.com-80.psim.us/';
 
 // The nick and password to log in with
 var nick = exports.nick = 'PlantBot'
-exports.pass = 'cn080395';
+exports.pass = '';
 
 // A list of private rooms that the bot will not leak through the seen command
 exports.privaterooms = [];
