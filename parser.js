@@ -21,13 +21,6 @@ var https = require('https');
 var http = require('http');
 var url = require('url');
 
-const ACTION_COOLDOWN = 3 * 1000;
-const FLOOD_MESSAGE_NUM = 5;
-const FLOOD_PER_MSG_MIN = 500; // this is the minimum time between messages for legitimate spam. It's used to determine what "flooding" is caused by lag
-const FLOOD_MESSAGE_TIME = 6 * 1000;
-const MIN_CAPS_LENGTH = 12;
-const MIN_CAPS_PROPORTION = 0.8;
-
 if (!fs.existsSync('settings.json')) {
 	fs.writeFileSync('settings.json', '{}');
 }
@@ -55,7 +48,7 @@ if (!Object.isObject(profiles)) profiles = {};
 
 exports.parse = {
 	actionUrl: url.parse('https://play.pokemonshowdown.com/~~' + config.serverid + '/action.php'),
-	room: 'lobby',
+	room: 'trivia',
 	'settings': settings,
 	//'profiles': profiles,
 	blacklistRegexes: {},
@@ -90,26 +83,10 @@ exports.parse = {
 		if (changes) {
 			Tools.writeSettings();
 		}
-		var room = 'lobby';
+		var room = 'trivia';
 		if (message.indexOf('\n') < 0) return this.message(message, room);
 
 		var spl = message.split('\n|:|')[0].split('\n');
-		/*
-		if (spl[0].charAt(0) === '>') {
-			if (spl[1].substr(1, 10) === 'tournament') return;
-			room = spl.shift().substr(1);
-			if (spl[0].substr(1, 4) === 'init') {
-				var users = spl[2].substr(7).split(',');
-				var nickId = toId(config.nick);
-				for (var i = users.length; i--;) {
-					if (toId(users[i]) === nickId) {
-						Bot.ranks[room] = users[i].trim().charAt(0);
-						break;
-					}
-				}
-				return ok('joined ' + room);
-			}
-		}*/
 		if (spl[0].charAt(0) === '>') {
 			room = spl.shift().substr(1);
 		}
@@ -118,6 +95,7 @@ exports.parse = {
 		}
 	},
 	message: function(message, room) {
+        console.log(message); // HTML structure of messages are [class='chat chat-message-<username>'], while trivia announcements are [class='announcement']
 		var spl = message.split('|');
 		switch (spl[1]) {
 			case 'init':
@@ -205,7 +183,7 @@ exports.parse = {
 							}
 						}
 						catch (e) {}
-						send('|/trn ' + config.nick + ',0,' + data);
+						send('|/trn ' + config.nick + ',0,' + data); // /trn does nickname?
 					}.bind(this));
 				}.bind(this));
 
@@ -228,7 +206,7 @@ exports.parse = {
 		var cmdrMessage = '["' + room + '|' + by + '|' + message + '"]';
 		message = message.trim();
 		// auto accept invitations to rooms
-		if (room.charAt(0) === ',' && message.substr(0, 8) === '/invite ') {
+		if (room.charAt(0) === ',' && message.substr(0, 8) === '/invite ' && by.trim() === 'mirf') {
 			invite(by, message.substr(8));
 			Bot.say('', '/join ' + message.substr(8));
 		}
@@ -310,26 +288,3 @@ exports.parse = {
 		}
 	},
 };
-
-
-/****************************
-*       For C9 Users        *
-*****************************/
-// Yes, sadly it can't be done in one huge chunk w/o undoing it / looking ugly :(
-
-/* globals toId */
-/* globals Bot */
-/* globals config */
-/* globals join */
-/* globals leave */
-/* globals invite */
-/* globals send */
-/* globals cmdr */
-/* globals error */
-/* globals Commands */
-/* globals fs */
-/* globals Plugins */
-/* globals Battle */
-/* globals info */
-/* globals ok */
-/* globals Tools */

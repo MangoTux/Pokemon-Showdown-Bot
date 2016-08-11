@@ -107,9 +107,9 @@ if (!Object.select) {
 var sys = require('sys');
 global.colors = require('colors');
 
-console.log('------------------------------------'.yellow);
-console.log('| Welcome to Pokemon Showdown Bot! |'.yellow);
-console.log('------------------------------------'.yellow);
+console.log('------------------------'.blue);
+console.log('| Welcome to PlantBot! |'.blue);
+console.log('------------------------'.blue);
 console.log('');
 
 // Config and config.js watching...
@@ -119,7 +119,7 @@ if (!('existsSync' in fs)) {
 }
 
 if (!fs.existsSync('./config.js')) {
-	error('config.js doesn\'t exist; are you sure you copied config-example.js to config.js?');
+	error('config.js doesn\'t exist!');
 	process.exit(-1);
 }
 

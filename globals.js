@@ -1,6 +1,6 @@
-//check data files
+//check data files & create where they don't exist
 function checkData() {
-	var files = ['addcom', 'autores', 'bannedrooms', 'botlog', 'commandban', 'emotecounter', 'emotemoderation', 'entries', 'ignorewcmsg', 'mail', 'mailbl', 'maillog', 'quotes', 'ranks', 'trivia', 'wcmsg'];
+	var files = ['ranks'];
 	for (var i = 0; i < files.length; i++) {
 		if (!fs.existsSync('data/' + files[i] + '.txt')) {
 			fs.writeFileSync('data/' + files[i] + '.txt', '');

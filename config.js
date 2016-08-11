@@ -48,7 +48,7 @@ exports.excepts = ["mirf", "Anacrusis"];
 // exercise moderator discretion. In addition, it currently uses a very simple method of 
 // determining who to mute and so may miss people who should be muted, or mute those who 
 // shouldn't. Use with caution.
-exports.allowmute = true;
+exports.allowmute = false;
 
 // This key is used to deliver requests from Google Spreadsheets. Used by the wifi room.
 exports.googleapikey = '';
@@ -57,7 +57,7 @@ exports.googleapikey = '';
 // If you use this, you will need to uncomment out the neccessary parts in the parser.js and commands.js
 exports.alts = false;
 
-// Default avatar
+// Default avatar - Bird Trainer!
 exports.avatar = 31;
 
 // When you pm the bot but don't use a command, it replies you this message.
