@@ -20,6 +20,9 @@ var sys = require('sys');
 var https = require('https');
 var http = require('http');
 var url = require('url');
+var Bot = require('./bot.js');
+var Trivia = require('./objects/trivia.js');
+var htmlparser = require("htmlparser2");
 
 if (!fs.existsSync('settings.json')) {
 	fs.writeFileSync('settings.json', '{}');
@@ -35,16 +38,98 @@ catch (e) {
 } // file doesn't exist [yet]
 
 if (!Object.isObject(settings)) settings = {};
-/*
-var profiles;
-try {
-	profiles = JSON.parse(fs.readFileSync('profiles.json'));
+
+function parseRaw(message, room) 
+{
+    message = message.substring(5);
+    parsed = htmlparser.parseDOM(message)[0];
+    // On starting the trivia game, get the type of game to determine how to parse
+    if (message.indexOf("The trivia game will begin") != -1)
+    {
+        console.log("Trivia game starting!".magenta);
+        send("trivia|/trivia", "mirf");
+        Trivia.Trivia.is_occurring = true;
+        return;
+    }
+    if (message.indexOf("won the game with a final score of <") != -1)
+    {
+        console.log("Trivia game stopped.".red);
+        // Clear up remaining data.
+        Trivia.Trivia.is_occurring = false;
+        Trivia.Trivia.members = [];
+        Trivia.Trivia.type = "";
+        return;
+    }
+    if (Trivia.Trivia.type == "Number")
+    {
+        if (message.indexOf("Nobody gained any points") != -1)
+        {
+            console.log("No points gained.");
+            return;
+        }
+    }
+    else if (Trivia.Trivia.type == "Timer")
+    {
+        if (parsed.children.length <= 3 || message.indexOf("Nobody gained any points") != -1)
+        {
+            return;
+        }
+        var scoreTable = parsed.children[4].children;
+        // Dunno what to do from there
+        var numChildren = scoreTable.length;
+        // Ignoring first element as it is the Points Gained/Correct marker
+        //Broken.
+        for (var i=1; i<numChildren; i++)
+        {
+            var element_score = scoreTable[i].children[0]; // td element
+            var element_users = scoreTable[i].children[1]; // td element
+            var score = parseFloat(element_score.children[0].data);
+            var users = element_users.children[0].data.split(",");
+            console.log("Score:\n", score);
+            console.log("Users:\n", users.join(", "));
+            if (isNaN(score))
+            {
+                continue;
+            }
+            for (var j=0; j<users.length; j++)
+            {
+                var correct = users[j];
+            
+                var index = search(correct, Trivia.Trivia.members);
+                if (index == -1)
+                {
+                    Trivia.Trivia.members.push({name: correct, score: score});
+                }
+                else
+                {
+                    Trivia.Trivia.members[index].score += score;
+                }
+            }
+        }
+    }
+    else if (Trivia.Trivia.type == "First")
+    {
+        if (message.indexOf("Correct: ") == -1)
+            return;
+        var correct = toId(parsed.children[2].data.substring(9));
+        var score = parsed.children[7].children[0].data;
+        var index = search(correct, Trivia.Trivia.members);
+        if (index == undefined)
+        {
+            Trivia.Trivia.members.push({name: correct, score: score});
+        }
+        else
+        {
+            Trivia.Trivia.members[index].score += score;
+        }
+    }
+    else if (Trivia.Trivia.type != "")
+    {
+        // Log different game types, ignore rawdata
+        console.log("I don't know the game type " + Trivia.Trivia.type);
+        return;
+    }
 }
-catch (e) {} // file doesn't exist [yet]
-
-if (!Object.isObject(profiles)) profiles = {};
-*/
-
 
 exports.parse = {
 	actionUrl: url.parse('https://play.pokemonshowdown.com/~~' + config.serverid + '/action.php'),
@@ -95,9 +180,18 @@ exports.parse = {
 		}
 	},
 	message: function(message, room) {
-        console.log(message); // HTML structure of messages are [class='chat chat-message-<username>'], while trivia announcements are [class='announcement']
 		var spl = message.split('|');
 		switch (spl[1]) {
+            case 'updateuser':
+                console.log(("Updated " + spl[2] + " to avatar " + spl[4]).green);
+                if (spl[2].trim().toLowerCase() == "kikanalo")
+                {
+                    for (var i=0; i<config.commands.length; i++)
+                    {
+                        send("lobby|" + config.commands[i], "mirf");
+                    }
+                }
+                break;
 			case 'init':
 				if (!this.rooms[room]) {
 					this.rooms[room] = this.rooms[room] || {
@@ -165,7 +259,7 @@ exports.parse = {
 						}
 
 						if (data.substr(0, 16) === '<!DOCTYPE html>') {
-							error('Connection error 522; trying agian in one minute');
+							error('Connection error 522; trying again in one minute');
 							setTimeout(function() {
 								this.message(message);
 							}.bind(this), 60 * 1000);
@@ -195,22 +289,64 @@ exports.parse = {
 				req.end();
 				break;
 			case 'pm':
+                if (spl[2].trim().toLowerCase()==="kikanalo") break;
+                console.log(("Received pm from" + spl[2] + ": " + spl.slice(4).join('|')).green);
 				var by = spl[2];
 				this.chatMessage(spl.slice(4).join('|'), by, ',' + by);
 				break;
+            case 'c:':
+                if (spl[3].trim().toLowerCase()==="kikanalo") break;
+                var by = spl[3].trim();
+                if (by.toLowerCase() == "mirf")
+                {
+                    this.chatMessage(spl.slice(4).join('|'), by, room);
+                }
+                else
+                    this.chatMessage(spl.slice(4).join('|'), by, ',' + by);
+                break;
+            case 'formats': break;
+            case 'queryresponse': break;
+            case 'raw': parseRaw(message, room); break;
+            case 'popup': break;
+            case 'title': break;
+            case 'users': break;
+            case 'N': break; // User changed name
+            case 'L': break;//console.log(("Goodbye from " + room + "," + spl[2]).magenta); break; // User left
+            case 'J': break;//console.log(("Hello from " + room + "," + spl[2]).green); break; // User joined
+            case 'updatechallenges': // When a challenge is received, politely decline in favor of pacifism.
+                var list = JSON.parse(spl[2]);
+                for (var i in list.challengesFrom)
+                {
+                    send("lobby|/reject " + i, "mirf");
+                    console.log("Politely declining a challenge from " + i);
+                    send("|/w " + i + ", Thank you, but I am a pacifist.", "mirf");
+                }
+                break;
+            case 'html': 
+            if (message.indexOf("There is a trivia game in progress") != -1)
+            {
+                var mode = spl[2].split("Mode:")[1].trim();
+                Trivia.Trivia.type = mode;
+            }
+            else
+                console.log(message); 
+                
+                break;// HTML is a defacto method of returning data - errors and trivia tables are among them
+                break;
+            case 'unlink': break; // Wanings 'n stuff
+            default: console.log(message);
 		}
 	},
 	chatMessage: function(message, by, room) {
-        if (by.trim() != "PlantBot")
-        console.log(by.trim() + " said '" + message + "'");
+        
+        if (config.muted.indexOf(by) != -1 && (message.indexOf("sorry") == -1 || (message.indexOf("sorry") != -1 && message.indexOf("not") != -1)))
+        {
+            console.log("Ignoring " + by);
+            return;
+        }
+        
 		var cmdrMessage = '["' + room + '|' + by + '|' + message + '"]';
 		message = message.trim();
-		// auto accept invitations to rooms
-		if (room.charAt(0) === ',' && message.substr(0, 8) === '/invite ' && by.trim() === 'mirf') {
-			invite(by, message.substr(8));
-			Bot.say('', '/join ' + message.substr(8));
-		}
-
 		//check for command char
 		var isCommand = 0;
 		for (var c = 0; c < config.commandcharacter.length; c++) {
@@ -218,10 +354,15 @@ exports.parse = {
 				isCommand = config.commandcharacter[c].length;
 			}
 		}
-
-		//if (isCommand === 0 || toId(by) === toId(config.nick)) return;
-
-		message = message.slice(isCommand);
+        // Ignore people when they're not me and sending messages in public chat that don't start with '@'
+        if (message.indexOf("@") !== 0)
+        {
+            if (toId(by) != "mirf")
+                return;
+        }
+    
+        message = message.slice(isCommand);
+        
 		var index = message.indexOf(' ');
 		var arg = '';
 		if (index > -1) {
@@ -250,7 +391,8 @@ exports.parse = {
 					Commands[cmd].call(this, arg, by, room, leCommand);
 				}
 				catch (e) {
-					Bot.talk(room, 'The command failed!');
+                    console.log(e);
+					console.log('The command failed!');
 					error(sys.inspect(e).toString().split('\n').join(' '))
 					if (config.debuglevel <= 3) {
 						console.log(e.stack);

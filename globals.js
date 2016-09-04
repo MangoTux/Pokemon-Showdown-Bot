@@ -13,7 +13,15 @@ global.Bot = require('./bot.js').Bot
 
 global.devList = [toId(config.nick), 'Anacrusis'];
 
-
+global.search = function(nameKey, arr)
+{
+    for (var i=0; i < arr.length; i++) {
+        if (arr[i].name === nameKey) {
+            return i;
+        }
+    }
+    return -1;
+}
 
 //join and leave
 global.join = function(room) {

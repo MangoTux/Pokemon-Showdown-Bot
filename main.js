@@ -10,6 +10,7 @@
 var sys = require('sys');
 var url = require('url');
 var http = require('http');
+var Config = require('./config.js');
 
 global.monitor = function(text) {
 	if (!colors) global.colors = require('colors');
@@ -66,6 +67,25 @@ global.stripCommands = function(text) {
 	if (text.charAt(0) === '!' || /^>>>? /.test(text)) return '!' + text;
 	return text;
 };
+
+global.getRandomInt = function(min, max)
+{
+	return Math.floor(Math.random() * (max-min+1))+min;
+}
+
+global.randomChoice = function(items)
+{
+	return items[getRandomInt(0, items.length-1)];
+}
+
+global.randomKey = function(obj) {
+    var ret;
+    var c = 0;
+    for (var key in obj)
+        if (Math.random() < 1/++c)
+           ret = key;
+    return ret;
+}
 
 function runNpm(command) {
 	console.log('Running `npm ' + command + '`...');
@@ -335,7 +355,7 @@ var connect = function(retry) {
 	ws.on('connect', function(con) {
 		connection = con;
 		ok('connected to server ' + config.server);
-
+        
 		con.on('error', function(err) {
 			error('connection error: ' + sys.inspect(err));
 		});
@@ -388,3 +408,4 @@ if (config.override) {
 	loadFunctions();
 	connect();
 }
+

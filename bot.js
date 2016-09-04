@@ -23,9 +23,6 @@ exports.Bot = {
         pattern: [],
         warnings: {}
     },
-    repeatON: {},
-    repeatText: {},
-    mutes: {},
     initMonitor: function() {
         //reset ResourceMonitor
         setInterval(function() {
@@ -52,21 +49,6 @@ exports.Bot = {
     },
     say: function(user, room, text, bypass) {
         user = toId(user);
-        if (!Parse.settings[config.serverid][toId(config.nick)].translation) {
-            Parse.settings[config.serverid][toId(config.nick)].translation = {}
-        }
-
-        if (!bypass && Parse.settings[config.serverid][toId(config.nick)].translation[room] !== 'en' && Parse.settings[config.serverid][toId(config.nick)].translation[room] && room.charAt(0) !== ',' && text.indexOf('/me') !== 0) {
-            var parts = ''
-            if (text.charAt(0) === '/' && text.charAt(1) !== '/' && text.indexOf('/me') !== 0) {
-                parts = text.split(',')[0];
-                text = text.split(',').slice(1).join(',')
-            }
-            Tools.translate(room, parts, text, 'en', Parse.settings[config.serverid][toId(config.nick)].translation[room]);
-            return;
-        }
-        if (!text) return;
-        //
         if (room.charAt(0) !== ',') {
             var str = (room !== 'lobby' ? room : '') + '|' + text;
         }
@@ -90,5 +72,5 @@ exports.Bot = {
                 console.log(e.stack)
             }
         }
-    }
+    },
 }

@@ -1,4 +1,5 @@
 var Pokemon = require('./../objects/pokemon.js').Pokedex;
+var PokemonMega = require('./../objects/pokemonmega.js').Pokedex;
 var Moves = require('./../objects/moves.js').BattleMovedex;
 var Types = require('./../objects/types.js').BattleTypeChart;
 var Abilities = require('./../objects/abilities.js').BattleAbilities;
@@ -153,18 +154,30 @@ function evaluate(lhs, rhs, comparison, pokemon)
 {
     // Fill in parameters
     var hp =pokemon.baseStats.hp;
+    var health=hp;
     var atk=pokemon.baseStats.atk;
+    var attack=atk;
     var def=pokemon.baseStats.def;
+    var defense=def;
     var spa=pokemon.baseStats.spa;
+    var specialattack=spa;
     var spd=pokemon.baseStats.spd;
+    var specialdefense = spd;
     var spe=pokemon.baseStats.spe;
+    var speed = spe;
     var bst=0;
     for (stat in pokemon.baseStats) { bst += pokemon.baseStats[stat]; }
     var wgt=pokemon.weightkg;
+    var weight = wgt;
     var hgt=pokemon.heightm;
+    var height = hgt;
     var dex=pokemon.num;
     
-    return eval(lhs + comparison + rhs);
+    try {
+        return eval(lhs + comparison + rhs);
+    }  catch (e) {
+        return false;
+    }
 }
 
 exports.commands = {
@@ -173,9 +186,54 @@ exports.commands = {
      *
      * These commands are here to provide extended support for /ds, /dt, and /ms
      */
+    re: 'regex',
+    regex: function(arg, by, room) {
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf") {
+            var text_base = '';
+        }
+        else {
+            var text_base = '/pm ' + by + ', ';
+        }
+        var text;
+        var reg;
+        
+        try {
+             reg = new RegExp(arg);
+        } catch (err) {
+            console.log(err);
+            Bot.say(by, room, text_base + arg + " did not contain a valid regular expression.");
+            return;
+        }
+        var dex = [];
+        for (var pokemon in Pokemon)
+        {
+            if (reg.test(Pokemon[pokemon].name.toLowerCase()))
+            {
+                dex.push(Pokemon[pokemon].name);
+            }
+        }
+        if (dex.length == 0)
+        {
+            text = "No pokemon matched the expression.";
+        }
+        else if (dex.length == 1)
+        {
+            text = dex[0];
+        }
+        else if (dex.length > 15 && room.charAt(0) != ",")
+        {
+            text = dex.length + " results. Please narrow your search.";
+        }
+        else
+        {
+            text = dex.splice(0, dex.length-1).join(", ") + ", and " + dex[dex.length-1];
+        }
+        Bot.say(by, room, text_base + text);
+    },
+    
     sp: 'species',
     species: function(arg, by, room) {
-        if (room.charAt(0) === ',') {
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf") {
             var text_base = '';
         }
         else {
@@ -202,8 +260,8 @@ exports.commands = {
     spr: 'speciesreverse',
     c: 'speciesreverse',
     speciesreverse: function(arg, by, room) {
-        if (room.charAt(0) === ',') 
-            var text_base = ''
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf") 
+            var text_base = '';
         else 
             var text_base = '/pm ' + by + ', ';
         var text;
@@ -250,8 +308,8 @@ exports.commands = {
     ca: 'speciesreverseadvanced',
     categoryadvanced: 'speciesreverseadvanced',
     speciesreverseadvanced: function(arg, by, room) {
-        if (room.charAt(0) === ',') 
-            var text_base = ''
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf") 
+            var text_base = '';
         else 
             var text_base = '/pm ' + by + ', ';
         var text;
@@ -379,11 +437,224 @@ exports.commands = {
         }
         Bot.say(by, room, text_base + text);
     },
+   
+    mixandmega: 'mnm',
+    mnm: function(arg, by, room) {
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf")
+            var text_base = '';
+        else
+            var text_base = '/pm ' + by + ', ';
+        var text;
+        var pokemon_list = arg.split(' ');
+        
+        var stats = {hp:0, atk:0, def:0, spa:0, spd:0, spe:0};
+        if (pokemon_list.length <= 1)
+        {
+            text = "Usage: .mnm [pokemon] [pokemon] <[pokemon]...>";
+            Bot.say(by, room, text_base + text);
+            return;
+        }
+        
+        if (pokemon_list.length >= 2)
+        {
+            var meganame = pokemon_list[0].replace(/\s/g, "").toLowerCase();
+            var form = "";
+            if (meganame.indexOf("charizard") > -1 || meganame.indexOf("mewtwo") > -1 && (meganame.charAt(meganame.length-1) == 'x' || meganame.charAt(meganame.length-1) == 'y'))
+            {
+                //Charizard and mewtwo both have x and y forms
+                form = "mega" + meganame.charAt(meganame.length-1);
+                meganame = meganame.substring(0, meganame.length - 1);
+            }
+            else if (meganame.indexOf("kyogre") > -1 || meganame.indexOf("groudon") > -1)
+            {
+                form = "primal";
+            }
+            else
+            {
+                form = "mega";
+            }
+            var premega = PokemonMega[meganame];   
+            if (premega == undefined)
+            {
+                Bot.say(by, room, text_base + premega + " is not a recognized Pokemon.");
+                return;
+            }
+            var meganame = meganame + form;
+            var postmega = PokemonMega[meganame];
+            if (postmega == undefined)
+            {
+                Bot.say(by, room, text_base + premega.species + " does not have a mega form.");
+                return;
+            }
+            for (var i = 1; i < pokemon_list.length; i++)
+            {
+                var compare = PokemonMega[pokemon_list[i]];
+                if (compare == undefined)
+                {
+                    Bot.say(by, room, text_base + pokemon_list[i] + " is not a recognized Pokemon.");
+                    continue;
+                }
+                stats.hp = compare.baseStats.hp + postmega.baseStats.hp - premega.baseStats.hp;
+                stats.atk = compare.baseStats.atk + postmega.baseStats.atk - premega.baseStats.atk;
+                stats.def = compare.baseStats.def + postmega.baseStats.def - premega.baseStats.def;
+                stats.spa = compare.baseStats.spa + postmega.baseStats.spa - premega.baseStats.spa;
+                stats.spd = compare.baseStats.spd + postmega.baseStats.spd - premega.baseStats.spd;
+                stats.spe = compare.baseStats.spe + postmega.baseStats.spe - premega.baseStats.spe;
+                text = "[" + stats.hp + "|" + stats.atk + "|" + stats.def + "|" + stats.spa + "|" + stats.spd + "|" + stats.spe + "]";
+                text += " [" + postmega.abilities[0] + "]";
+                if (JSON.stringify(premega.types) != JSON.stringify(postmega.types))
+                {
+                    var secondType = "|" + postmega.types[postmega.types.length-1];
+                    var type = compare.types[0] + secondType;
+                    console.log(premega.types, postmega.types);
+                }
+                else
+                {
+                    var type = compare.types.join("|");
+                }
+                text += " ["+type+"]";
+                var formModifier = "";
+                if (form == "primal")
+                    formModifier = "-Primal";
+                else
+                    formModifier = "-Mega" + (form!="mega"?"-"+form.toUpperCase():"");
+                Bot.say(by, room, text_base + "Results for " + compare.species + " being boosted by " + premega.species + formModifier + " stats:");
+                Bot.say(by, room, text_base + text);
+            }
+            return;
+        }
+    },
+    mega: function(arg, by, room) {
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf")
+            var text_base = '';
+        else
+            var text_base = '/pm ' + by + ', ';
+        var text;
+        var pokemon_list = arg.split(' ');
+        
+        var stats = {hp:0, atk:0, def:0, spa:0, spd:0, spe:0};
+        if (pokemon_list.length == 0)
+        {
+            text = "Usage: .mega [pokemon] <[pokemon] ...>";
+            Bot.say(by, room, text_base + text);
+        }
+        
+        if (pokemon_list.length == 1)
+        {
+            var meganame = pokemon_list[0].replace(/\s/g, "").toLowerCase();
+            var form = "";
+            if (meganame.indexOf("charizard") > -1 || meganame.indexOf("mewtwo") > -1 && (meganame.charAt(meganame.length-1) == 'x' || meganame.charAt(meganame.length-1) == 'y'))
+            {
+                //Charizard and mewtwo both have x and y forms
+                form = "mega" + meganame.charAt(meganame.length-1);
+                meganame = meganame.substring(0, meganame.length - 1);
+            }
+            else if (meganame.indexOf("kyogre") > -1 || meganame.indexOf("groudon") > -1)
+            {
+                form = "primal";
+            }
+            else
+            {
+                form = "mega";
+            }
+            var premega = PokemonMega[meganame];  
+            if (premega == undefined)
+            {
+                Bot.say(by, room, text_base + meganame + " is not a recognized Pokemon.");
+                return;
+            }
+            meganame = meganame + form;
+            var postmega = PokemonMega[meganame];
+            if (postmega == undefined)
+            {
+                Bot.say(by, room, text_base + premega.species + " does not have a mega form.");
+                return;
+            }
+                                       
+            stats.hp     = postmega.baseStats.hp - premega.baseStats.hp;
+            stats.atk = postmega.baseStats.atk - premega.baseStats.atk;
+            stats.def = postmega.baseStats.def - premega.baseStats.def;
+            stats.spa = postmega.baseStats.spa - premega.baseStats.spa;
+            stats.spd = postmega.baseStats.spd - premega.baseStats.spd;
+            stats.spe = postmega.baseStats.spe - premega.baseStats.spe;
+                                       
+            for (var key in stats){
+                stats[key] = (stats[key]>=0?"+"+stats[key]:stats[key]);
+            }
+            text = "[" + stats.hp + "|" + stats.atk + "|" + stats.def + "|" + stats.spa + "|" + stats.spd + "|" + stats.spe + "]";
+            var formModifier = "";
+            if (form == "primal")
+                formModifier = "-Primal";
+            else
+                formModifier = "-Mega" + (form!="mega"?"-"+form.toUpperCase():"");
+            
+            Bot.say(by, room, text_base + "Stat changes between " + premega.species + " and " + premega.species + formModifier + ":")
+            Bot.say(by, room, text_base + text);
+            return;
+        }
+        else if (pokemon_list.length >= 2)
+        {
+            var meganame = pokemon_list[0].replace(/\s/g, "").toLowerCase();
+            var form = "";
+            if (meganame.indexOf("charizard") > -1 || meganame.indexOf("mewtwo") > -1 && (meganame.charAt(meganame.length-1) == 'x' || meganame.charAt(meganame.length-1) == 'y'))
+            {
+                //Charizard and mewtwo both have x and y forms
+                form = "mega" + meganame.charAt(meganame.length-1);
+                meganame = meganame.substring(0, meganame.length - 1);
+            }
+            else if (meganame.indexOf("kyogre") > -1 || meganame.indexOf("groudon") > -1)
+            {
+                form = "primal";
+            }
+            else
+            {
+                form = "mega";
+            }
+            var premega = PokemonMega[meganame];   
+            if (premega == undefined)
+            {
+                Bot.say(by, room, text_base + premega + " is not a recognized Pokemon.");
+                return;
+            }
+            var meganame = meganame + form;
+            var postmega = PokemonMega[meganame];
+            if (postmega == undefined)
+            {
+                Bot.say(by, room, text_base + premega.species + " does not have a mega form.");
+                return;
+            }
+            for (var i = 1; i < pokemon_list.length; i++)
+            {
+                var compare = PokemonMega[pokemon_list[i]];
+                if (compare == undefined)
+                {
+                    Bot.say(by, room, text_base + pokemon_list[i] + " is not a recognized Pokemon.");
+                    continue;
+                }
+                stats.hp = compare.baseStats.hp + postmega.baseStats.hp - premega.baseStats.hp;
+                stats.atk = compare.baseStats.atk + postmega.baseStats.atk - premega.baseStats.atk;
+                stats.def = compare.baseStats.def + postmega.baseStats.def - premega.baseStats.def;
+                stats.spa = compare.baseStats.spa + postmega.baseStats.spa - premega.baseStats.spa;
+                stats.spd = compare.baseStats.spd + postmega.baseStats.spd - premega.baseStats.spd;
+                stats.spe = compare.baseStats.spe + postmega.baseStats.spe - premega.baseStats.spe;
+                text = "[" + stats.hp + "|" + stats.atk + "|" + stats.def + "|" + stats.spa + "|" + stats.spd + "|" + stats.spe + "]";
+               
+                var formModifier = "";
+                if (form == "primal")
+                    formModifier = "-Primal";
+                else
+                    formModifier = "-Mega" + (form!="mega"?"-"+form.toUpperCase():"");
+                Bot.say(by, room, text_base + "Results for " + compare.species + " being boosted by " + premega.species + formModifier + " stats:");
+                Bot.say(by, room, text_base + text);
+            }
+            return;
+        }
+    },
     
     ds: 'dexsearch',
 	dsearch: 'dexsearch',
 	dexsearch: function(arg, by, room) {
-        if (room.charAt(0) === ',') 
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf") 
             var text_base = '';
         else 
             var text_base = '/pm ' + by + ', ';
@@ -399,10 +670,12 @@ exports.commands = {
         var strict = true;
         var minmax = {'isMinMax':false, 'type':'none', 'stat':'none'};
         var category = {'isCat':false, 'isStrict':true, 'cat':0};
+        var evos = 0;
+        var prevo = 0;
         var andGroups = arg.split(',');
         for (var i = 0; i < andGroups.length; i++) 
         {
-            var orGroup = {abilities: {}, tiers: {}, colors: {}, gens: {}, moves: {}, types: {}, resists: {}, categories: {}, eggGroups: {}, stats: {}, minmax: false, skip: false, cat: false};
+            var orGroup = {abilities: {}, tiers: {}, colors: {}, gens: {}, types: {}, resists: {}, categories: {}, eggGroups: {}, stats: {}, evoSearch: false, prevoSearch: false, minmax: false, skip: false, cat: false};
             var parameters = andGroups[i].split("|");
             if (parameters.length > 3) 
             { Bot.say(by, room, text_base + "No more than 3 alternatives for each parameter may be used."); return; }
@@ -426,62 +699,26 @@ exports.commands = {
                     orGroup.colors[target] = !isNotSearch;
                     continue;
                 }
-
-                if (target in allEggs) {
-                    target = target.charAt(0).toUpperCase() + target.slice(1);
-                    orGroup.allEggs[target] = !isNotSearch;
+                if (target.substr(0, 3) === 'evo')
+                {
+                    orGroup.evoSearch = true;
+                    if (isNotSearch)
+                        evos = -1;
+                    else
+                        evos = 1;
                     continue;
                 }
-        
-                if (target === 'recovery') 
+                
+                if (target.substr(0, 5) === 'prevo')
                 {
-                    if (parameters.length > 1) 
-                    { 
-                        Bot.say(by, room, text_base + "The parameter 'recover' cannot have alternative parameters"); 
-                        return; 
-                    }
-                    var recoveryMoves = [ "recover", "roost", "moonlight", "morningsun", "synthesis", "milkdrink", "slackoff", "softboiled", "wish", "healorder"];
-                    for (var k = 0; k < recoveryMoves.length; k++) {
-                        if (isNotSearch) {
-                            var bufferObj = {moves: {}};
-                            bufferObj.moves[recoveryMoves[k]] = false;
-                            searches.push(bufferObj);
-                        } else {
-                            orGroup.moves[recoveryMoves[k]] = true;
-                        }
-                    }
-                    if (isNotSearch) orGroup.skip = true; break;
+                    orGroup.prevoSearch = true;
+                    if (isNotSearch)
+                        prevo = -1;
+                    else
+                        prevo = 1;
+                    continue;
                 }
-        
-                if (target === 'priority') 
-                {
-                    if (parameters.length > 1) 
-                    { 
-                        Bot.say(by, room, text_base + "The parameter 'priority' cannot have alternate parameters"); 
-                        return; 
-                    }
-                    for (var move in Moves) 
-                    {
-                        var moveData = getMove(move);
-                        if (moveData.category === "Status" || moveData.id === "bide") continue;
-                        if (moveData.priority > 0) 
-                        {
-                            if (isNotSearch) 
-                            {
-                                var bufferObj = {moves: {}};
-                                bufferObj.moves[move] = false;
-                                searches.push(bufferObj);
-                            }
-                            else
-                            {
-                                orGroup.moves[move] = true;
-                            }
-                        }
-                    }
-                    if (isNotSearch) orGroup.skip = true;
-                    break;
-                }
-        
+                
                 if (target.substr(0, 8) === 'resists ') 
                 {
                     var targetResist = target.substr(8, 1).toUpperCase() + target.substr(9);
@@ -539,12 +776,6 @@ exports.commands = {
                     }
                     minmax["stat"] = stat;
                     orGroup.minmax = true;
-                    continue;
-                }
-                
-                var targetMove = getMove(target);
-                if (targetMove.exists) {
-                    orGroup.moves[targetMove.id] = !isNotSearch;
                     continue;
                 }
                 
@@ -692,7 +923,23 @@ exports.commands = {
                     if (alts.colors[dex[mon].color]) continue;
                     if ((Object.values(alts.colors).indexOf(false) > -1) && alts.colors[dex[mon].color] !== false) continue;
                 }
-
+                
+                if (alts.evoSearch)
+                {
+                    if ((evos == 1 && dex[mon].evos != undefined && dex[mon].evos.length != 0) || (evos == -1 && (dex[mon].evos == undefined || dex[mon].evos.length == 0))) {
+                        matched = true;
+                        continue;
+                    } 
+                }
+                
+                if (alts.prevoSearch)
+                {
+                    if ((prevo == 1 && dex[mon].prevo.length !=  0) || (evos == -1 && (dex[mon].prevo.length == 0))) {
+                        matched = true;
+                        continue;
+                    } 
+                }
+                
                 for (var egg in alts.eggGroups) {                    
                     if ((dex[mon].eggGroups.indexOf(egg) > -1) === alts.eggGroups[egg]) {
                         matched = true;
@@ -763,33 +1010,6 @@ exports.commands = {
                     }
                 }
                 if (matched) continue;
-
-                if (!learnSetsCompiled) {
-                    for (var mon2 in dex) {
-                        var template = dex[mon2];
-                        if (!template.learnset) template = getTemplate(template.baseSpecies);
-                        if (!template.learnset) continue;
-                        var fullLearnset = template.learnset;
-                        while (template.prevo) {
-                            template = getTemplate(template.prevo);
-                            for (var move in template.learnset) {
-                                if (!fullLearnset[move]) fullLearnset[move] = template.learnset[move];
-                            }
-                        }
-                        dex[mon2].learnset = fullLearnset;
-                    }
-                    learnSetsCompiled = true;
-                }
-
-                for (var move in alts.moves) {
-                    var canLearn = dex[mon].learnset[move];
-                    if ((canLearn && alts.moves[move]) || (alts.moves[move] === false && !canLearn)) {
-                        matched = true;
-                        break;
-                    }
-                }
-                if (matched) continue;
-                
                 delete dex[mon];
             }
         }
@@ -876,8 +1096,8 @@ exports.commands = {
     
     calc: 'calculate',
     calculate: function(arg, by, room) {
-        if (room.charAt(0) === ',') 
-            var text_base = ''
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf") 
+            var text_base = '';
         else 
             var text_base = '/pm ' + by + ', ';
         var text;
@@ -890,7 +1110,7 @@ exports.commands = {
         var lhs = arg.substr(0, arg.indexOf("="));
         var rhs = arg.substr(arg.indexOf("=")+1);
         
-         var match = [];
+        var match = [];
         for (var p in Pokemon)
         {
             if (evaluate(lhs, rhs, '==', Pokemon[p]))
@@ -900,7 +1120,7 @@ exports.commands = {
         {
             text = "No results found.";
         }
-        else if (match.length > 25)
+        else if (match.length > 25 && room.charAt(0) != ",")
         {
             text = match.length + " results returned. Please narrow your search and try again.";        
         }
