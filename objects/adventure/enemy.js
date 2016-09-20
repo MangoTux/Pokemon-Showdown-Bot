@@ -273,7 +273,7 @@ var allEnemies = {
 		 baseXP:50,
 		 defense:12},
 		"Witch":
-		{description:"Double, double, toil and trouble;<br>    Fire burn, and cauldron bubble.",
+		{description:"Double, double, toil and trouble/Fire burn, and cauldron bubble.",
 		 damage:8,
 		 gold:60,
 		 baseXP:50,

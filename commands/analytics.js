@@ -186,13 +186,195 @@ exports.commands = {
      *
      * These commands are here to provide extended support for /ds, /dt, and /ms
      */
-    re: 'regex',
-    regex: function(arg, by, room) {
+    head: function(arg, by, room, hasPipeOut, argIn) {
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf" || hasPipeOut) {
+            var text_base = '';
+        }    
+        else {
+            var text_base = '/pm ' + by + ', ';
+        }
+        if (argIn == "")
+        {
+            Bot.say(by, room, text_base + "``head`` requires input.");
+            return -1;
+        }
+        var numLines = 10;
+        if (arg.indexOf('-n') == 0)
+        {
+            arg = arg.substr(2).trim();
+            numLines = parseFloat(arg) || 10;
+        }
+        argIn =  argIn.split("\n").splice(0, numLines).join(hasPipeOut?"\n":", ");
+        if (argIn.length < 200 || hasPipeOut)
+            return text_base + argIn;
+        Bot.say(by, room, text_base + "Maximum length exceeded. Please narrow results and try again.");
+        return -1;
+    },
+    
+    tail: function(arg, by, room, hasPipeOut, argIn) {
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf" || hasPipeOut) {
+            var text_base = '';
+        }    
+        else {
+            var text_base = '/pm ' + by + ', ';
+        }
+        if (argIn == "")
+        {
+            Bot.say(by, room, text_base + "``tail`` requires input.");
+            return -1;
+        }
+        var numLines = 10;
+        if (arg.indexOf('-n') == 0)
+        {
+            arg = arg.substr(2).trim();
+            numLines = parseFloat(arg) || 10;
+        }
+        argIn =  argIn.split("\n").splice(-1*numLines).join(hasPipeOut?"\n":", ");
+        console.log(argIn.length);
+        if (argIn.length < 200 || hasPipeOut)
+            return text_base + argIn;
+        Bot.say(by, room, text_base + "Maximum length exceeded. Please narrow results and try again.");
+        return -1;
+    },
+    
+    ls: function(arg, by, room, hasPipeOut, argIn) {
         if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf") {
             var text_base = '';
         }
         else {
             var text_base = '/pm ' + by + ', ';
+        }
+        
+        var text = "Pokemon | Moves | Types | Abilities";
+        return text_base + text;
+    },
+    grep: function(arg, by, room, hasPipeOut, argIn) {
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf" || hasPipeOut) {
+            var text_base = '';
+        }
+        else {
+            var text_base = '/pm ' + by + ", ";
+        }
+        if (argIn=="")
+        {
+            Bot.say(by, room, text_base + "``grep`` is used to filter an input list. Please provide an input file using ``cat``.");
+            return -1;
+        }
+        var ignoreCase = false;
+        var inverse = false;
+        if (arg.indexOf('-') == 0)
+        {
+            arg = arg.substr(1);
+            while (arg.length > 0 && arg.charAt(0) != ' ')
+            {
+                switch (arg.charAt(0))
+                {
+                    case 'i':
+                    case 'I': ignoreCase = true; break;
+                    case 'v':
+                    case 'V': inverse = true; break;
+                    default: Bot.say(by, room, text_base + '-' + arg.charAt(0) + " is not a valid flag."); return -1;
+                }
+                arg = arg.substr(1);
+            }
+            arg = arg.trim();
+        }
+        try {
+             reg = new RegExp(arg);
+        } catch (err) {
+            console.log(err);
+            Bot.say(by, room, text_base + arg + " did not contain a valid regular expression.");
+            return -1;
+        }
+        var text = [];
+        var argList = argIn.split("\n");
+        for (var i in argList)
+        {
+            if (reg.test(ignoreCase?toId(argList[i]):argList[i]) == !inverse)
+            {
+                text.push(argList[i]);
+            }
+        }
+        if (text.length == 0)
+        {
+            Bot.say(by, room, text_base + "No results returned.");
+            return -1;
+        }
+        if (hasPipeOut)
+        {
+            return text_base + text.join("\n");
+        }
+        else
+        {
+            text = text.join(", ");
+            if (text.length < 120)
+            {
+                return text_base + text;
+            }
+            else
+                return text_base + "Size limit exceeded. Please narrow your search term.";
+        }
+        return text_base + text;
+    },
+    cat: function(arg, by, room, hasPipeOut, argIn) {
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf" || hasPipeOut) {
+            var text_base = '';
+        }
+        else {
+            var text_base = '/pm ' + by + ', ';
+        }
+        if (!hasPipeOut) {
+            var text = "``cat`` sends too much output. Please use ``grep`` to process data.";
+            Bot.say(by, room, text_base + text);
+            return -1;
+        }
+        var text = ""; // Pipe out will split 
+        switch (toId(arg))
+        {
+            case "pokemon": 
+                for (var p in Pokemon)
+                {
+                    text += Pokemon[p].name + "\n";
+                }
+                return text.replace(/\n$/, "");
+                break;
+            case "moves": 
+                for (var p in Moves)
+                {
+                    text += Moves[p].name + "\n";
+                }
+                return text.replace(/\n$/, "");
+                break;
+            case "types": 
+                for (var p in Types)
+                {
+                    text += p + "\n";
+                }
+                return text.replace(/\n$/, "");
+                break;
+            case "abilities": 
+                for (var p in Abilities)
+                {
+                    text += Abilities[p].name + "\n";
+                }
+                return text.replace(/\n$/, "");
+                break;
+            default:
+                Bot.say(by, room, arg + ": Not found.");
+                return -1;
+        }
+    },
+    re: 'regex',
+    regex: function(arg, by, room, hasPipeOut, argIn) {
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf") {
+            var text_base = '';
+        }
+        else {
+            var text_base = '/pm ' + by + ', ';
+        }
+        if (hasPipeOut) {
+            Bot.say(by, room, text_base + "regex does not support the use of piping.");
+            return -1;
         }
         var text;
         var reg;
@@ -202,7 +384,7 @@ exports.commands = {
         } catch (err) {
             console.log(err);
             Bot.say(by, room, text_base + arg + " did not contain a valid regular expression.");
-            return;
+            return -1;
         }
         var dex = [];
         for (var pokemon in Pokemon)
@@ -228,95 +410,254 @@ exports.commands = {
         {
             text = dex.splice(0, dex.length-1).join(", ") + ", and " + dex[dex.length-1];
         }
-        Bot.say(by, room, text_base + text);
+        return text_base + text;
+    },
+    
+    weak: 'weakness',
+    weakness: function(arg, by, room, hasPipeOut, argIn) {
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf") {
+            var text_base = '';
+        }    
+        else {
+            var text_base = '/pm ' + by + ', ';
+        }
+        if (hasPipeOut) {
+            Bot.say(by, room, text_base + "weakness does not support the use of piping.");
+            return -1;
+        }
+        // In the future, allow options for abilities to add immunities/weaknesses
+        
+        var allTypes = ["Bug", "Dark", "Dragon", "Electric", "Fairy", "Fighting", "Fire", "Flying", "Ghost", "Grass", "Ground", "Ice", "Normal", "Poison", "Psychic", "Rock", "Steel", "Water"];
+        var tempList = arg.split('/');
+        // The final type list is here
+        var typeList = [];
+        
+        var hasAll = -1;
+        for (var i in tempList)
+        {
+            if (toId(tempList[i]) == "all")
+            {
+                var hasAll = tempList.indexOf(tempList[i]);
+                break;
+            }
+        }
+        
+        if (hasAll != -1)
+        {
+            typeList = allTypes;
+            for (var i in tempList)
+            {
+                var element = toId(tempList[i]);
+                if (element == "" || element == "all")
+                {
+                    continue;
+                }
+                if (PokemonMega[element] != undefined)
+                {
+                    for (var j in PokemonMega[element].types)
+                    {
+                        if (typeList.indexOf(PokemonMega[element].types[j]) != -1)
+                            typeList.splice(typeList.indexOf(PokemonMega[element].types[j]), 1);
+                    }
+                }
+                else if (typeList.indexOf("Grass") != -1 && (element == "forestcurse" || element == "forestscurse"))
+                {
+                    typeList.splice(typeList.indexOf("Grass"), 1);
+                }
+                else if (typeList.indexOf("Ghost") != -1 && (element == "tricktreat" || element == "trickortreat"))
+                {
+                    typeList.splice(typeList.indexOf("Ghost"), 1);
+                }
+                // Check for types now
+                var typeIndex = typeList.indexOf(element[0].toUpperCase() + element.substr(1));
+                if (typeIndex > -1)
+                {
+                    typeList.splice(typeIndex, 1);
+                }
+            }   
+        }
+        else
+        {
+            for (var i in tempList)
+            {
+                var element = toId(tempList[i]);
+                if (element == "")
+                {
+                    continue;
+                }
+                if (PokemonMega[element] != undefined)
+                {
+                    for (var j in PokemonMega[element].types)
+                    {
+                        typeList.push(PokemonMega[element].types[j]);
+                    }
+                }
+                else if (element == "forestcurse" || element == "forestscurse")
+                {
+                    typeList.push("Grass");
+                }
+                else if (element == "trickortreat" || element == "tricktreat")
+                {
+                    typeList.push("Ghost");
+                }
+                // Check for types now
+                var typeIndex = allTypes.indexOf(element[0].toUpperCase() + element.substr(1));
+                if (typeIndex > -1)
+                {
+                    typeList.push(allTypes[typeIndex]);
+                }
+            }
+        }
+        
+        //TODO remove duplicates
+        for (var i in typeList)
+        {
+            if (typeList.indexOf(typeList[i]) != i)
+                typeList.splice(i, 1);
+        }
+        // In the future, all with any other parameter starts all, and then removes other elements
+        
+        var total_weakness = {
+			"Bug": 0,
+			"Dark": 0,
+			"Dragon": 0,
+			"Electric": 0,
+			"Fairy": 0,
+			"Fighting": 0,
+			"Fire": 0,
+			"Flying": 0,
+			"Ghost": 0,
+			"Grass": 0,
+			"Ground": 0,
+			"Ice": 0,
+			"Normal": 0,
+			"Poison": 0,
+			"Psychic": 0,
+			"Rock": 0,
+			"Steel": 0,
+			"Water": 0,
+        }
+        
+        // Build the type matchup, summing for each element
+        for (var type in typeList)
+        {
+            if (allTypes.indexOf(typeList[type]) == -1)
+            {
+                return text_base + "'" + typeList[type] + "' is not a recognized type.";
+            } 
+            for (var type2 in allTypes) 
+            {
+                switch (Types[typeList[type]].damageTaken[allTypes[type2]])
+                {
+                    case 0: break;
+                    case 1:
+                        if (total_weakness[allTypes[type2]] != -20) {
+                            total_weakness[allTypes[type2]]++;
+                        }  
+                        break;
+                    case 2:
+                        if (total_weakness[allTypes[type2]] != -20) {
+                            total_weakness[allTypes[type2]]--;
+                        } 
+                        break;
+                    case 3:
+                        total_weakness[allTypes[type2]] = -20; 
+                        break;
+                }
+            }
+        }
+        
+        var results_sorted = [];
+        for(var a in total_weakness)
+        {
+            if (total_weakness[a] != 0) 
+                results_sorted.push([a,total_weakness[a]])
+        }
+        
+        results_sorted.sort(function(a,b){return a[1] - b[1]});
+        results_sorted.reverse();
+        var weakness = [];
+        var text = typeList.join("/") + ":";
+        
+        text += "\n" + text_base + "**Weaknesses:** ";
+        var i=0; 
+        while (i < results_sorted.length && results_sorted[i][1] > 0)
+        {
+            weakness.push(results_sorted[i][0] + " (x" + Math.pow(2, results_sorted[i][1]) + ")");
+            i++;
+        }
+        if (weakness.length == 0)
+            text += "__None__";
+        else
+            text += weakness.join(", ");
+
+        var resist = [];
+        text += "\n" + text_base + "**Resistances:** ";
+        while (i < results_sorted.length && results_sorted[i][1] != -20)
+        {
+            resist.push(results_sorted[i][0] + " (x1/" + Math.pow(2, (-1*results_sorted[i][1])) + ")");
+            i++
+        }
+        if (resist.length == 0)
+            text += "__None__";
+        else
+            text += resist.join(", ");
+        
+        var immune = [];
+        text += "\n" + text_base + "**Immunities:** ";
+        while (i < results_sorted.length)
+        {
+            immune.push(results_sorted[i][0]);
+            i++;
+        }
+        if (immune.length == 0)
+            text += "__None__";
+        else
+            text += immune.join(", ");
+        return text_base + text;
     },
     
     sp: 'species',
-    species: function(arg, by, room) {
+    species: function(arg, by, room, hasPipeOut, argIn) {
         if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf") {
             var text_base = '';
         }
         else {
             var text_base = '/pm ' + by + ', ';
         }
+        if (hasPipeOut) {
+            Bot.say(by, room, text_base + "species does not support the use of piping.");
+            return -1;
+        }
         var pokemon = arg.replace(/\s/g, "").toLowerCase();
         if (pokemon == "")
         {
             text = "Usage: .species [pokemon]";
-            Bot.say(by, room, text_base + text);
+            return text_base + text;
         }
         var result = Pokemon[pokemon];
         if (result == undefined) 
         {
             text = pokemon + " does not match any Pokemon in the database.";
-            Bot.say(by, room, text_base + text);
-            return;
+            return text_base + text;
         }
         text = "The " + result.species + " Pokemon"; // Testing
-        Bot.say(by, room, text_base + text);
-    },
-    
-    rsp: 'speciesreverse',
-    spr: 'speciesreverse',
-    c: 'speciesreverse',
-    speciesreverse: function(arg, by, room) {
-        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf") 
-            var text_base = '';
-        else 
-            var text_base = '/pm ' + by + ', ';
-        var text;
-        if (arg == "") 
-        {
-            text = "Usage: .speciesreverse [category]"; Bot.say(by, room, text_base + text); 
-            return; 
-        }
-        
-        var category = arg.toLowerCase().replace('pokemon', '').replace(/\s/g, "");
-        if (category == "")
-        {
-            text = "Usage: .speciesreverse [category]"; Bot.say(by, room, text_base + text); return;
-        }
-        // Passes test, start searching now
-        var match = [];
-        for (var p in Pokemon)
-        {
-            if (Pokemon[p].formeLetter != undefined && Pokemon[p].num != 720) continue;
-            
-            if (Pokemon[p].species.toLowerCase().replace(/\s/g, "") == category)
-            {
-                match.push(Pokemon[p]);
-            }
-        }
-        if (match.length == 0)
-        {
-            text = "No results found.";
-        }
-        else if (match.length > 25)
-        {
-            text = match.length + " results returned. Please narrow your search and try again.";        
-        }
-        else
-        {
-            text = match[0].name;
-            for (var i=1; i<match.length; i++) {
-                text += ", " + match[i].name;
-            }
-        }
-        Bot.say(by, room, text_base + text);
+        return text_base + text;
     },
         
     ca: 'speciesreverseadvanced',
     categoryadvanced: 'speciesreverseadvanced',
-    speciesreverseadvanced: function(arg, by, room) {
-        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf") 
+    speciesreverseadvanced: function(arg, by, room, hasPipeOut, argIn) {
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf" || hasPipeOut) 
             var text_base = '';
         else 
             var text_base = '/pm ' + by + ', ';
         var text;
         if (arg == "") 
         {
-            text = "Usage: .speciesreverseadvanced [contains] [searchterm], [max/min] [stat]"; Bot.say(by, room, text_base + text); 
-            return; 
+            text = "Usage: .speciesreverseadvanced [contains] [searchterm], [max/min] [stat]"; 
+            Bot.say(by, room, text_base + text);
+            return -1;
         }
         arg_list = arg.split(',');
         var strict = true;
@@ -329,7 +670,7 @@ exports.commands = {
             {
                 // Invalid range
                 Bot.say(by, room, text_base + "Invalid search term.");
-                return;
+                return -1;
             }
             var category = contain_list.slice(contain_index+1).join(' ').toLowerCase().replace('pokemon').replace(/\s/g, "");
             strict = false;
@@ -343,8 +684,8 @@ exports.commands = {
         var statSearch = false;
         if (arg_list.length > 1 && arg_list[1].indexOf("min") != -1 && arg_list[1].indexOf("max") != -1) 
         {
-            Bot.say(by, room, text_base + "Can't minmax search.");
-            return;
+            Bot.say(by, room, text_base + "Can't minmax search");
+            return -1;
         }
         else if (arg_list.length > 1 && arg_list[1].indexOf("min") > -1)
         {
@@ -364,18 +705,21 @@ exports.commands = {
             var stat_index = stat_list.indexOf(maxSearch?"max":"min");
             if (stat_index == stat_list.length-1)
             {
-                Bot.say(by, room, text_base + "Invalid search order."); return;
+                Bot.say(by, room, text_base + "Invalid search order.");
+                return -1;
             }
             var statComparison = stat_list[stat_index+1].toLowerCase();
             if (["bst", "atk", "def", "spa", "spd", "spe", "hp"].indexOf(statComparison) == -1)
             {
-                Bot.say(by, room, text_base + "Invalid stat parameter."); return;
+                Bot.say(by, room, text_base + "Invalid stat parameter");
+                return -1;
             }
         }
         
         if (category == "")
         {
-            text = "Usage: .speciesreverse [category]"; Bot.say(by, room, text_base + text); return;
+            text = "Usage: .speciesreverse [category]";
+            return text_base + text;
         }
         // Passes test, start searching now
         var match = [];
@@ -420,30 +764,37 @@ exports.commands = {
                 }
             }
         }
+        for (var i=0; i<match.length; i++)
+        {
+            match[i] = match[i].name;
+        }
         if (match.length == 0)
         {
-            text = "No results found.";
+            Bot.say(by, room, text_base + "No results found.");
+            return -1;
         }
-        else if (match.length > 25)
+        else if (match.length > 25 && !hasPipeOut)
         {
-            text = match.length + " results returned. Please narrow your search and try again.";        
+            Bot.say(by, room, text_base + match.length + " results returned. Please narrow your search and try again.");
+            return -1;
         }
         else
         {
-            text = match[0].name;
-            for (var i=1; i<match.length; i++) {
-                text += ", " + match[i].name;
-            }
+            text = match.join(hasPipeOut?"\n":", ");
         }
-        Bot.say(by, room, text_base + text);
+        return text_base + text;
     },
    
     mixandmega: 'mnm',
-    mnm: function(arg, by, room) {
+    mnm: function(arg, by, room, hasPipeOut, argIn) {
         if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf")
             var text_base = '';
         else
             var text_base = '/pm ' + by + ', ';
+        if (hasPipeOut) {
+            Bot.say(by, room, text_base + "mnm does not support the use of piping.");
+            return -1;
+        }
         var text;
         var pokemon_list = arg.split(' ');
         
@@ -451,8 +802,7 @@ exports.commands = {
         if (pokemon_list.length <= 1)
         {
             text = "Usage: .mnm [pokemon] [pokemon] <[pokemon]...>";
-            Bot.say(by, room, text_base + text);
-            return;
+            return text_base + text;
         }
         
         if (pokemon_list.length >= 2)
@@ -476,22 +826,20 @@ exports.commands = {
             var premega = PokemonMega[meganame];   
             if (premega == undefined)
             {
-                Bot.say(by, room, text_base + premega + " is not a recognized Pokemon.");
-                return;
+                return text_base + premega + " is not a recognized Pokemon.";
             }
             var meganame = meganame + form;
             var postmega = PokemonMega[meganame];
             if (postmega == undefined)
             {
-                Bot.say(by, room, text_base + premega.species + " does not have a mega form.");
-                return;
+                return text_base + premega.species + " does not have a mega form.";
             }
             for (var i = 1; i < pokemon_list.length; i++)
             {
                 var compare = PokemonMega[pokemon_list[i]];
                 if (compare == undefined)
                 {
-                    Bot.say(by, room, text_base + pokemon_list[i] + " is not a recognized Pokemon.");
+                    text += "\n" + text_base + pokemon_list[i] + " is not a recognized Pokemon.";
                     continue;
                 }
                 stats.hp = compare.baseStats.hp + postmega.baseStats.hp - premega.baseStats.hp;
@@ -500,35 +848,39 @@ exports.commands = {
                 stats.spa = compare.baseStats.spa + postmega.baseStats.spa - premega.baseStats.spa;
                 stats.spd = compare.baseStats.spd + postmega.baseStats.spd - premega.baseStats.spd;
                 stats.spe = compare.baseStats.spe + postmega.baseStats.spe - premega.baseStats.spe;
-                text = "[" + stats.hp + "|" + stats.atk + "|" + stats.def + "|" + stats.spa + "|" + stats.spd + "|" + stats.spe + "]";
+                var formModifier = "";
+                if (form == "primal")
+                    formModifier = "-Primal";
+                else
+                    formModifier = "-Mega" + (form!="mega"?"-"+form.toUpperCase():"");
+                text += "\n" + text_base + "Results for " + compare.species + " being boosted by " + premega.species + formModifier + " stats:";
+                text += "\n" + text_base + "[" + stats.hp + "|" + stats.atk + "|" + stats.def + "|" + stats.spa + "|" + stats.spd + "|" + stats.spe + "]";
                 text += " [" + postmega.abilities[0] + "]";
                 if (JSON.stringify(premega.types) != JSON.stringify(postmega.types))
                 {
                     var secondType = "|" + postmega.types[postmega.types.length-1];
                     var type = compare.types[0] + secondType;
-                    console.log(premega.types, postmega.types);
                 }
                 else
                 {
                     var type = compare.types.join("|");
                 }
                 text += " ["+type+"]";
-                var formModifier = "";
-                if (form == "primal")
-                    formModifier = "-Primal";
-                else
-                    formModifier = "-Mega" + (form!="mega"?"-"+form.toUpperCase():"");
-                Bot.say(by, room, text_base + "Results for " + compare.species + " being boosted by " + premega.species + formModifier + " stats:");
-                Bot.say(by, room, text_base + text);
+                return text_base + text;
             }
             return;
         }
     },
-    mega: function(arg, by, room) {
+    
+    mega: function(arg, by, room, hasPipeOut, argIn) {
         if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf")
             var text_base = '';
         else
             var text_base = '/pm ' + by + ', ';
+        if (hasPipeOut) {
+            Bot.say(by, room, text_base + "mega does not support the use of piping.");
+            return -1;
+        }
         var text;
         var pokemon_list = arg.split(' ');
         
@@ -536,7 +888,7 @@ exports.commands = {
         if (pokemon_list.length == 0)
         {
             text = "Usage: .mega [pokemon] <[pokemon] ...>";
-            Bot.say(by, room, text_base + text);
+            return text_base + text;
         }
         
         if (pokemon_list.length == 1)
@@ -560,15 +912,13 @@ exports.commands = {
             var premega = PokemonMega[meganame];  
             if (premega == undefined)
             {
-                Bot.say(by, room, text_base + meganame + " is not a recognized Pokemon.");
-                return;
+                return text_base + meganame + " is not a recognized Pokemon.";
             }
             meganame = meganame + form;
             var postmega = PokemonMega[meganame];
             if (postmega == undefined)
             {
-                Bot.say(by, room, text_base + premega.species + " does not have a mega form.");
-                return;
+                return text_base + premega.species + " does not have a mega form.";
             }
                                        
             stats.hp     = postmega.baseStats.hp - premega.baseStats.hp;
@@ -587,10 +937,8 @@ exports.commands = {
                 formModifier = "-Primal";
             else
                 formModifier = "-Mega" + (form!="mega"?"-"+form.toUpperCase():"");
-            
-            Bot.say(by, room, text_base + "Stat changes between " + premega.species + " and " + premega.species + formModifier + ":")
-            Bot.say(by, room, text_base + text);
-            return;
+            text = text_base + "Stat changes between " + premega.species + " and " + premega.species + formModifier + ":\n" + text_base + text;
+            return text;
         }
         else if (pokemon_list.length >= 2)
         {
@@ -613,23 +961,20 @@ exports.commands = {
             var premega = PokemonMega[meganame];   
             if (premega == undefined)
             {
-                Bot.say(by, room, text_base + premega + " is not a recognized Pokemon.");
-                return;
+                return text_base + premega + " is not a recognized Pokemon.";
             }
             var meganame = meganame + form;
             var postmega = PokemonMega[meganame];
             if (postmega == undefined)
             {
-                Bot.say(by, room, text_base + premega.species + " does not have a mega form.");
-                return;
+                return text_base + premega.species + " does not have a mega form.";
             }
             for (var i = 1; i < pokemon_list.length; i++)
             {
                 var compare = PokemonMega[pokemon_list[i]];
                 if (compare == undefined)
                 {
-                    Bot.say(by, room, text_base + pokemon_list[i] + " is not a recognized Pokemon.");
-                    continue;
+                    return text_base + pokemon_list[i] + " is not a recognized Pokemon.";
                 }
                 stats.hp = compare.baseStats.hp + postmega.baseStats.hp - premega.baseStats.hp;
                 stats.atk = compare.baseStats.atk + postmega.baseStats.atk - premega.baseStats.atk;
@@ -644,8 +989,7 @@ exports.commands = {
                     formModifier = "-Primal";
                 else
                     formModifier = "-Mega" + (form!="mega"?"-"+form.toUpperCase():"");
-                Bot.say(by, room, text_base + "Results for " + compare.species + " being boosted by " + premega.species + formModifier + " stats:");
-                Bot.say(by, room, text_base + text);
+                return text_base + "Results for " + compare.species + " being boosted by " + premega.species + formModifier + " stats:\n" + text_base + text;
             }
             return;
         }
@@ -653,12 +997,12 @@ exports.commands = {
     
     ds: 'dexsearch',
 	dsearch: 'dexsearch',
-	dexsearch: function(arg, by, room) {
-        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf") 
+	dexsearch: function(arg, by, room, hasPipeOut, argIn) {
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf" || hasPipeOut) 
             var text_base = '';
         else 
             var text_base = '/pm ' + by + ', ';
-        var text;
+        var text = [];
         
         var searches = [];
         // All colors of pokemon
@@ -678,7 +1022,10 @@ exports.commands = {
             var orGroup = {abilities: {}, tiers: {}, colors: {}, gens: {}, types: {}, resists: {}, categories: {}, eggGroups: {}, stats: {}, evoSearch: false, prevoSearch: false, minmax: false, skip: false, cat: false};
             var parameters = andGroups[i].split("|");
             if (parameters.length > 3) 
-            { Bot.say(by, room, text_base + "No more than 3 alternatives for each parameter may be used."); return; }
+            {
+                Bot.say(by, room, text_base + "No more than 3 alternatives for each parameter may be used.");
+                return -1;
+            }
             
             for (var j = 0; j < parameters.length; j++) 
             {
@@ -730,7 +1077,7 @@ exports.commands = {
                     else 
                     {
                         Bot.say(by, room, text_base + targetResist + " is not a recognized type.");
-                        return;
+                        return -1;
                     }
                 }
                 if (target.substr(0, 3) === "ca ")
@@ -752,7 +1099,7 @@ exports.commands = {
                     if (orGroup.minmax)
                     {
                         Bot.say(by, room, text_base + " You cannot use multiple min/max terms in the same query.");
-                        return;
+                        return -1;
                     }
                     minmax["isMinMax"] = true;
                     minmax["type"] = target.substr(0, 4).trim();
@@ -772,7 +1119,7 @@ exports.commands = {
                     if (!(stat in allStats))
                     {
                         Bot.say(by, room, text_base + target + " did not contain a valid stat.");
-                        return;
+                        return -1;
                     }
                     minmax["stat"] = stat;
                     orGroup.minmax = true;
@@ -791,7 +1138,7 @@ exports.commands = {
                     else
                     {
                         Bot.say(by, room, text_base + target + " is not a recognized type.");
-                        return;
+                        return -1;
                     }
                 }
                 
@@ -806,7 +1153,7 @@ exports.commands = {
                     else
                     {
                         Bot.say(by, room, text_base + target + " is not a recognized egg group.");
-                        return;
+                        return -1;
                     }
                 }
                 
@@ -816,7 +1163,7 @@ exports.commands = {
                     if (isNotSearch)
                     {
                         Bot.say(by, room, text_base + "You cannot use the negation symbol '!' in stat ranges.");
-                        return;
+                        return -1;
                     }
                     if (target.charAt(inequality + 1) === '=')
                     {
@@ -858,7 +1205,7 @@ exports.commands = {
                     else
                     {
                         Bot.say(by, room, text_base + "No value given to compare with '" + target + "'.");
-                        return;
+                        return -1;
                     }
                     switch (toId(stat))
                     {
@@ -875,14 +1222,20 @@ exports.commands = {
                     if (!(stat in allStats))
                     {
                         Bot.say(by, room, text_base + target + " did not contain a valid stat.");
-                        return;
+                        return -1;
                     }
-                    if (!orGroup.stats[stat]) orGroup.stats[stat] = {};
-                    if (orGroup.stats[stat][direction]) return {reply: "Invalid stat range for " + stat + "."};
+                    if (!orGroup.stats[stat])
+                        orGroup.stats[stat] = {};
+                    if (orGroup.stats[stat][direction])
+                    {
+                        Bot.say(by, room, text_base + "Invalid stat range for " + stat + ".");
+                        return -1;
+                    }
                     orGroup.stats[stat][direction] = num;
                     continue;
                 }
                 Bot.say(by, room, text_base + target + " could not be found in any of the search categories.");
+                return -1;
             }
             searches.push(orGroup);
         }
@@ -1071,32 +1424,45 @@ exports.commands = {
                 }
             }
         }
+        for (var i=0; i<dex.length; i++)
+        {
+            dex[i] = dex[i].name;
+        }
         var resultsStr = "";
         
         if (results.length > 1) 
         {
-            if (results.length > 25)
+            if (results.length > 25 && !hasPipeOut)
             {
-                resultsStr = results.length + " results returned. Please narrow your query.";
+                Bot.say(by, room, text_base + results.length + " results returned. Please narrow your query.");
+                return -1;
             }
             else
             {
                 results.forEach(function (part, index, arr) { arr[index] = arr[index].name });
-                resultsStr = results.join(", ");
+                if (hasPipeOut)
+                {
+                    resultsStr = results.join("\n");
+                }
+                else
+                {
+                    resultsStr = results.join(", ");
+                }
             }
         }
         else if (results.length === 1) {
             resultsStr = results[0].name;
         } else {
-            resultsStr = "No Pokemon found.";
+            Bot.say(by, room, text_base + "No Pokemon found.");
+            return -1;
         }
         // Print message
-        Bot.say(by, room, text_base + resultsStr);
+        return text_base + resultsStr;
 	},
     
     calc: 'calculate',
-    calculate: function(arg, by, room) {
-        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf") 
+    calculate: function(arg, by, room, hasPipeOut, argIn) {
+        if (room.charAt(0) === ',' || by.trim().toLowerCase() == "mirf" || hasPipeOut) 
             var text_base = '';
         else 
             var text_base = '/pm ' + by + ', ';
@@ -1105,7 +1471,7 @@ exports.commands = {
         if ((arg.match(/=/g) || []).length != 1)
         {
             Bot.say(by, room, text_base + "Input should contain a left-hand side and a right-hand side");
-            return;
+            return -1;
         }
         var lhs = arg.substr(0, arg.indexOf("="));
         var rhs = arg.substr(arg.indexOf("=")+1);
@@ -1114,23 +1480,28 @@ exports.commands = {
         for (var p in Pokemon)
         {
             if (evaluate(lhs, rhs, '==', Pokemon[p]))
-                match.push(Pokemon[p]);
+                match.push(Pokemon[p].name);
         }
         if (match.length == 0)
         {
-            text = "No results found.";
+            Bot.say(by, room, text_base + "No results found.");
+            return -1;
         }
-        else if (match.length > 25 && room.charAt(0) != ",")
+        else if (!hasPipeOut && match.length > 25 && room.charAt(0) != ",")
         {
-            text = match.length + " results returned. Please narrow your search and try again.";        
+            Bot.say(by, room, text_base + match.length + " results returned. Please narrow your search and try again.");
+            return -1;
         }
         else
         {
-            text = match[0].name;
-            for (var i=1; i<match.length; i++) {
-                text += ", " + match[i].name;
+            if (hasPipeOut)
+            {
+                return text_base + match.join("\n");
+            }
+            else
+            {
+                return text_base + match.join(", ");
             }
         }
-        Bot.say(by, room, text_base + text);
     }
 };

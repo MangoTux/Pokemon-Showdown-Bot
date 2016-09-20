@@ -88,7 +88,7 @@ exports.commands = {
 				text += "Don't count on it.";
 				break;
 		}
-		Bot.say(by, room, text);
+		return text;
 	},
 
 	/**

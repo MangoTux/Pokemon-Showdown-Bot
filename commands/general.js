@@ -14,8 +14,7 @@ exports.commands = {
         else {
             return; 
         }
-        help_page = "http://pastebin.com/kgtSFwnW";
-        Bot.say(by, room, text_base + help_page);
+        return text_base + "Pester mirf to get this implemented.";
     },
     credits: function(arg, by, room) {
         if (room.charAt(0) === ',') {
@@ -24,8 +23,7 @@ exports.commands = {
         else {
             return; 
         }
-        var text = "I'm currently being developed by mirf. I'm based on Pokémon Showdown Bots by: Quinella, TalkTakesTime, Morfent, and sparkychild";
-        Bot.say(by, room, text_base + text);
+        return text_base + "I'm currently being developed by mirf. I'm based on Pokémon Showdown Bots by: Quinella, TalkTakesTime, Morfent, and sparkychild";
     },
     about: function(arg, by, room) {
         if (room.charAt(0) === ',') {
@@ -34,8 +32,8 @@ exports.commands = {
         else {
             return; 
         }
-        text = 'Hello! Hulloo! What\'s up? What\'s new? I\'m PlantBot: a Pokemon Lookup & ANalytics Tool designed to extend the functionalities of current commands.';
-        Bot.say(by, room, text_base + text);
+        text = 'Hello! Hulloo! What\'s up? What\'s new? I\'m PlantBot (AKA Kikanalo): a Pokemon Lookup & ANalytics Tool designed to extend the functionalities of current commands.';
+        return text_base + text;
     },
     who: 'whodabest',
     whosthebest: 'whodabest',
@@ -59,20 +57,7 @@ exports.commands = {
             text += "Anacrusis is the best!";
         }
         console.log(by.trim() + " asked who the best is.");
-        Bot.say(by, room, text);
-    },
-    sudo: function(arg, by, room) {
-        console.log(arg, by, room);
-        if (room.charAt(0) === ',') {
-            var text = '';
-        }
-        else {
-            return; // Don't want to annoy others
-        }
-        if ((by.trim() === "mirf" || by.trim() === "Anacrusis" || by.trim() === "MangoTux") && room.charAt(0) === ',')
-        {
-            Bot.say(by, room, text + arg);
-        }
+        return text_base + text;
     },
     Sorry: 'sorry',
     sorry: function(arg, by, room) {
@@ -85,14 +70,12 @@ exports.commands = {
         }
         if (Config.muted.indexOf(toId(by)) == -1)
         {
-            Bot.say(by, room, "What for? We're friends!");
-            return;
+            return "What for? We're friends!";
         }
         else
         {
             Config.muted.splice(Config.muted.indexOf(toId(by)), 1);
-            Bot.say(by, room, randomChoice(["It's okay c:", "I forgive you.", "Yay! Friends again!", "It's cool! We're friends now c:"]));
-            return;
+            return randomChoice(["It's okay c:", "I forgive you.", "Yay! Friends again!", "It's cool! We're friends now c:"]);
         }
     },
     boop: function(arg, by, room) {
@@ -102,8 +85,8 @@ exports.commands = {
         else {
             return; 
         }
-        Bot.say(by, room, "Boop!");
-    }
+        return "Boop!";
+    },
 };
 
 /****************************

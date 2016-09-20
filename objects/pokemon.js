@@ -10097,5 +10097,5 @@ exports.Pokedex = {
 		weightkg: 195,
 		color: "Brown",
 		eggGroups: ["undiscovered"],
-	},
+	}
 };

@@ -344,65 +344,104 @@ exports.parse = {
             console.log("Ignoring " + by);
             return;
         }
-        
-		var cmdrMessage = '["' + room + '|' + by + '|' + message + '"]';
-		message = message.trim();
-		//check for command char
-		var isCommand = 0;
-		for (var c = 0; c < config.commandcharacter.length; c++) {
-			if (message.indexOf(config.commandcharacter[c]) === 0) {
-				isCommand = config.commandcharacter[c].length;
-			}
-		}
-        // Ignore people when they're not me and sending messages in public chat that don't start with '@'
-        if (message.indexOf("@") !== 0)
+        var messageList = message.split(' | ');
+        var messageResult = "";
+        for (var i in messageList)
         {
-            if (toId(by) != "mirf")
-                return;
-        }
+            var cmdrMessage = '["' + room + '|' + by + '|' + messageList[i] + '"]';
+            message = messageList[i].trim();
+            //check for command char
+            var isCommand = 0;
+            for (var c = 0; c < config.commandcharacter.length; c++)
+            {
+                if (message.indexOf(config.commandcharacter[c]) === 0)
+                {
+                    isCommand = config.commandcharacter[c].length;
+                }
+            }
+            // Ignore people when they're not me and sending messages in public chat that don't start with '@'
+            if (message.indexOf("@") !== 0)
+            {
+                if (toId(by) != "mirf")
+                    return;
+            }
     
-        message = message.slice(isCommand);
+            message = message.slice(isCommand);
         
-		var index = message.indexOf(' ');
-		var arg = '';
-		if (index > -1) {
-			var cmd = toId(message.substr(0, index));
-			arg = message.substr(index + 1).trim();
-		}
-		else {
-			var cmd = toId(message);
-		}
+            var index = message.indexOf(' ');
+            var arg = '';
+            if (index > -1)
+            {
+                var cmd = toId(message.substr(0, index));
+                arg = message.substr(index + 1).trim();
+            }
+            else
+            {
+                var cmd = toId(message);
+            }
 
-		if (Commands[cmd]) {
-			var failsafe = 0;
-			var leCommand = cmd;
-			while (typeof Commands[cmd] !== "function" && failsafe++ < 10) {
-				cmd = Commands[cmd];
-			}
-			if (typeof Commands[cmd] === "function") {
-				if (!this.settings[config.serverid][toId(config.nick)].disable) {
-					this.settings[config.serverid][toId(config.nick)].disable = {};
-				}
-				if (this.settings[config.serverid][toId(config.nick)].disable[cmd] && !Bot.isDev(by)) {
-					return;
-				}
-				cmdr(cmdrMessage);
-				try {
-					Commands[cmd].call(this, arg, by, room, leCommand);
-				}
-				catch (e) {
-                    console.log(e);
-					console.log('The command failed!');
-					error(sys.inspect(e).toString().split('\n').join(' '))
-					if (config.debuglevel <= 3) {
-						console.log(e.stack);
-					}
-				}
-			}
-			else {
-				error("Invalid command type for " + cmd + ": " + (typeof Commands[cmd]));
-			}
-		}
+            if (Commands[cmd]) 
+            {
+                var failsafe = 0;
+                var leCommand = cmd;
+                while (typeof Commands[cmd] !== "function" && failsafe++ < 10)
+                {
+                    cmd = Commands[cmd];
+                }
+                if (typeof Commands[cmd] === "function")
+                {
+                    if (!this.settings[config.serverid][toId(config.nick)].disable)
+                    {
+                        this.settings[config.serverid][toId(config.nick)].disable = {};
+                    }
+                    if (this.settings[config.serverid][toId(config.nick)].disable[cmd] && !Bot.isDev(by))
+                    {
+                        return;
+                    }
+                    cmdr(cmdrMessage);
+                    try
+                    {
+                        var textResult = Commands[cmd].call(this, arg, by, room, (i < messageList.length-1), baseString, leCommand);
+                        if (textResult == -1) return;
+                        if (i == messageList.length-1)
+                        {
+                            var sayList = textResult.split("\n");
+
+                            by = toId(by);
+                            if (room.charAt(0) !== ',') {
+                                var baseString = (room!=='lobby'?room:'') + "|";
+                            }
+                            else
+                            {
+                                var baseString = '|/pm ' + room.substr(1) + ', ';
+                            }
+                            for (var i in sayList)
+                            {
+                                send(baseString + sayList[i], by);
+                            }
+                        }
+                        else
+                        {
+                            baseString = textResult;
+                        }
+                    }
+                    catch (e)
+                    {
+                        console.log(e);
+                        console.log('The command failed!');
+                        error(sys.inspect(e).toString().split('\n').join(' '))
+                        if (config.debuglevel <= 3)
+                        {
+                            console.log(e.stack);
+                        }
+                    }
+                }
+                else
+                {
+                    error("Invalid command type for " + cmd + ": " + (typeof Commands[cmd]));
+                }
+            }
+        }
 	},
 	cleanChatData: function() {
 		var chatData = this.chatData;
