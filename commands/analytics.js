@@ -230,7 +230,6 @@ exports.commands = {
             numLines = parseFloat(arg) || 10;
         }
         argIn =  argIn.split("\n").splice(-1*numLines).join(hasPipeOut?"\n":", ");
-        console.log(argIn.length);
         if (argIn.length < 200 || hasPipeOut)
             return text_base + argIn;
         Bot.say(by, room, text_base + "Maximum length exceeded. Please narrow results and try again.");
@@ -282,7 +281,6 @@ exports.commands = {
         try {
              reg = new RegExp(arg);
         } catch (err) {
-            console.log(err);
             Bot.say(by, room, text_base + arg + " did not contain a valid regular expression.");
             return -1;
         }
@@ -382,7 +380,6 @@ exports.commands = {
         try {
              reg = new RegExp(arg);
         } catch (err) {
-            console.log(err);
             Bot.say(by, room, text_base + arg + " did not contain a valid regular expression.");
             return -1;
         }
@@ -629,7 +626,7 @@ exports.commands = {
             Bot.say(by, room, text_base + "species does not support the use of piping.");
             return -1;
         }
-        var pokemon = arg.replace(/\s/g, "").toLowerCase();
+        var pokemon = toId(arg.replace(/\s/g, "").toLowerCase());
         if (pokemon == "")
         {
             text = "Usage: .species [pokemon]";
@@ -1038,7 +1035,8 @@ exports.commands = {
             
                 var targetAbility = getAbility(target);
                 if (targetAbility.exists) {
-                    orGroup.abilities[targetAbility] = !isNotSearch; continue;
+                    console.log(targetAbility);
+                    orGroup.abilities[targetAbility.name] = !isNotSearch; continue;
                 }
 
                 if (target in allColours) {
@@ -1125,6 +1123,9 @@ exports.commands = {
                     orGroup.minmax = true;
                     continue;
                 }
+                
+                // Ability check
+                // TODO
                 
                 var typeIndex = target.indexOf(' type');
                 if (typeIndex >= 0)

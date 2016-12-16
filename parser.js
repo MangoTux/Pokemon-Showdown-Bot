@@ -402,7 +402,7 @@ exports.parse = {
                     try
                     {
                         var textResult = Commands[cmd].call(this, arg, by, room, (i < messageList.length-1), baseString, leCommand);
-                        if (textResult == -1) return;
+                        if (textResult == -1 || !textResult) return;
                         if (i == messageList.length-1)
                         {
                             var sayList = textResult.split("\n");

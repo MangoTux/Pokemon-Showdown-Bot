@@ -49,14 +49,12 @@ exports.Bot = {
     },
     say: function(user, room, text, bypass) {
         user = toId(user);
-        console.log("Room: ", room, "\nText: ", text);
         if (room.charAt(0) !== ',') {
             var str = (room !== 'lobby' ? room : '') + '|' + text;
         }
         else {
             room = room.substr(1);
             var str = '|/pm ' + room + ', ' + text;
-            console.log(str);
         }
         send(str, user);
     },
